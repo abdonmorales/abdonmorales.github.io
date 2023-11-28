@@ -1,21 +1,23 @@
-name: Deploy Astro Site to GitHub Pages
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - gh-pages  # Set this to the branch you want to deploy from
+      - gh-pages  # Trigger the workflow on push to the main branch
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '21.2.0'  # Set the Node.js version as per your project requirements
-      - run: npm install
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: ./dist
+    - uses: actions/checkout@v2
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '21.2.0' # Specify your Node.js version
+    - run: npm install
+    - run: npm run build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GIT_TOKEN }}
+        publish_dir: ./dist
+        publish_branch: web  # Deploy to gh-pages branch
