@@ -4,6 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "lint:js": "eslint 'src/**/*.js'",
+    "lint:css": "stylelint 'src/styles/*.css'",
+    "lint": "npm run lint:js && npm run lint:css",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -12,5 +15,8 @@
   },
   "dependencies": {
     "astro": "^3.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0"
   }
 }
