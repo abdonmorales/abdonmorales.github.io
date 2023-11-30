@@ -14,7 +14,18 @@ tags:
 
 # CODE@TACC 2022 Summer Camp
 
-**Placeholder for text**
+## Key Features
+- **Dynamic Data Interpretation**: Utilizes Pandas and Numpy for efficient data handling and analysis, processing temperature data from multiple CSV files.
+- **Hardware Integration**: Seamlessly integrates with Raspberry Pi’s GPIO interface, controlling LED outputs to reflect environmental data variations.
+- **Adaptive Visualization**: Employs an algorithm to interpolate sensor readings, correlating them with specific LED patterns for an intuitive understanding of temperature changes.
+- **Multi-Site Capability**: Versatile in handling data from various environmental sites, showcasing the program's adaptability to different data sets.
+- **User-Friendly Interaction**: Ensures easy-to-understand visual feedback, making it suitable for educational purposes or for users with non-technical backgrounds.
+
+## Technical Stack
+Python, RPi.GPIO, Pandas, Numpy, Matplotlib.
+
+## Application
+Ideal for educational environments as a tool to demonstrate data visualization and hardware interaction, and can be adapted for practical environmental monitoring solutions.
 
 #### Project Repository
 **[CODE@TACC 2022 Final Project repo](https://github.com/abdonmorales/TACC-2022-Final-Project)**
