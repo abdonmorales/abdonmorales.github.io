@@ -12,6 +12,7 @@ tags:
 ---
 
 # Graphy Release 1
+
 ## Key Features
 
 1. **User Interface**: Utilizes Tkinter to create a user-friendly and interactive graphical interface.
