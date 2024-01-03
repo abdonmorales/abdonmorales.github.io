@@ -1,7 +1,7 @@
 {
   "name": "@example/portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "lint:ts": "eslint 'src/**/*.{ts,tsx}' --quiet",
@@ -13,12 +13,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.0.8"
+    "astro": "^4.0.9"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1",
-    "eslint": "^8.54.0",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
     "stylelint": "^16.1.0",
     "stylelint-config-standard": "^36.0.0"
   }
