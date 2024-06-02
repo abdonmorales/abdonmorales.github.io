@@ -16,7 +16,7 @@ jobs:
         node-version: '21.2.0' # Match this with your project's Node.js version
 
     - name: Install Dependencies
-      run: npm install
+      run: npm install --force
 
     - name: Run Linters
       run: npm run lint
