@@ -1,7 +1,11 @@
 {
-  "name": "@example/portfolio",
+  "name": "portfolio",
   "type": "module",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "author": {
+    "name": "Abdon Morales",
+    "email": "abdonm@cs.utexas.edu"
+  },
   "private": true,
   "scripts": {
     "lint:ts": "eslint 'src/**/*.{ts,tsx}' --quiet",
