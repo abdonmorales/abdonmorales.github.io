@@ -1,7 +1,7 @@
 ---
 title: PDF Compiler
 publishDate: 2024-06-01 01:00:00
-img: /assets/stock-2.jpg
+img: /assets/duke-java/vector/Thinking.svg
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   Created a PDF Merger for fun since I had to search for a tool online (most of them looked sketchy) and around this time I was learning Python. I thought it would be a fun project to work on during my free time.
