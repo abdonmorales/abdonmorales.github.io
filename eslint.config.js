@@ -10,5 +10,9 @@ export default {
     rules: {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/triple-slash-reference": "off"
-    }
+    },
+    ignorePatterns: [
+        "dist/",
+        "node_modules/"
+    ]
 };
