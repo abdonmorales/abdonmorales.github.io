@@ -8,7 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "lint:ts": "eslint 'src/**/*.{ts,tsx}' --quiet",
+    "lint:ts": "eslint 'src/**/*.{ts,tsx}' --quiet --no-ignore",
     "lint": "npm run lint:ts",
     "dev": "astro dev",
     "start": "astro dev",
