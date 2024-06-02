@@ -147,6 +147,13 @@ declare module 'astro:content' {
   collection: "work";
   data: InferEntrySchema<"work">
 } & { render(): Render[".md"] };
+"pdfcompiler.md": {
+	id: "pdfcompiler.md";
+  slug: "pdfcompiler";
+  body: string;
+  collection: "work";
+  data: InferEntrySchema<"work">
+} & { render(): Render[".md"] };
 "utsa_camp.md": {
 	id: "utsa_camp.md";
   slug: "utsa_camp";
