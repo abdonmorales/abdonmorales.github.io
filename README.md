@@ -7,4 +7,4 @@ The website was built using HTML, CSS, TypeScript, and Astro. It is hosted on Gi
 
 **(c) 1980 - 2023 Morales Research Corp.**
 
-**(c) 2024 Abdon Morales**
+**(c) 2024 - 2026 Abdon Morales**
