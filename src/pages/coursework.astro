@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import DropdownList from "../components/DropdownList.astro";
+import Hero from "../components/Hero.astro";
+import { deserializeManifest } from "astro/app";
+
+const fall2023 = [
+	{
+		id: 1,
+		title: "GOV 312L: Issues and Policies in American Government",
+		description:
+			"Analysis of underlying themes concerned with American political institutions and policies, including the United States Constitution.",
+	},
+	{
+		id: 2,
+		title: "M 305G: Preperation for Calculus",
+		description:
+			"M 305G is a discussion of the functions and graphs met in calculus." +
+			" The courses cover logarithms, exponential functions, trigonometric functions, inverse trigonometric functions, polynomials, and the range, domain, and graphs of these functions.",
+	},
+	{
+		id: 3,
+		title: "ECO 304K: Introduction to Microeconomics",
+		description:
+			"Analysis of the economic behavior of individual consumers, firms, and workers. Demand, supply, and market equilibrium." + 
+			" Impact of taxes, externalities, and market power on equilibrium.",
+	},
+	{
+		id: 4,
+		title: "UGS 016: First-Year Signature Course",
+		description: "",
+	},
+	{
+		id: 5,
+		title: "UGS 303: Math of Politics",
+		description: "",
+	},
+];
+const spring2024 = [
+	{
+		id: 1,
+		title: "M 408C: Differential and Integral Calculus (Calculus I)",
+		description:
+			"M 408C is the standard first-year calculus course." +
+			" It is directed at students in the natural and social sciences and at engineering students." +
+			" The emphasis in this course is on problem-solving, not on the presentation of theoretical considerations." +
+			" While the course necessarily includes some discussion of theoretical notions, its primary objective is not the production of theorem-provers." +
+			" The syllabus for M408C includes most of the elementary topics in the theory of real-valued functions of a real variable: limits, continuity, derivatives, maxima and minima, integration, area under a curve, volumes of revolution, trigonometric, logarithmic and exponential functions and techniques of integration.",
+	},
+	{
+		id: 2,
+		title: "CS 312: Introduction to Programming",
+		description: "",
+	},
+	{
+		id: 3,
+		title: "ECO 304L: Introduction to Macroeconomics",
+		description: "",
+	},
+	{
+		id: 4,
+		title: "LA 101M: Career in Liberal Arts",
+		description: "",
+	},
+	{
+		id: 5,
+		title: "GE 107C: Supplementary Instruction for M 408C",
+		description: "",
+	},
+];
+const summer2024 = [
+	{
+		id: 1,
+		title: "M 340L: Matrices and Matrix Calculations (Linear Algebra)",
+		description: "",
+	},
+	{
+		id: 2,
+		title: "ECO 330T: Financial Literacy",
+		description: "",
+	},
+	{
+		id: 3,
+		title: "NTR 306: Fundementals of Nutrition",
+		description: "",
+	},
+]
+---
+
+<BaseLayout
+	title="Course work | Abdon Morales"
+	description="My coursework at the University of Texas at Austin"
+>
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="My coursework"
+				tagline="Below is my coursework that I have taken in the past few sesmesters as a student at the University of Texas at Austin."
+			/>
+			<h1 style="font-size: large;"">Fall 2023</h1><br>
+			<DropdownList dropdownItems={fall2023} />
+			<h1 style="font-size: large;">Spring 2024</h1><br>
+			<DropdownList dropdownItems={spring2024} />
+			<h1 style="font-size: large;">Summer 2024</h1><br>
+			<DropdownList dropdownItems={summer2024} />
+			<h1 style="font-size: large;">Fall 2024</h1><br>
+			<p>Coming soon...Fall 2023 will be phased out</p>
+
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
