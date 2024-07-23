@@ -4,7 +4,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import DropdownList from "../components/DropdownList.astro";
 import Hero from "../components/Hero.astro";
-import { deserializeManifest } from "astro/app";
 
 const fall2023 = [
 	{
@@ -24,20 +23,33 @@ const fall2023 = [
 		id: 3,
 		title: "ECO 304K: Introduction to Microeconomics",
 		description:
-			"Analysis of the economic behavior of individual consumers, firms, and workers. Demand, supply, and market equilibrium." + 
+			"Analysis of the economic behavior of individual consumers, firms, and workers. Demand, supply, and market equilibrium." +
 			" Impact of taxes, externalities, and market power on equilibrium.",
 	},
 	{
 		id: 4,
 		title: "UGS 016: First-Year Signature Course",
-		description: "",
+		description: "This seminar will give you an opportunity to explore issues relevant to new students in a university environment, while learning more about issues relevant to students in your discipline." + 
+		" When you complete this seminar you will have a better understanding of the University and issues important to the UT community." + 
+		" You will become familiar with models of learning while focusing on your own academic goals." + 
+		" Most importantly, you will have experience working collaboratively with other students and develop important skills to ensure your academic success.",
 	},
 	{
 		id: 5,
 		title: "UGS 303: Math of Politics",
-		description: "",
+		description:
+			"How can the preferences of many individuals be combined into one set of preferences for a society?" +
+			" When will cooperation take place and when will conflict emerge?" +
+			" How do the institutional rules in Congress or other legislative bodies affect the policies that are produced?" +
+			" Should war be possible when the leaders of countries are acting rationally?" +
+			" Many fundamental political concepts can be studied with logical and even mathematical approaches." +
+			" This often yields important, sometimes surprising, insights." +
+			" Furthermore, many of these insights and theoretical approaches have obvious applications in other areas such as economics, natural sciences and business." +
+			" This class will examine politics through formalized reasoning." +
+			" There are no mathematical prerequisites, just the willingness to think carefully and logically about the material presented in the course.",
 	},
 ];
+
 const spring2024 = [
 	{
 		id: 1,
@@ -52,41 +64,64 @@ const spring2024 = [
 	{
 		id: 2,
 		title: "CS 312: Introduction to Programming",
-		description: "",
+		description:
+			"First part of a two-part (CS 312, CS 314) sequence in programming." +
+			" Fundamental concepts of structured programming;" +
+			" procedures and data structures with a focus on problem solving strategies and implementation;" +
+			" introduction to concepts of informal specification, informal reasoning about program behavior, debugging, and ad hoc testing.",
 	},
 	{
 		id: 3,
 		title: "ECO 304L: Introduction to Macroeconomics",
-		description: "",
+		description:
+			"The purpose of the class is to provide you with a firm understanding of the structure and workings of the macro-economy." +
+			" Course topics include measurement of output, the price level, and employment; basic theories of the determination of gross domestic product, investment and growth, and inflation;" +
+			" and an introduction to fiscal policy and monetary policy.",
 	},
 	{
 		id: 4,
 		title: "LA 101M: Career in Liberal Arts",
-		description: "",
+		description:
+			"This course is designed to help you identify your strengths and talents as a liberal arts major, and to develop the necessary skills to conduct an effective job search from beginning to end." + 
+			" By the end of this course, you will have a targeted resume and cover letter, knowledge of building a professional online presence, and the necessary tools to network, build your personal brand, and interview successfully." + 
+			" We hope that this course gives you the confidence to successfully launch a job or internship search while playing to the strengths of your major.",
 	},
 	{
 		id: 5,
 		title: "GE 107C: Supplementary Instruction for M 408C",
-		description: "",
+		description: "This course provides students an opportunity to enhance their problem-solving skills in the concurrent course through collaborative learning techniques applied to additional problems in the subject area." + 
+		" This course is not a homework review session." + 
+		" Students will be given in-class work differing from the homework assigned by the concurrent instructor.",
 	},
 ];
+
 const summer2024 = [
 	{
 		id: 1,
 		title: "M 340L: Matrices and Matrix Calculations (Linear Algebra)",
-		description: "",
+		description: "This course covers a variety of topics within linear algebra and matrix theory." + 
+		" It is also intended to help develop skills at constructing and writing mathematical proofs." + 
+		" Specific topics to be covered include vectors and matrices, systems of linear equations and Gaussian elimination, eigenvalues and eigenvectors, determinants, vector spaces, linear transformations, and orthogonality.",
 	},
 	{
 		id: 2,
 		title: "ECO 330T: Financial Literacy",
-		description: "",
+		description: "Financial Literacy aims to provide students with core competencies of personal financial management and financial literacy." + 
+		" The course intertwines components of economics relevant to developing financial literacy and financial management skills." + 
+		" Students will learn financial planning concepts and applications for their personal lives." + 
+		" The objective is for students to gain applicable and practical knowledge while expanding their understanding of financial and economic issues faced by different households and how those issues can be managed.",
 	},
 	{
 		id: 3,
 		title: "NTR 306: Fundementals of Nutrition",
-		description: "",
+		description: "Fundamentals of Nutrition provides an overview of the science of nutrition." + 
+		" It is an introductory course about food and its relationship to health, development, and disease." + 
+		" Topics covered include components of food (carbohydrates, fats, proteins, vitamins and minerals), their digestion, absorption, transport, and metabolism, their sources in foods, effects of deficiency or excess, and the biological roles they play in the body." + 
+		" Students learn the vital role of scientific inquiry in addressing currently pressing problems such as the growing epidemic of obesity and chronic illnesses, including diabetes, coronary heart disease, and cancer. Other nutrition-related conditions, such as eating disorders and osteoporosis, are also covered." + 
+		" This course conveys knowledge and skills that are relevant and applicable to students’ lives both now and in the future.",
 	},
-]
+];
+
 ---
 
 <BaseLayout
@@ -98,16 +133,15 @@ const summer2024 = [
 			<Hero
 				title="My coursework"
 				tagline="Below is my coursework that I have taken in the past few sesmesters as a student at the University of Texas at Austin."
-			/><br>
-			<h1 style="font-size: large;"">Fall 2023</h1>
-			<DropdownList dropdownItems={fall2023} /><br>
+			/><br />
+			<h1 style="font-size: large;" ">Fall 2023</h1>
+			<DropdownList dropdownItems={fall2023} /><br/>
 			<h1 style="font-size: large;">Spring 2024</h1>
-			<DropdownList dropdownItems={spring2024} /><br>
+			<DropdownList dropdownItems={spring2024} /><br/>
 			<h1 style="font-size: large;">Summer 2024</h1>
-			<DropdownList dropdownItems={summer2024} /><br>
+			<DropdownList dropdownItems={summer2024} /><br/>
 			<h1 style="font-size: large;">Fall 2024</h1>
-			<p>Coming soon...Fall 2023 will be phased out</p>
-
+			<p>Coming soon...Fall 2023 will be phased out for Fall 2024</p>
 		</main>
 
 		<ContactCTA />

@@ -14,7 +14,7 @@ const { dropdownItems } = Astro.props;
 	.dropdown-content {
 		display: none;
 		padding: 10px;
-		border: 1px solid #ddd;
+		border: 3px solid #ddd;
 		border-top: none;
 	}
 
@@ -28,8 +28,8 @@ const { dropdownItems } = Astro.props;
 		align-items: center;
 		cursor: pointer;
 		padding: 10px;
-		border: 1px solid #ddd;
-		background-color: #f9f9f9;
+		border: 5px solid #ddd;
+		/* background-color: #505d84; */
 	}
 </style>
 
@@ -37,22 +37,17 @@ const { dropdownItems } = Astro.props;
 	{
 		dropdownItems.map((item) => (
 			<div class="dropdown-item" key={item.id}>
-				<div
-					class="dropdown-button"
-					onClick="toggleDropdown(event)"
-				>
+				<div class="dropdown-button" onClick="toggleDropdown(event)">
 					<span>{item.title}</span>
 					<span>▼</span>
 				</div>
-				<div class="dropdown-content">
-					{item.description}
-				</div>
+				<div class="dropdown-content">{item.description}</div>
 			</div>
 		))
 	}
 </div>
 
-<script>
+<script client:load>
 	function toggleDropdown(event) {
 		const item = event.currentTarget.parentElement;
 		item.classList.toggle("open");
