@@ -1,15 +1,16 @@
 ---
 import Icon from './Icon.astro';
 const currentYear = new Date().getFullYear();
+const endCopyYear = new Date().getFullYear() + 2;
 ---
 
 <footer>
 	<div class="group">
 		<p>
-			Designed & Developed in Austin, Texas with <a href="https://astro.build/">Astro 4.9</a>
+			Designed & Developed in Austin, Texas with <a href="https://astro.build/">Astro 4.12.2</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Abdon Morales and Morales Research Corp.</p>
+		<p>&copy; {currentYear} - {endCopyYear} Abdon Morales.</p>
 	</div>
 	<p class="socials">
 		<a href="https://x.com/AbdonMorales7"> Twitter</a>

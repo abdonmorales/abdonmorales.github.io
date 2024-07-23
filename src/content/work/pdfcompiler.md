@@ -24,7 +24,7 @@ When I began developing this application around October of 2023, I was thinking 
 
 Around this time of rewriting the UI from tkinter to Qt4, the way I originally packaged my file was by just distributing the raw source file through the .pyw extension until version 2.0. After the Qt4 rewrite, I completely changed the way on how I packged the file by using some type of universal packaging tool to which the name I have forgotten. The pain was on how the user is unable to launch the application in its executable form without no explanation of the error or why it's unable to execute. This only fuled my frustration with Python and packaging tools to the point of rewriting the whole codebase of the application in Java.
 
-**P.S After this, I was learning Java since I was about to take a Java course in the upcoming semester for intro CS class.**
+**P.S After this, I was dabbling with Java since I was about to take a Java course in the upcoming semester for my intro CS class.**
 
 ## The Fun Times
 

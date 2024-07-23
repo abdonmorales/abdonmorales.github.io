@@ -1,5 +1,5 @@
 # My Portfolio: Abdon Morales
-This has the source code and host my portfolio website. It is a modern, fluid, and simple website that has an extensive description of myself, my projects, and my contact information.
+This has the source code and host my portfolio website. It is a fluid and modern website that has an extensive description of myself, my projects, coursework and contact information.
 
 <img src="public/assets/duke-java/vector/Wave.svg">
 
@@ -7,4 +7,4 @@ The website was built using HTML, CSS, TypeScript, and Astro. It is hosted on Gi
 
 **(c) 1980 - 2023 Morales Research Corp.**
 
-**(c) 2024 Abdon Morales**
+**(c) 2024 - 2026 Abdon Morales**

@@ -13,6 +13,7 @@ export default {
     },
     ignorePatterns: [
         "dist/",
-        "node_modules/"
+        "node_modules/",
+        "!src/**/*.{ts,tsx}"
     ]
 };
