@@ -1,5 +1,5 @@
 # My Portfolio: Abdon Morales
-This has the source code and host my portfolio website. It is a modern, fluid, and simple website that has an extensive description of myself, my projects, and my contact information.
+This has the source code and host my portfolio website. It is a fluid and modern website that has an extensive description of myself, my projects, coursework and contact information.
 
 <img src="public/assets/duke-java/vector/Wave.svg">
 
