@@ -17,13 +17,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.12.2"
+    "astro": "^4.13.3"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
-    "eslint": "^9.7.0",
-    "stylelint": "^16.7.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
+    "eslint": "^9.9.0",
+    "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1"
   }
 }
