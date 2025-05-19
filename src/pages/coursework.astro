@@ -163,6 +163,78 @@ const fall2024 = [
 			" The equivalent of four lectures hours a week.",
 	},
 ];
+
+const spring2025 = [
+	{
+		id: 1,
+		title: "M 408D: Differential and Integral Calculus (Calculus II)",
+		description:
+			"This is the second semester of the accelerated calculus sequence." +
+			" The theory and applications of sequences and infinite series, including those involving functions of one variable, and an introduction to the theory and applications of differential and integral calculus of functions of several variables;" +
+			" subjects include methods of integration, parametric equations, sequences, infinite series, power series, functions of several variables, partial derivatives, and multiple integrals." +
+			" Three lecture hours and two discussion hours a week for one semester.",
+	},
+	{
+		id: 2,
+		title: "MUS 307: Jazz Appreciation-WB",
+		description:
+			"Open to all University students. Studies of the popular music of a selected culture or geographical area. " +
+			"Three lecture hours a week for one semester, with one laboratory hour a week as required. May be repeated for credit when the topics vary.",
+	},
+	{
+		id: 3,
+		title: "PHY 105M: Lab for Engineering Physics I",
+		description:
+			"Participate in an introductory mechanics laboratory. Three laboratory hours a week for one semester.",
+	},
+	{
+		id: 4,
+		title: "ECE 422C: Software Design and Implementation II",
+		description:
+			"Methods for engineering software with a focus on abstraction; specification, design, " +
+			"and implementation of object-oriented code; design and implementation of object-oriented programs in Java; " +
+			"abstract data types; inheritance; polymorphism; parameterized types and generic programming; " +
+			"the operation and application of commonly used data structures; miscellaneous high-level programming topics.",
+	},
+	{
+		id: 5,
+		title: "E 316N: World Literature",
+		description:
+			"Same as Comparative Literature 315. Introduction to masterpieces of world literature, emphasizing historical, " +
+			"generic, and thematic connections. Three lecture hours a week for one semester. Some sections require an additional discussion hour a week.",
+	},
+];
+
+const summer2025 = [
+	{
+		id: 1,
+		title: "ECO w329: Economic Statistics",
+		description:
+			"This course is designed to provide students with a basic understanding of statistical methods and their applications in economics." +
+			" The course covers topics such as probability, sampling, hypothesis testing, regression analysis, and time series analysis." +
+			" The course is taught as a Web-based course.",
+	},
+	{
+		id: 2,
+		title: "RHE s306: Rhetoric and Composition",
+		description:
+			"This course is designed to provide students with a basic understanding of rhetoric and composition." +
+			" The course covers topics such as argumentation, persuasion, and writing." +
+			" The course is taught as a Web-based course.",
+	},
+	{
+		id: 3,
+		title: "M w427J: Differential Equations with Linear Algebra",
+		description:
+			"This course is designed to provide students with a basic understanding of differential equations and linear algebra." +
+			" The course covers topics such as first-order differential equations, second-order differential equations, and systems of differential equations.",
+	},
+	{
+		id: 4,
+		title: "M w427L: Calculus with Application II",
+		description: "This course description is currently unavailable. Please check back later for more details."
+	},
+];
 ---
 
 <BaseLayout
@@ -182,7 +254,10 @@ const fall2024 = [
 			<h1 style="font-size: large;">Summer 2024</h1>
 			<DropdownList dropdownItems={summer2024} /><br />
 			<h1 style="font-size: large;">Fall 2024</h1>
-			<DropdownList dropdownItems={fall2024} />
+			<DropdownList dropdownItems={fall2024} /><br />
+			<h1 style="font-size: large;">Spring 2025</h1>
+			<DropdownList dropdownItems={spring2025} /><br />
+			<h1 style="font-size: large;">Summer 2025</h1>
 		</main>
 
 		<ContactCTA />
