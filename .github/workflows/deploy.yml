@@ -18,6 +18,12 @@ jobs:
         node-version: '20.x' # Use LTS version
     - run: npm install --force
     - run: npm run build
+
+    - name: Copy CNAME
+      run: |
+      if [ -f CNAME ]; then
+        cp CNAME dist/
+      fi
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
