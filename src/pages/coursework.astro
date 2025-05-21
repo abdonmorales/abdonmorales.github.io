@@ -322,16 +322,19 @@ const summer2025 = [
 
 	.semester-section {
 		margin-bottom: 2.5rem;
-		background-color: var(--gray-999);
+		background-color: var(--gray-900);
+		background-image: linear-gradient(to bottom right, #f8f9fa, var(--gray-900));
 		border-radius: 1rem;
 		padding: 1.5rem 2rem;
-		box-shadow: var(--shadow-sm);
-		transition: box-shadow 0.25s ease, transform 0.25s ease, background-color 0.3s ease;
+		box-shadow: var(--shadow-md);
+		border: 1px solid var(--gray-800);
+		transition: box-shadow 0.25s ease, transform 0.25s ease, background-color 0.3s ease, border-color 0.3s ease;
 	}
 	
 	.semester-section:hover {
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--shadow-lg);
 		transform: translateY(-5px);
+		border-color: var(--accent-regular);
 	}
 
 	.semester-title {
@@ -340,8 +343,10 @@ const summer2025 = [
 		font-family: var(--font-brand);
 		margin-bottom: 1.25rem;
 		padding-bottom: 0.5rem;
-		border-bottom: 2px solid var(--accent-regular);
+		border-bottom: 3px solid var(--accent-regular);
 		display: inline-block;
+		font-weight: 600;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 
 	.content :global(a) {
@@ -380,10 +385,13 @@ const summer2025 = [
 	:global(.theme-dark) .semester-title {
 		color: var(--gray-200);
 		border-bottom-color: var(--accent-light);
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 	}
 	
 	:global(.theme-dark) .semester-section {
 		background-color: var(--gray-800);
+		background-image: linear-gradient(to bottom right, var(--gray-800), var(--gray-900));
 		box-shadow: var(--shadow-md);
+		border-color: var(--gray-700);
 	}
 </style>
