@@ -235,6 +235,37 @@ const summer2025 = [
 		description: "This course description is currently unavailable. Please check back later for more details."
 	},
 ];
+
+const fall2025 = [
+	{
+		id: 1,
+		title: "ECO 441K: Introduction to Econometrics",
+		description: "Parameter estimation and inference in regression models."
+	
+	},
+	{
+		id: 2,
+		title: "ECO 420S: Math Microeconomic Theory Advanced Application",
+		description: "Examine mathematical treatment of microeconomic theory " +
+		"with application to real world subjects. Explore mathematical methods " + 
+		"used by economists and apply them to analyze consumer behavior, choice " + 
+		"under uncertainty, theory of the firm, game theory and general equilibrium."
+	},
+	{
+		id: 3,
+		title: "PHY 303L: Engineering Physics II",
+		description:
+			"A general survey of physics; primarily electricity, magnetism, and optics." +
+			" Three lecture hours and one discussion hour a week for one semester.",
+	},
+	{
+		id: 4,
+		title: "PHY 105N: Lab for Engineering Physics II",
+		description:
+			"Participate in an introductory electricity and magnetism laboratory." +
+			" Three laboratory hours a week for one semester.",
+	}
+]
 ---
 
 <BaseLayout
@@ -278,6 +309,9 @@ const summer2025 = [
 					<h2 class="semester-title">Summer 2025</h2>
 					<DropdownList dropdownItems={summer2025} />
 				</div>
+				<div class="semester-section">
+					<h2 class="semester-title">Fall 2025</h2>
+					<DropdownList dropdownItems={fall2025} />
 			</section>
 		</main>
 
