@@ -130,6 +130,7 @@ body {
 	line-height: 1.5;
 	transition: background-color var(--theme-transition-body),
 				color var(--theme-transition-body);
+	font-display: swap; /* Estrategia óptima para texto visible */
 }
 
 *,

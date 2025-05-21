@@ -246,18 +246,39 @@ const summer2025 = [
 			<Hero
 				title="My coursework"
 				tagline="Below is my coursework that I have taken in the past few sesmesters as a student at the University of Texas at Austin."
-			/><br />
-			<!--<h1 style="font-size: large;" ">Fall 2023</h1>
-			<DropdownList dropdownItems={fall2023} /><br/> -->
-			<!-- <h1 style="font-size: large;">Spring 2024</h1>
-			<DropdownList dropdownItems={spring2024} /><br /> -->
-			<h1 style="font-size: large;">Summer 2024</h1>
-			<DropdownList dropdownItems={summer2024} /><br />
-			<h1 style="font-size: large;">Fall 2024</h1>
-			<DropdownList dropdownItems={fall2024} /><br />
-			<h1 style="font-size: large;">Spring 2025</h1>
-			<DropdownList dropdownItems={spring2025} /><br />
-			<h1 style="font-size: large;">Summer 2025</h1>
+			/>
+			
+			<section class="content">
+				<!--<div class="semester-section">
+					<h2 class="semester-title">Fall 2023</h2>
+					<DropdownList dropdownItems={fall2023} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Spring 2024</h2>
+					<DropdownList dropdownItems={spring2024} />
+				</div>-->
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Summer 2024</h2>
+					<DropdownList dropdownItems={summer2024} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Fall 2024</h2>
+					<DropdownList dropdownItems={fall2024} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Spring 2025</h2>
+					<DropdownList dropdownItems={spring2025} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Summer 2025</h2>
+					<DropdownList dropdownItems={summer2025} />
+				</div>
+			</section>
 		</main>
 
 		<ContactCTA />
@@ -292,6 +313,35 @@ const summer2025 = [
 
 	.content {
 		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.semester-section {
+		margin-bottom: 2.5rem;
+		background-color: var(--gray-999);
+		border-radius: 1rem;
+		padding: 1.5rem 2rem;
+		box-shadow: var(--shadow-sm);
+		transition: box-shadow 0.25s ease, transform 0.25s ease;
+	}
+	
+	.semester-section:hover {
+		box-shadow: var(--shadow-md);
+		transform: translateY(-5px);
+	}
+
+	.semester-title {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		font-family: var(--font-brand);
+		margin-bottom: 1.25rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--accent-regular);
+		display: inline-block;
 	}
 
 	.content :global(a) {
@@ -319,5 +369,20 @@ const summer2025 = [
 			display: contents;
 			font-size: var(--text-lg);
 		}
+		
+		.content {
+			grid-column: 2;
+			width: 100%;
+		}
+	}
+
+	/* Estilo para tema oscuro */
+	:global(.theme-dark) .semester-title {
+		color: var(--gray-200);
+		border-bottom-color: var(--accent-light);
+	}
+	
+	:global(.theme-dark) .semester-section {
+		background-color: var(--gray-100);
 	}
 </style>

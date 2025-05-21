@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -40,14 +41,15 @@ const projects = (await getCollection('work'))
 					</div>
 				</Hero>
 
-				<img
-					alt="Abdon Morales"
-					width="480"
-					height="620"
+				<Image
 					src="/assets/portrait.jpg"
+					alt="Abdon Morales"
+					width={480}
+					height={620}
 					loading="eager"
 					fetchpriority="high"
 				/>
+			</header>
 			</header>
 
 			<Skills />

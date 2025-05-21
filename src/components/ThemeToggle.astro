@@ -91,5 +91,18 @@ import Icon from './Icon.astro';
 			return document.documentElement.classList.contains('theme-dark');
 		}
 	}
-	customElements.define('theme-toggle', ThemeToggle);
+	
+	// Utilizar requestIdleCallback para definir el componente cuando el navegador esté inactivo
+	if ('requestIdleCallback' in window) {
+		window.requestIdleCallback(() => {
+			customElements.define('theme-toggle', ThemeToggle);
+		});
+	} else {
+		// Fallback para navegadores que no soportan requestIdleCallback
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				customElements.define('theme-toggle', ThemeToggle);
+			}, 100);
+		});
+	}
 </script>
