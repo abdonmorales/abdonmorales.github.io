@@ -235,6 +235,37 @@ const summer2025 = [
 		description: "This course description is currently unavailable. Please check back later for more details."
 	},
 ];
+
+const fall2025 = [
+	{
+		id: 1,
+		title: "ECO 441K: Introduction to Econometrics",
+		description: "Parameter estimation and inference in regression models."
+	
+	},
+	{
+		id: 2,
+		title: "ECO 420S: Math Microeconomic Theory Advanced Application",
+		description: "Examine mathematical treatment of microeconomic theory " +
+		"with application to real world subjects. Explore mathematical methods " + 
+		"used by economists and apply them to analyze consumer behavior, choice " + 
+		"under uncertainty, theory of the firm, game theory and general equilibrium."
+	},
+	{
+		id: 3,
+		title: "PHY 303L: Engineering Physics II",
+		description:
+			"A general survey of physics; primarily electricity, magnetism, and optics." +
+			" Three lecture hours and one discussion hour a week for one semester.",
+	},
+	{
+		id: 4,
+		title: "PHY 105N: Lab for Engineering Physics II",
+		description:
+			"Participate in an introductory electricity and magnetism laboratory." +
+			" Three laboratory hours a week for one semester.",
+	}
+]
 ---
 
 <BaseLayout
@@ -245,19 +276,43 @@ const summer2025 = [
 		<main class="wrapper about">
 			<Hero
 				title="My coursework"
-				tagline="Below is my coursework that I have taken in the past few sesmesters as a student at the University of Texas at Austin."
-			/><br />
-			<!--<h1 style="font-size: large;" ">Fall 2023</h1>
-			<DropdownList dropdownItems={fall2023} /><br/> -->
-			<!-- <h1 style="font-size: large;">Spring 2024</h1>
-			<DropdownList dropdownItems={spring2024} /><br /> -->
-			<h1 style="font-size: large;">Summer 2024</h1>
-			<DropdownList dropdownItems={summer2024} /><br />
-			<h1 style="font-size: large;">Fall 2024</h1>
-			<DropdownList dropdownItems={fall2024} /><br />
-			<h1 style="font-size: large;">Spring 2025</h1>
-			<DropdownList dropdownItems={spring2025} /><br />
-			<h1 style="font-size: large;">Summer 2025</h1>
+				tagline="Below is my coursework that I have taken in the past few semesters as a student at the University of Texas at Austin."
+			/>
+			
+			<section class="content">
+				<!--<div class="semester-section">
+					<h2 class="semester-title">Fall 2023</h2>
+					<DropdownList dropdownItems={fall2023} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Spring 2024</h2>
+					<DropdownList dropdownItems={spring2024} />
+				</div>-->
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Summer 2024</h2>
+					<DropdownList dropdownItems={summer2024} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Fall 2024</h2>
+					<DropdownList dropdownItems={fall2024} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Spring 2025</h2>
+					<DropdownList dropdownItems={spring2025} />
+				</div>
+				
+				<div class="semester-section">
+					<h2 class="semester-title">Summer 2025</h2>
+					<DropdownList dropdownItems={summer2025} />
+				</div>
+				<div class="semester-section">
+					<h2 class="semester-title">Fall 2025</h2>
+					<DropdownList dropdownItems={fall2025} />
+			</section>
 		</main>
 
 		<ContactCTA />
@@ -292,6 +347,40 @@ const summer2025 = [
 
 	.content {
 		grid-column: 2 / 4;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.semester-section {
+		margin-bottom: 2.5rem;
+		background-color: var(--gray-900);
+		background-image: linear-gradient(to bottom right, #f8f9fa, var(--gray-900));
+		border-radius: 1rem;
+		padding: 1.5rem 2rem;
+		box-shadow: var(--shadow-md);
+		border: 1px solid var(--gray-800);
+		transition: box-shadow 0.25s ease, transform 0.25s ease, background-color 0.3s ease, border-color 0.3s ease;
+	}
+	
+	.semester-section:hover {
+		box-shadow: var(--shadow-lg);
+		transform: translateY(-5px);
+		border-color: var(--accent-regular);
+	}
+
+	.semester-title {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		font-family: var(--font-brand);
+		margin-bottom: 1.25rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 3px solid var(--accent-regular);
+		display: inline-block;
+		font-weight: 600;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 	}
 
 	.content :global(a) {
@@ -319,5 +408,24 @@ const summer2025 = [
 			display: contents;
 			font-size: var(--text-lg);
 		}
+		
+		.content {
+			grid-column: 2;
+			width: 100%;
+		}
+	}
+
+	/* Estilo para tema oscuro */
+	:global(.theme-dark) .semester-title {
+		color: var(--gray-200);
+		border-bottom-color: var(--accent-light);
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+	
+	:global(.theme-dark) .semester-section {
+		background-color: var(--gray-800);
+		background-image: linear-gradient(to bottom right, var(--gray-800), var(--gray-900));
+		box-shadow: var(--shadow-md);
+		border-color: var(--gray-700);
 	}
 </style>

@@ -4,54 +4,141 @@ const { dropdownItems } = Astro.props;
 
 <style>
 	.dropdown-container {
-		margin: 20px;
+		width: 100%;
+		max-width: 100%;
 	}
 
 	.dropdown-item {
-		margin-bottom: 10px;
+		margin-bottom: 1rem;
+		transition: all 0.3s ease;
 	}
 
 	.dropdown-content {
-		display: none;
-		padding: 10px;
-		border: 3px solid #ddd;
-		border-radius: 5px;
-		border-top: none;
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s ease;
+		padding: 0 1.25rem;
+		border-left: 2px solid var(--accent-regular);
+		margin-left: 0.5rem;
+		line-height: 1.6;
+		color: var(--gray-200);
+		font-size: var(--text-md);
 	}
 
 	.dropdown-item.open .dropdown-content {
-		display: block;
+		max-height: 500px;
+		opacity: 1;
+		padding-top: 1.25rem;
+		padding-bottom: 1.25rem;
 	}
 
 	.dropdown-button {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		width: 100%;
 		cursor: pointer;
-		padding: 10px;
-		border: 5px solid #ddd;
-		border-radius: 5px;
-		/* background-color: #505d84; */
+		padding: 1rem 1.5rem;
+		border-radius: 0.5rem;
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		color: var(--gray-100);
+		font-weight: 500;
+		font-family: var(--font-brand);
+		box-shadow: var(--shadow-sm);
+		transition: all 0.2s ease;
+	}
+
+	.dropdown-button:hover {
+		border-color: var(--accent-regular);
+		box-shadow: var(--shadow-md);
+		transform: translateY(-2px);
+	}
+
+	.dropdown-button .icon {
+		transition: transform 0.3s ease;
+		flex-shrink: 0;
+		margin-left: 1rem;
+	}
+	
+	.dropdown-button .icon svg {
+		width: 22px;
+		height: 22px;
+		color: var(--accent-regular);
+		stroke: var(--accent-regular);
+	}
+	
+	:global(.theme-dark) .dropdown-button .icon svg {
+		color: var(--accent-light);
+		stroke: var(--accent-light);
+	}
+
+	.dropdown-item.open .dropdown-button .icon {
+		transform: rotate(180deg);
+	}
+	
+	.dropdown-button .title {
+		font-size: var(--text-lg);
+		font-weight: 600;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.dropdown-button, .dropdown-content, .icon {
+			transition: none;
+		}
+	}
+
+	/* Estilo para tema oscuro */
+	:global(.theme-dark) .dropdown-button {
+		background: var(--gray-800);
+		color: var(--gray-200);
+		border-color: var(--gray-700);
+	}
+
+	:global(.theme-dark) .dropdown-button:hover {
+		border-color: var(--accent-light);
+		box-shadow: var(--shadow-md);
+	}
+
+	:global(.theme-dark) .dropdown-content {
+		border-left-color: var(--accent-light);
+		color: var(--gray-300);
 	}
 </style>
 
 <div class="dropdown-container">
 	{
 		dropdownItems.map((item) => (
-			<div class="dropdown-item" key={item.id}>
-				<div class="dropdown-button" onClick="toggleDropdown(event)">
-					<span>{item.title}</span>
-					<span>▼</span>
+			<div class="dropdown-item">
+				<button class="dropdown-button" aria-expanded="false">
+					<span class="title">{item.title}</span>
+					<span class="icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="6 9 12 15 18 9"></polyline>
+						</svg>
+					</span>
+				</button>
+				<div class="dropdown-content">
+					<p>{item.description}</p>
 				</div>
-				<div class="dropdown-content">{item.description}</div>
 			</div>
 		))
 	}
 </div>
 
-<script client:load>
-	function toggleDropdown(event) {
-		const item = event.currentTarget.parentElement;
-		item.classList.toggle("open");
-	}
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const buttons = document.querySelectorAll('.dropdown-button');
+		
+		buttons.forEach(button => {
+			button.addEventListener('click', () => {
+				const item = button.parentElement;
+				const isOpen = item.classList.toggle('open');
+				
+				// Actualizar atributos ARIA para accesibilidad
+				button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+			});
+		});
+	});
 </script>

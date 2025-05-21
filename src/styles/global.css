@@ -71,6 +71,7 @@
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
+	--theme-transition-body: 0.3s ease-in-out;
 }
 
 :root.theme-dark {
@@ -127,6 +128,9 @@ body {
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
+	transition: background-color var(--theme-transition-body),
+				color var(--theme-transition-body);
+	font-display: swap; /* Estrategia óptima para texto visible */
 }
 
 *,
@@ -143,6 +147,11 @@ img {
 
 a {
 	color: var(--link-color);
+}
+
+a:focus-visible {
+	outline: 3px solid var(--accent-regular);
+	outline-offset: 3px;
 }
 
 h1,
@@ -251,5 +260,41 @@ h5 {
 	}
 	.lg\:gap-48 {
 		gap: 12rem;
+	}
+}
+
+/* Mejoras para dispositivos táctiles */
+.touch-device .involvement-item,
+.touch-device .education-card,
+.touch-device a {
+	transition: none; /* Desactivar transiciones para mejorar rendimiento en móviles */
+}
+
+.touch-device .dropdown-button:active,
+.touch-device .involvement-item:active {
+	transform: translateY(2px);
+	box-shadow: var(--shadow-sm);
+}
+
+/* Mejora de focus para accesibilidad */
+body:not(.using-mouse) a:focus,
+body:not(.using-mouse) button:focus {
+	outline: 2px solid var(--accent-regular);
+	outline-offset: 2px;
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 350px) {
+	h1 {
+		font-size: var(--text-2xl);
+	}
+	
+	h2 {
+		font-size: var(--text-xl);
+	}
+	
+	.involvement-item h3,
+	.skill-category h3 {
+		font-size: var(--text-base);
 	}
 }
