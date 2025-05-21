@@ -71,6 +71,7 @@
 
 	/* Transitions */
 	--theme-transition: 0.2s ease-in-out;
+	--theme-transition-body: 0.3s ease-in-out;
 }
 
 :root.theme-dark {
@@ -127,6 +128,8 @@ body {
 	font-family: var(--font-body);
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
+	transition: background-color var(--theme-transition-body),
+				color var(--theme-transition-body);
 }
 
 *,
@@ -143,6 +146,11 @@ img {
 
 a {
 	color: var(--link-color);
+}
+
+a:focus-visible {
+	outline: 3px solid var(--accent-regular);
+	outline-offset: 3px;
 }
 
 h1,
