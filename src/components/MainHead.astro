@@ -16,8 +16,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://abdonmor
 
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content={Astro.generator} />
+<meta name="author" content="Abdon Morales" />
+<meta property="og:title" content={title} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:type" content="website" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<link rel="canonical" href={canonicalURL} />
 <title>{title}</title>
 
 <!-- SEO y Open Graph -->

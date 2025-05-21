@@ -29,7 +29,9 @@ const { title, description } = Astro.props;
 
 <script>
 // Add "loaded" class once the document has completely loaded.
+import { setupTouchDetection } from '../utilities/touchDetection';
 addEventListener('load', () => document.documentElement.classList.add('loaded'));
+setupTouchDetection();
 
 // Mejorar la carga de imágenes de fondo
 document.addEventListener('DOMContentLoaded', () => {
