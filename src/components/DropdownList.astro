@@ -68,6 +68,11 @@ const { dropdownItems } = Astro.props;
 		color: var(--accent-regular);
 		stroke: var(--accent-regular);
 	}
+	
+	:global(.theme-dark) .dropdown-button .icon svg {
+		color: var(--accent-light);
+		stroke: var(--accent-light);
+	}
 
 	.dropdown-item.open .dropdown-button .icon {
 		transform: rotate(180deg);
@@ -86,13 +91,19 @@ const { dropdownItems } = Astro.props;
 
 	/* Estilo para tema oscuro */
 	:global(.theme-dark) .dropdown-button {
-		background: var(--gray-999);
+		background: var(--gray-800);
 		color: var(--gray-200);
 		border-color: var(--gray-700);
 	}
 
+	:global(.theme-dark) .dropdown-button:hover {
+		border-color: var(--accent-light);
+		box-shadow: var(--shadow-md);
+	}
+
 	:global(.theme-dark) .dropdown-content {
 		border-left-color: var(--accent-light);
+		color: var(--gray-300);
 	}
 </style>
 
