@@ -1,0 +1,267 @@
+---
+const { title, courses, isOpen = false } = Astro.props;
+---
+
+<div class="semester-section">
+	<button class="semester-button" aria-expanded={isOpen ? 'true' : 'false'}>
+		<h2 class="semester-title">{title}</h2>
+		<span class="icon">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<polyline points="6 9 12 15 18 9"></polyline>
+			</svg>
+		</span>
+	</button>
+	<div class="semester-content" class:list={[{ open: isOpen }]}>
+		<div class="courses-list">
+			{courses.map((course) => (
+				<div class="course-item">
+					<button class="course-button" aria-expanded="false">
+						<span class="course-title">{course.title}</span>
+						<span class="course-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="6 9 12 15 18 9"></polyline>
+							</svg>
+						</span>
+					</button>
+					<div class="course-description">
+						<p>{course.description}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</div>
+
+<style>
+	.semester-section {
+		margin-bottom: 1.5rem;
+		background-color: var(--gray-900);
+		background-image: linear-gradient(
+			to bottom right,
+			#f8f9fa,
+			var(--gray-900)
+		);
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+		border: 1px solid var(--gray-800);
+		overflow: hidden;
+		transition:
+			box-shadow 0.25s ease,
+			transform 0.25s ease,
+			background-color 0.3s ease,
+			border-color 0.3s ease;
+	}
+
+	.semester-section:hover {
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-regular);
+	}
+
+	.semester-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		padding: 1.5rem 2rem;
+		background: transparent;
+		border: none;
+		color: inherit;
+		font-family: inherit;
+		transition: all 0.2s ease;
+		outline: none;
+		position: relative;
+		z-index: 1;
+	}
+
+	.semester-button:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.semester-button:focus {
+		outline: 2px solid var(--accent-regular);
+		outline-offset: -2px;
+		border-radius: 0.5rem;
+	}
+
+	.semester-title {
+		font-size: var(--text-2xl);
+		color: var(--gray-0);
+		font-family: var(--font-brand);
+		margin: 0;
+		font-weight: 600;
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	}
+
+	.icon {
+		transition: transform 0.3s ease;
+		flex-shrink: 0;
+		color: var(--accent-regular);
+	}
+
+	.semester-section.open .icon {
+		transform: rotate(180deg);
+	}
+
+	.semester-content {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s ease;
+		position: relative;
+		z-index: 1;
+	}
+
+	.semester-content.open {
+		max-height: 2000px;
+		opacity: 1;
+		padding-bottom: 1.5rem;
+	}
+
+	.courses-list {
+		padding: 0 2rem;
+	}
+
+	.course-item {
+		margin-bottom: 1rem;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 0.5rem;
+		border: 1px solid var(--gray-700);
+		overflow: hidden;
+		position: relative;
+		isolation: isolate;
+	}
+
+	.course-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		cursor: pointer;
+		padding: 1rem 1.25rem;
+		background: transparent;
+		border: none;
+		color: inherit;
+		font-family: inherit;
+		transition: all 0.2s ease;
+		outline: none;
+		position: relative;
+		z-index: 2;
+	}
+
+	.course-button:hover {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+
+	.course-button:focus {
+		outline: 2px solid var(--accent-regular);
+		outline-offset: -2px;
+		border-radius: 0.375rem;
+	}
+
+	.course-title {
+		font-size: var(--text-lg);
+		font-weight: 500;
+		color: var(--gray-100);
+	}
+
+	.course-icon {
+		transition: transform 0.3s ease;
+		flex-shrink: 0;
+		color: var(--accent-regular);
+	}
+
+	.course-item.open .course-icon {
+		transform: rotate(180deg);
+	}
+
+	.course-description {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.3s ease;
+		padding: 0 1.25rem;
+		border-left: 2px solid var(--accent-regular);
+		margin-left: 0.5rem;
+		line-height: 1.6;
+		color: var(--gray-200);
+		font-size: var(--text-md);
+	}
+
+	.course-item.open .course-description {
+		max-height: 500px;
+		opacity: 1;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	/* Estilo para tema oscuro */
+	:global(.theme-dark) .semester-title {
+		color: var(--gray-200);
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	:global(.theme-dark) .semester-section {
+		background-color: var(--gray-800);
+		background-image: linear-gradient(
+			to bottom right,
+			var(--gray-800),
+			var(--gray-900)
+		);
+		border-color: var(--gray-700);
+	}
+
+	:global(.theme-dark) .course-item {
+		background: rgba(255, 255, 255, 0.02);
+		border-color: var(--gray-600);
+	}
+
+	:global(.theme-dark) .icon,
+	:global(.theme-dark) .course-icon {
+		color: var(--accent-light);
+	}
+
+	:global(.theme-dark) .course-description {
+		border-left-color: var(--accent-light);
+		color: var(--gray-300);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.semester-content,
+		.course-description,
+		.icon,
+		.course-icon {
+			transition: none;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		// Handle semester sections
+		const semesterButtons = document.querySelectorAll('.semester-button');
+		
+		semesterButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const section = button.parentElement;
+				const content = section.querySelector('.semester-content');
+				const isOpen = section.classList.toggle('open');
+				
+				content.classList.toggle('open', isOpen);
+				button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+			});
+		});
+
+		// Handle individual courses
+		const courseButtons = document.querySelectorAll('.course-button');
+		
+		courseButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				const item = button.parentElement;
+				const isOpen = item.classList.toggle('open');
+				
+				button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+			});
+		});
+	});
+</script>
