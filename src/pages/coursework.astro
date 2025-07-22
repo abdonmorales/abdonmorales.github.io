@@ -210,29 +210,42 @@ const summer2025 = [
 		id: 1,
 		title: "ECO w329: Economic Statistics",
 		description:
-			"This course is designed to provide students with a basic understanding of statistical methods and their applications in economics." +
-			" The course covers topics such as probability, sampling, hypothesis testing, regression analysis, and time series analysis." +
-			" The course is taught as a Web-based course.",
+			"an introductory course in probability and statistics and may be your first course in quantitative methods" +
+			" at the upper level of the economics course sequence. The objective of this course is to prepare students " +
+			"for further studies of econometrics by providing students with (1) basic knowledge about interpretation of economic data," +
+			" (2) an introduction to statistical models, estimation, and inference in economics, and (3) instances involving combinations" +
+			" of theoretical statistics and mathematical background with real-life data analysis skills in economics and business situations.",
 	},
 	{
 		id: 2,
 		title: "RHE s306: Rhetoric and Composition",
 		description:
-			"This course is designed to provide students with a basic understanding of rhetoric and composition." +
-			" The course covers topics such as argumentation, persuasion, and writing." +
-			" The course is taught as a Web-based course.",
+			"In RHE 306, Rhetoric & Writing, you will take the first step in changing the world by learning how to" +
+			" argue effectively in the public sphere. In this class, you will learn how to examine public rhetoric, analyze" +
+			" various positions that people hold, and effectively advocate your own position. You will also explore the" +
+			" ethics of argumentation, explaining what it means to “fairly” represent someone with whom you disagree," +
+			" or how to responsibly address a community with particular values and interests. Your work in this course" +
+			" will help you advance the critical writing and reading skills you will need to succeed in courses for your" +
+			" major and university degree.",
 	},
 	{
 		id: 3,
 		title: "M w427J: Differential Equations with Linear Algebra",
 		description:
-			"This course is designed to provide students with a basic understanding of differential equations and linear algebra." +
-			" The course covers topics such as first-order differential equations, second-order differential equations, and systems of differential equations.",
+			"This is an introduction to linear algebra and differential equations. " +
+			"Geared to the audience primarily consisting of engineering and science students, " +
+			"the course aims to teach the basic techniques for solving differential equations that arise in applications. " +
+			"The approach is problem-oriented and not particularly theoretical. Most of the time is devoted to first and " +
+			"second-order ordinary differential equations with an introduction to Fourier series and partial differential equations at the end.",
 	},
 	{
 		id: 4,
 		title: "M w427L: Calculus with Application II",
-		description: "This course description is currently unavailable. Please check back later for more details."
+		description:
+			"We start the course with a discussion of curves and surfaces in R2 and R3. To study those objects, we introduce tools such as matrices, " +
+			"inner products and the cross product. We then proceed to develop calculus for scalar a vector-valued functions of several variables. " +
+			"In particular, we discuss their limits, derivatives and integrals. We finish the course with Stokes’s theorem, " +
+			"which relates the integral over the boundary of a curve or surface U ⊂ R3 to the integral of a suitable object over U.",
 	},
 ];
 
@@ -240,16 +253,16 @@ const fall2025 = [
 	{
 		id: 1,
 		title: "ECO 441K: Introduction to Econometrics",
-		description: "Parameter estimation and inference in regression models."
-	
+		description: "Parameter estimation and inference in regression models.",
 	},
 	{
 		id: 2,
 		title: "ECO 420S: Math Microeconomic Theory Advanced Application",
-		description: "Examine mathematical treatment of microeconomic theory " +
-		"with application to real world subjects. Explore mathematical methods " + 
-		"used by economists and apply them to analyze consumer behavior, choice " + 
-		"under uncertainty, theory of the firm, game theory and general equilibrium."
+		description:
+			"Examine mathematical treatment of microeconomic theory " +
+			"with application to real world subjects. Explore mathematical methods " +
+			"used by economists and apply them to analyze consumer behavior, choice " +
+			"under uncertainty, theory of the firm, game theory and general equilibrium.",
 	},
 	{
 		id: 3,
@@ -264,8 +277,8 @@ const fall2025 = [
 		description:
 			"Participate in an introductory electricity and magnetism laboratory." +
 			" Three laboratory hours a week for one semester.",
-	}
-]
+	},
+];
 ---
 
 <BaseLayout
@@ -278,154 +291,157 @@ const fall2025 = [
 				title="My coursework"
 				tagline="Below is my coursework that I have taken in the past few semesters as a student at the University of Texas at Austin."
 			/>
-			
+
 			<section class="content">
-				<!--<div class="semester-section">
-					<h2 class="semester-title">Fall 2023</h2>
-					<DropdownList dropdownItems={fall2023} />
-				</div>
-				
-				<div class="semester-section">
-					<h2 class="semester-title">Spring 2024</h2>
-					<DropdownList dropdownItems={spring2024} />
-				</div>-->
-				
-				<div class="semester-section">
-					<h2 class="semester-title">Summer 2024</h2>
-					<DropdownList dropdownItems={summer2024} />
-				</div>
-				
 				<div class="semester-section">
 					<h2 class="semester-title">Fall 2024</h2>
 					<DropdownList dropdownItems={fall2024} />
 				</div>
-				
+
 				<div class="semester-section">
 					<h2 class="semester-title">Spring 2025</h2>
 					<DropdownList dropdownItems={spring2025} />
 				</div>
-				
+
 				<div class="semester-section">
 					<h2 class="semester-title">Summer 2025</h2>
 					<DropdownList dropdownItems={summer2025} />
 				</div>
+
 				<div class="semester-section">
 					<h2 class="semester-title">Fall 2025</h2>
 					<DropdownList dropdownItems={fall2025} />
+				</div>
 			</section>
+
+			<ContactCTA />
 		</main>
-
-		<ContactCTA />
 	</div>
-</BaseLayout>
 
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-		width: 100%;
-		max-width: 100%;
-	}
-
-	.semester-section {
-		margin-bottom: 2.5rem;
-		background-color: var(--gray-900);
-		background-image: linear-gradient(to bottom right, #f8f9fa, var(--gray-900));
-		border-radius: 1rem;
-		padding: 1.5rem 2rem;
-		box-shadow: var(--shadow-md);
-		border: 1px solid var(--gray-800);
-		transition: box-shadow 0.25s ease, transform 0.25s ease, background-color 0.3s ease, border-color 0.3s ease;
-	}
-	
-	.semester-section:hover {
-		box-shadow: var(--shadow-lg);
-		transform: translateY(-5px);
-		border-color: var(--accent-regular);
-	}
-
-	.semester-title {
-		font-size: var(--text-2xl);
-		color: var(--gray-0);
-		font-family: var(--font-brand);
-		margin-bottom: 1.25rem;
-		padding-bottom: 0.5rem;
-		border-bottom: 3px solid var(--accent-regular);
-		display: inline-block;
-		font-weight: 600;
-		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
+	<style>
 		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
+			display: flex;
+			flex-direction: column;
+			gap: 3.5rem;
 		}
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
+		img {
+			margin-top: 1.5rem;
+			border-radius: 1.5rem;
+			box-shadow: var(--shadow-md);
 		}
 
 		section {
-			display: contents;
-			font-size: var(--text-lg);
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			color: var(--gray-200);
 		}
-		
-		.content {
-			grid-column: 2;
-			width: 100%;
-		}
-	}
 
-	/* Estilo para tema oscuro */
-	:global(.theme-dark) .semester-title {
-		color: var(--gray-200);
-		border-bottom-color: var(--accent-light);
-		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
-	}
-	
-	:global(.theme-dark) .semester-section {
-		background-color: var(--gray-800);
-		background-image: linear-gradient(to bottom right, var(--gray-800), var(--gray-900));
-		box-shadow: var(--shadow-md);
-		border-color: var(--gray-700);
-	}
-</style>
+		.section-title {
+			grid-column-start: 1;
+			font-size: var(--text-xl);
+			color: var(--gray-0);
+		}
+
+		.content {
+			grid-column: 2 / 4;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.semester-section {
+			margin-bottom: 2.5rem;
+			background-color: var(--gray-900);
+			background-image: linear-gradient(
+				to bottom right,
+				#f8f9fa,
+				var(--gray-900)
+			);
+			border-radius: 1rem;
+			padding: 1.5rem 2rem;
+			box-shadow: var(--shadow-md);
+			border: 1px solid var(--gray-800);
+			transition:
+				box-shadow 0.25s ease,
+				transform 0.25s ease,
+				background-color 0.3s ease,
+				border-color 0.3s ease;
+		}
+
+		.semester-section:hover {
+			box-shadow: var(--shadow-lg);
+			transform: translateY(-5px);
+			border-color: var(--accent-regular);
+		}
+
+		.semester-title {
+			font-size: var(--text-2xl);
+			color: var(--gray-0);
+			font-family: var(--font-brand);
+			margin-bottom: 1.25rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid var(--accent-regular);
+			display: inline-block;
+			font-weight: 600;
+			text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+		}
+
+		.content :global(a) {
+			text-decoration: 1px solid underline transparent;
+			text-underline-offset: 0.25em;
+			transition: text-decoration-color var(--theme-transition);
+		}
+
+		.content :global(a:hover),
+		.content :global(a:focus) {
+			text-decoration-color: currentColor;
+		}
+
+		@media (min-width: 50em) {
+			.about {
+				display: grid;
+				grid-template-columns: 1fr 60% 1fr;
+			}
+
+			.about > :global(:first-child) {
+				grid-column-start: 2;
+			}
+
+			section {
+				display: contents;
+				font-size: var(--text-lg);
+			}
+
+			.content {
+				grid-column: 2;
+				width: 100%;
+			}
+
+			.about > :global(:last-child) {
+				grid-column: 1 / -1;
+			}
+		}
+
+		/* Estilo para tema oscuro */
+		:global(.theme-dark) .semester-title {
+			color: var(--gray-200);
+			border-bottom-color: var(--accent-light);
+			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+		}
+
+		:global(.theme-dark) .semester-section {
+			background-color: var(--gray-800);
+			background-image: linear-gradient(
+				to bottom right,
+				var(--gray-800),
+				var(--gray-900)
+			);
+			box-shadow: var(--shadow-md);
+			border-color: var(--gray-700);
+		}
+	</style>
+</BaseLayout>
