@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
+import ThemeToggle from './ThemeToggle';
 import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
@@ -110,7 +110,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 
 			<div class="theme-toggle">
-				<ThemeToggle />
+				<ThemeToggle client:load />
 			</div>
 		</div>
 	</div>
@@ -158,8 +158,12 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		z-index: 9999;
 		position: relative;
 		font-family: var(--font-brand);
-		font-weight: 500;
-		margin-bottom: 3.5rem;
+	}
+
+	.nav-controls {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.menu-header {

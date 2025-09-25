@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
@@ -11,5 +13,6 @@ export default defineConfig({
       entrypoint: 'astro/assets/services/sharp'
     }
   },
-  compressHTML: true
+  compressHTML: true,
+  integrations: [react()]
 });

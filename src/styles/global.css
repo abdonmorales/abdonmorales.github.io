@@ -1,3 +1,14 @@
+/* Spacing variables */
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+}
+
 /* Global variables */
 :root {
 	/* Colors */
@@ -24,6 +35,16 @@
 	--accent-text-over: var(--gray-999);
 
 	--link-color: var(--accent-regular);
+
+	/* Glass effect variables */
+	--glass-bg: rgba(255, 255, 255, 0.1);
+	--glass-bg-hover: rgba(255, 255, 255, 0.15);
+	--glass-border: rgba(255, 255, 255, 0.1);
+	--glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+	--glass-backdrop: blur(16px);
+	--glass-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	--glass-border-radius: 16px;
+	--glass-glow: 0 0 20px rgba(255, 255, 255, 0.15);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -199,27 +220,25 @@ h5 {
 	border-width: 0;
 }
 
+/* Main content spacing */
+main {
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+/* Section spacing */
+main > section,
+main > div:not(.no-spacing) {
+  margin-bottom: var(--spacing-2xl);
+}
+
 .wrapper {
-	width: 100%;
-	max-width: 83rem;
-	margin-inline: auto;
-	padding-inline: 1.5rem;
+  width: 100%;
+  max-width: 83rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
-.stack {
-	display: flex;
-	flex-direction: column;
-}
-
-.gap-2 {
-	gap: 0.5rem;
-}
-.gap-4 {
-	gap: 1rem;
-}
-.gap-8 {
-	gap: 2rem;
-}
 .gap-10 {
 	gap: 2.5rem;
 }
@@ -236,7 +255,17 @@ h5 {
 	gap: 12rem;
 }
 
+/* Responsive spacing */
 @media (min-width: 50em) {
+  main {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+  }
+  
+  main > section,
+  main > div:not(.no-spacing) {
+    margin-bottom: var(--spacing-3xl);
+  }
 	.lg\:gap-2 {
 		gap: 0.5rem;
 	}
@@ -263,17 +292,151 @@ h5 {
 	}
 }
 
-/* Mejoras para dispositivos táctiles */
+/* Touch device optimizations */
 .touch-device .involvement-item,
 .touch-device .education-card,
 .touch-device a {
-	transition: none; /* Desactivar transiciones para mejorar rendimiento en móviles */
+	transition: none; /* Disable transitions for better mobile performance */
 }
 
 .touch-device .dropdown-button:active,
 .touch-device .involvement-item:active {
 	transform: translateY(2px);
 	box-shadow: var(--shadow-sm);
+}
+
+/* Apply glass effect to common UI elements */
+.card,
+.project-card,
+.post-preview,
+.sidebar,
+header,
+footer,
+nav,
+.hero,
+.cta-section,
+.testimonial {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-backdrop);
+  -webkit-backdrop-filter: var(--glass-backdrop);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-glow);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+/* Hover effects for glass elements */
+.card:hover,
+.project-card:hover,
+.post-preview:hover,
+.sidebar:hover,
+.cta-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15), 0 0 20px rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons with glass effect */
+button,
+.button,
+[role='button'],
+input[type='button'],
+input[type='submit'] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: var(--gray-100);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+button:hover:not(:disabled),
+.button:hover:not(:disabled),
+[role='button']:hover:not(:disabled),
+input[type='button']:hover:not(:disabled),
+input[type='submit']:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+button:active:not(:disabled),
+.button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled,
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary button variant */
+.button-primary {
+  background: var(--gradient-accent) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px var(--accent-overlay);
+}
+
+.button-primary:hover {
+  background: var(--gradient-accent) !important;
+  box-shadow: 0 6px 16px var(--accent-overlay) !important;
+  filter: brightness(1.1);
+}
+
+/* Form elements */
+input,
+textarea,
+select,
+[contenteditable] {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--gray-100);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+[contenteditable]:focus {
+  outline: none;
+  border-color: var(--accent-regular) !important;
+  box-shadow: 0 0 0 2px var(--accent-overlay);
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Labels for form elements */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--gray-200);
+  font-size: 0.9375rem;
 }
 
 /* Mejora de focus para accesibilidad */

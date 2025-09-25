@@ -8,32 +8,68 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
-title?: string | undefined;
-description?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
 }
 
 const { title, description } = Astro.props;
+
+// Initialize theme class - will be set by client-side JavaScript
+const themeClass = '';
 ---
 
 <html lang="en">
-<head>
-<MainHead title={title} description={description} />
-<meta name="theme-color" content="#bf5700" />
-</head>
-<body>
-<div class="stack backgrounds">
-<Nav />
-<slot />
-<Footer />
-</div>
+  <head>
+    <MainHead title={title} description={description} />
+    <meta name="theme-color" content="#bf5700" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <!-- @ts-ignore -->
+  <body>
+    <!-- @ts-ignore -->
+    <div class="stack backgrounds liquid-glass">
+      <Nav />
+      <!-- @ts-ignore -->
+      <main class="liquid-glass-container">
+        <slot />
+      </main>
+      <Footer />
+    </div>
 
 <script>
 // Add "loaded" class once the document has completely loaded.
 import { setupTouchDetection } from '../utilities/touchDetection';
-addEventListener('load', () => document.documentElement.classList.add('loaded'));
-setupTouchDetection();
 
-// Mejorar la carga de imágenes de fondo
+// Set up theme
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+if (theme === 'dark') {
+  document.documentElement.classList.add('theme-dark');
+} else {
+  document.documentElement.classList.remove('theme-dark');
+}
+
+// Set up theme change listener
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const handleChange = (e: MediaQueryListEvent) => {
+  if (!localStorage.getItem('theme')) {
+    if (e.matches) {
+      document.documentElement.classList.add('theme-dark');
+    } else {
+      document.documentElement.classList.remove('theme-dark');
+    }
+  }
+};
+mediaQuery.addEventListener('change', handleChange);
+
+// Clean up
+window.addEventListener('load', () => {
+  document.documentElement.classList.add('loaded');
+  setupTouchDetection();
+});
+
+// Improve background image loading
 document.addEventListener('DOMContentLoaded', () => {
 const bgImages = document.querySelectorAll('img[loading="lazy"]');
 if ('IntersectionObserver' in window) {
