@@ -43,13 +43,12 @@ const projects = (await getCollection('work'))
 
 				<Image
 					src="/assets/portrait.jpg"
-					alt="Abdon Morales"
+					alt="Portrait of Abdon Morales"
 					width={480}
 					height={620}
 					loading="eager"
 					fetchpriority="high"
 				/>
-			</header>
 			</header>
 
 			<Skills />
@@ -60,6 +59,7 @@ const projects = (await getCollection('work'))
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>My Projects</h3>
 					<p>Take a look below at some of my featured projects from the past few years.</p>
+					<div class="divider"></div>
 				</header>
 
 				<div class="gallery">
@@ -91,12 +91,21 @@ const projects = (await getCollection('work'))
 	.hero {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		gap: 2rem;
+		padding: 2rem 1.25rem;
+		border-radius: var(--glass-border-radius);
+		margin: 1rem 0;
 	}
 
 	.roles {
 		display: none;
+		flex-wrap: nowrap;
+		gap: 0.5rem;
+		margin-top: 1rem;
+		overflow-x: auto;
+		width: 100%;
+		padding-bottom: 0.5rem;
 	}
 
 	.hero img {
@@ -111,14 +120,16 @@ const projects = (await getCollection('work'))
 		.hero {
 			display: grid;
 			grid-template-columns: 6fr 4fr;
-			padding-inline: 2.5rem;
+			padding: 3rem 2.25rem;
 			gap: 3.75rem;
+			align-items: center;
 		}
 
 		.roles {
-			margin-top: 0.5rem;
+			margin: 1.5rem 0 0.5rem;
 			display: flex;
-			gap: 0.5rem;
+			gap: 0.75rem;
+			flex-wrap: wrap;
 		}
 
 		.hero img {
@@ -132,11 +143,17 @@ const projects = (await getCollection('work'))
 
 	.section {
 		display: grid;
-		gap: 2rem;
+		gap: 2.5rem;
+		position: relative;
 	}
 
 	.with-background {
 		position: relative;
+	}
+
+	.with-background {
+		padding-top: 3rem;
+		margin-top: 3rem;
 	}
 
 	.with-background::before {
@@ -164,31 +181,64 @@ const projects = (await getCollection('work'))
 	}
 
 	.section-header {
-		justify-self: center;
-		text-align: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
+		margin-bottom: 2.5rem;
+		position: relative;
+	}
+
+	.divider {
+		height: 1px;
+		background-color: var(--gray-700);
+		margin: 1.5rem 0;
+		width: 100%;
 	}
 
 	.section-header h3 {
 		font-size: var(--text-2xl);
+		color: var(--gray-100);
+		margin: 0;
 	}
 
 	@media (min-width: 50em) {
 		.section {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
+			gap: 3.5rem;
 		}
 
 		.section.with-cta {
 			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+			row-gap: 2.5rem;
+			column-gap: 2rem;
+			align-items: start;
+			padding-top: 2rem;
+			margin-top: 2rem;
+		}
+		.section-header h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.with-cta .section-header {
+			justify-self: flex-start;
+			text-align: left;
+		}
+
+		.gallery {
+			grid-area: gallery;
+			margin-top: 0.5rem;
+		}
+
+		.cta {
+			grid-area: cta;
+			margin-top: 0.5rem;
 		}
 
 		.section-header {
 			grid-area: header;
 			font-size: var(--text-lg);
+			margin-bottom: 3rem;
 		}
 
 		.section-header h3 {
@@ -202,10 +252,12 @@ const projects = (await getCollection('work'))
 
 		.gallery {
 			grid-area: gallery;
+			margin-top: 0.5rem;
 		}
 
 		.cta {
 			grid-area: cta;
+			margin-top: 0.5rem;
 		}
 	}
 

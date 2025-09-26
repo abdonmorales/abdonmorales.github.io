@@ -31,8 +31,10 @@ const ThemeToggle = () => {
   const updateDocumentTheme = (dark: boolean) => {
     if (dark) {
       document.documentElement.classList.add('theme-dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.classList.remove('theme-dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   };
 
@@ -49,13 +51,14 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       aria-pressed={isDark}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
-      className={`${styles.themeToggleButton} ${isDark ? styles.dark : ''}`}
+      className={styles.themeToggle}
+      data-theme={isDark ? 'dark' : 'light'}
     >
-      <span className="sr-only">Dark theme</span>
-      <span className={`${styles.icon} ${styles.light}`}>
+      <span className="sr-only">Toggle theme</span>
+      <span className={`${styles.icon} ${styles.sun} ${!isDark ? styles.active : ''}`}>
         <ReactIcon icon="sun" />
       </span>
-      <span className={`${styles.icon} ${styles.dark}`}>
+      <span className={`${styles.icon} ${styles.moon} ${isDark ? styles.active : ''}`}>
         <ReactIcon icon="moon-stars" />
       </span>
     </button>
