@@ -37,9 +37,6 @@
         },
         "img_alt": {
           "type": "string"
-        },
-        "$schema": {
-          "type": "string"
         }
       },
       "required": [
