@@ -39,6 +39,13 @@ const themeClass = '';
 <script>
 // Add "loaded" class once the document has completely loaded.
 import { setupTouchDetection } from '../utilities/touchDetection';
+import { 
+  initAssetOptimization,
+  setupLazyLoadingWithCompression,
+  setupLinkPrefetching,
+  setupNetworkQualityMonitoring
+} from '../utilities/assetOptimization';
+import { createCompressionMonitor } from '../utilities/compressionMonitor';
 
 // Set up theme
 const savedTheme = localStorage.getItem('theme');
@@ -63,27 +70,39 @@ const handleChange = (e: MediaQueryListEvent) => {
 };
 mediaQuery.addEventListener('change', handleChange);
 
-// Clean up
-window.addEventListener('load', () => {
+// Clean up and optimize loading
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add('loaded');
+    
+    // Initialize asset optimization with Web Workers (non-blocking!)
+    initAssetOptimization().catch(console.error);
+    
+    // Setup lazy loading (now using workers)
+    setupLazyLoadingWithCompression();
+    
+    // Setup link prefetching (now using workers)
+    setupLinkPrefetching();
+    
+    // Monitor network quality
+    setupNetworkQualityMonitoring();
+  });
+} else {
   document.documentElement.classList.add('loaded');
-  setupTouchDetection();
-});
+  
+  initAssetOptimization().catch(console.error);
+  setupLazyLoadingWithCompression();
+  setupLinkPrefetching();
+  setupNetworkQualityMonitoring();
+}
 
-// Improve background image loading
-document.addEventListener('DOMContentLoaded', () => {
-const bgImages = document.querySelectorAll('img[loading="lazy"]');
-if ('IntersectionObserver' in window) {
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-const img = entry.target;
-img.setAttribute('fetchpriority', 'high');
-observer.unobserve(img);
-}
-});
-});
-bgImages.forEach(img => observer.observe(img));
-}
+window.addEventListener('load', () => {
+  setupTouchDetection();
+  
+  // Enable compression monitor in development
+  if (import.meta.env.DEV) {
+    createCompressionMonitor();
+  }
 });
 </script>
 

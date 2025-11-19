@@ -48,6 +48,9 @@ const projects = (await getCollection('work'))
 					height={620}
 					loading="eager"
 					fetchpriority="high"
+					widths={[320, 480, 640]}
+					sizes="(max-width: 768px) 100vw, 480px"
+					quality={85}
 				/>
 			</header>
 

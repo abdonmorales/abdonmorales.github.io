@@ -9,7 +9,7 @@ interface Props {
 const { data, slug } = Astro.props.project;
 ---
 
-<a class="card" href={`/work/${slug}`}>
+<a class="card" href={`/work/${slug}`} data-image-src={data.img}>
 	<span class="title">{data.title}</span>
 	<Image 
 		src={data.img} 
@@ -18,7 +18,11 @@ const { data, slug } = Astro.props.project;
 		height={600} 
 		loading="lazy" 
 		decoding="async" 
-		fetchpriority="low" 
+		fetchpriority="low"
+		widths={[400, 800, 1200]}
+		sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+		quality={80}
+		data-optimize
 	/>
 </a>
 
