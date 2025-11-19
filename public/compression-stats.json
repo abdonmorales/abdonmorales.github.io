@@ -1,0 +1,320 @@
+{
+  "totalFiles": 52,
+  "totalOriginalSize": 11761498,
+  "totalCompressedSize": 10632926,
+  "compressionRatio": 9.59547839909508,
+  "files": [
+    {
+      "path": "assets/LonghornLogo.svg",
+      "originalSize": 1645,
+      "compressedSize": 860,
+      "ratio": 47.72036474164134
+    },
+    {
+      "path": "assets/RGB_formal_Cockrell_Cockrell.jpg",
+      "originalSize": 122935,
+      "compressedSize": 102992,
+      "ratio": 16.222393948021306
+    },
+    {
+      "path": "assets/at-work.jpg",
+      "originalSize": 5004123,
+      "compressedSize": 4939827,
+      "ratio": 1.2848605040283734
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-dark-1440w.jpg",
+      "originalSize": 15589,
+      "compressedSize": 7889,
+      "ratio": 49.39380332285586
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-dark-800w.jpg",
+      "originalSize": 6360,
+      "compressedSize": 3922,
+      "ratio": 38.33333333333333
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-light-1440w.jpg",
+      "originalSize": 12614,
+      "compressedSize": 4107,
+      "ratio": 67.44093863960678
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-light-800w.jpg",
+      "originalSize": 4735,
+      "compressedSize": 2159,
+      "ratio": 54.403379091869056
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark-1440w.jpg",
+      "originalSize": 28973,
+      "compressedSize": 22479,
+      "ratio": 22.41397162875781
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark-800w.jpg",
+      "originalSize": 12727,
+      "compressedSize": 11151,
+      "ratio": 12.383122495482047
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark.svg",
+      "originalSize": 1197,
+      "compressedSize": 575,
+      "ratio": 51.96324143692566
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light-1440w.jpg",
+      "originalSize": 21502,
+      "compressedSize": 13552,
+      "ratio": 36.97330480885499
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light-800w.jpg",
+      "originalSize": 14098,
+      "compressedSize": 10562,
+      "ratio": 25.08157185416371
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light.svg",
+      "originalSize": 1148,
+      "compressedSize": 567,
+      "ratio": 50.609756097560975
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-dark-1440w.jpg",
+      "originalSize": 21122,
+      "compressedSize": 12793,
+      "ratio": 39.43281886185021
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-dark-800w.jpg",
+      "originalSize": 6710,
+      "compressedSize": 4614,
+      "ratio": 31.23695976154992
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-light-1440w.jpg",
+      "originalSize": 15807,
+      "compressedSize": 8027,
+      "ratio": 49.21870057569431
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-light-800w.jpg",
+      "originalSize": 6340,
+      "compressedSize": 3778,
+      "ratio": 40.41009463722397
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-dark-1440w.jpg",
+      "originalSize": 16804,
+      "compressedSize": 8725,
+      "ratio": 48.077838609854794
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-dark-800w.jpg",
+      "originalSize": 7519,
+      "compressedSize": 4660,
+      "ratio": 38.02367336081925
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-light-1440w.jpg",
+      "originalSize": 14445,
+      "compressedSize": 6665,
+      "ratio": 53.85946694357909
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-light-800w.jpg",
+      "originalSize": 5420,
+      "compressedSize": 2878,
+      "ratio": 46.90036900369003
+    },
+    {
+      "path": "assets/backgrounds/noise.png",
+      "originalSize": 27223,
+      "compressedSize": 27205,
+      "ratio": 0.06612055982073706
+    },
+    {
+      "path": "assets/duke-java/3D/Duke/Duke.png",
+      "originalSize": 229198,
+      "compressedSize": 220425,
+      "ratio": 3.827694831543038
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Bonnet-Map.png",
+      "originalSize": 37094,
+      "compressedSize": 32427,
+      "ratio": 12.58154957675096
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Duke Car.png",
+      "originalSize": 753635,
+      "compressedSize": 751761,
+      "ratio": 0.2486614873247639
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Wheel.png",
+      "originalSize": 776237,
+      "compressedSize": 775691,
+      "ratio": 0.07033934223696914
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/openduke.png",
+      "originalSize": 488001,
+      "compressedSize": 486987,
+      "ratio": 0.20778645945397356
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/wave.png",
+      "originalSize": 94026,
+      "compressedSize": 92955,
+      "ratio": 1.1390466466721927
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Dukes-Lab-5k.jpg",
+      "originalSize": 2277742,
+      "compressedSize": 1694190,
+      "ratio": 25.619758515231318
+    },
+    {
+      "path": "assets/duke-java/vector/Agent.svg",
+      "originalSize": 30855,
+      "compressedSize": 7340,
+      "ratio": 76.21131097066926
+    },
+    {
+      "path": "assets/duke-java/vector/Boxer.svg",
+      "originalSize": 109596,
+      "compressedSize": 33678,
+      "ratio": 69.2707763057046
+    },
+    {
+      "path": "assets/duke-java/vector/ChezDuke.svg",
+      "originalSize": 33110,
+      "compressedSize": 23093,
+      "ratio": 30.25369978858351
+    },
+    {
+      "path": "assets/duke-java/vector/Hips.svg",
+      "originalSize": 4035,
+      "compressedSize": 2009,
+      "ratio": 50.210656753407676
+    },
+    {
+      "path": "assets/duke-java/vector/Juggler.svg",
+      "originalSize": 99431,
+      "compressedSize": 26381,
+      "ratio": 73.46803310838672
+    },
+    {
+      "path": "assets/duke-java/vector/NyaNya.svg",
+      "originalSize": 25241,
+      "compressedSize": 7710,
+      "ratio": 69.45445901509449
+    },
+    {
+      "path": "assets/duke-java/vector/Palmtree.svg",
+      "originalSize": 76425,
+      "compressedSize": 25281,
+      "ratio": 66.92051030421982
+    },
+    {
+      "path": "assets/duke-java/vector/Paper.svg",
+      "originalSize": 7270,
+      "compressedSize": 3236,
+      "ratio": 55.488308115543326
+    },
+    {
+      "path": "assets/duke-java/vector/Reward.svg",
+      "originalSize": 6714,
+      "compressedSize": 2777,
+      "ratio": 58.638665475126594
+    },
+    {
+      "path": "assets/duke-java/vector/Snooze.svg",
+      "originalSize": 7946,
+      "compressedSize": 3020,
+      "ratio": 61.99345582683111
+    },
+    {
+      "path": "assets/duke-java/vector/Surfing.svg",
+      "originalSize": 76724,
+      "compressedSize": 23028,
+      "ratio": 69.98592357019969
+    },
+    {
+      "path": "assets/duke-java/vector/Thinking.svg",
+      "originalSize": 5157,
+      "compressedSize": 2247,
+      "ratio": 56.42815590459569
+    },
+    {
+      "path": "assets/duke-java/vector/ThumbsUp.svg",
+      "originalSize": 5250,
+      "compressedSize": 2077,
+      "ratio": 60.438095238095244
+    },
+    {
+      "path": "assets/duke-java/vector/Tumbling.svg",
+      "originalSize": 22565,
+      "compressedSize": 12916,
+      "ratio": 42.7609129182362
+    },
+    {
+      "path": "assets/duke-java/vector/Wave.svg",
+      "originalSize": 3567,
+      "compressedSize": 1570,
+      "ratio": 55.985421923184745
+    },
+    {
+      "path": "assets/portrait.jpg",
+      "originalSize": 1098605,
+      "compressedSize": 1090847,
+      "ratio": 0.7061682770422517
+    },
+    {
+      "path": "assets/stock-1.jpg",
+      "originalSize": 39459,
+      "compressedSize": 39151,
+      "ratio": 0.7805570338832668
+    },
+    {
+      "path": "assets/stock-2.jpg",
+      "originalSize": 20120,
+      "compressedSize": 19548,
+      "ratio": 2.8429423459244485
+    },
+    {
+      "path": "assets/stock-3.jpg",
+      "originalSize": 21810,
+      "compressedSize": 20509,
+      "ratio": 5.965153599266393
+    },
+    {
+      "path": "assets/stock-4.jpg",
+      "originalSize": 27864,
+      "compressedSize": 27567,
+      "ratio": 1.065891472868219
+    },
+    {
+      "path": "compression-worker.js",
+      "originalSize": 9810,
+      "compressedSize": 2713,
+      "ratio": 72.34454638124363
+    },
+    {
+      "path": "favicon.svg",
+      "originalSize": 749,
+      "compressedSize": 452,
+      "ratio": 39.65287049399199
+    },
+    {
+      "path": "sw.js",
+      "originalSize": 4226,
+      "compressedSize": 1353,
+      "ratio": 67.9839091339328
+    }
+  ]
+}

@@ -12,9 +12,10 @@
     "lint": "npm run lint:ts",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && node scripts/compress-assets.mjs",
+    "build": "npm run optimize && astro build && npm run compress:custom",
     "build:no-compress": "astro build",
-    "compress": "node scripts/compress-assets.mjs",
+    "optimize": "tsx scripts/optimize-images.mjs",
+    "compress:custom": "tsx scripts/compress-custom.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -31,6 +32,8 @@
     "@typescript-eslint/parser": "^8.0.1",
     "eslint": "^9.9.0",
     "stylelint": "^16.8.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^36.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6"
   }
 }

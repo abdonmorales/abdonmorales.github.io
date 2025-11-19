@@ -5,8 +5,11 @@
  * Handles compression/decompression requests from the main thread
  */
 
-// Import compression logic (will be bundled into worker)
-self.addEventListener('message', async (event: MessageEvent) => {
+/**
+ * Message event handler for the compression worker
+ * @param {MessageEvent} event - The message event from the main thread
+ */
+self.addEventListener('message', async (event) => {
   const { type, id, data, options } = event.data;
 
   try {
@@ -40,13 +43,15 @@ self.addEventListener('message', async (event: MessageEvent) => {
 
 // Compression implementation (copied from compression.ts for worker isolation)
 
+/**
+ * Huffman tree node for compression
+ */
 class HuffmanNode {
-  char: number | null;
-  freq: number;
-  left: HuffmanNode | null;
-  right: HuffmanNode | null;
-
-  constructor(char: number | null, freq: number) {
+  /**
+   * @param {number|null} char - The character code or null for internal nodes
+   * @param {number} freq - The frequency of the character
+   */
+  constructor(char, freq) {
     this.char = char;
     this.freq = freq;
     this.left = null;
@@ -54,7 +59,13 @@ class HuffmanNode {
   }
 }
 
-async function compressInWorker(input: ArrayBuffer | string, options: any): Promise<any> {
+/**
+ * Compresses data using a hybrid algorithm (Delta + RLE + LZ77 + Huffman)
+ * @param {ArrayBuffer|string} input - The input data to compress
+ * @param {Object} options - Compression options
+ * @returns {Promise<Object>} The compressed data with metadata
+ */
+async function compressInWorker(input, options) {
   const data = typeof input === 'string' 
     ? new TextEncoder().encode(input)
     : new Uint8Array(input);
@@ -86,7 +97,12 @@ async function compressInWorker(input: ArrayBuffer | string, options: any): Prom
   };
 }
 
-async function decompressInWorker(compressed: any): Promise<Uint8Array> {
+/**
+ * Decompresses data that was compressed with compressInWorker
+ * @param {Object} compressed - The compressed data object
+ * @returns {Promise<Uint8Array>} The decompressed data
+ */
+async function decompressInWorker(compressed) {
   const data = new Uint8Array(compressed.data);
   
   const huffmanDecoded = huffmanDecompress(data);
@@ -97,7 +113,13 @@ async function decompressInWorker(compressed: any): Promise<Uint8Array> {
   return original;
 }
 
-async function compressImageInWorker(imageData: any, options: any): Promise<any> {
+/**
+ * Compresses image data
+ * @param {Object} imageData - Image data with width, height, and data properties
+ * @param {Object} options - Compression options
+ * @returns {Promise<Object>} The compressed image data with metadata
+ */
+async function compressImageInWorker(imageData, options) {
   const pixels = new Uint8Array(imageData.data);
   const width = imageData.width;
   const height = imageData.height;
@@ -114,8 +136,13 @@ async function compressImageInWorker(imageData: any, options: any): Promise<any>
   };
 }
 
-// Delta encoding with chunking
-async function deltaEncodeChunked(data: Uint8Array, chunkSize: number): Promise<Uint8Array> {
+/**
+ * Delta encoding with chunking for non-blocking execution
+ * @param {Uint8Array} data - The data to encode
+ * @param {number} chunkSize - Size of chunks to process before yielding
+ * @returns {Promise<Uint8Array>} The delta encoded data
+ */
+async function deltaEncodeChunked(data, chunkSize) {
   if (data.length === 0) return data;
   
   const result = new Uint8Array(data.length);
@@ -133,7 +160,12 @@ async function deltaEncodeChunked(data: Uint8Array, chunkSize: number): Promise<
   return result;
 }
 
-function deltaDecode(data: Uint8Array): Uint8Array {
+/**
+ * Decodes delta encoded data
+ * @param {Uint8Array} data - The delta encoded data
+ * @returns {Uint8Array} The decoded data
+ */
+function deltaDecode(data) {
   if (data.length === 0) return data;
   
   const result = new Uint8Array(data.length);
@@ -146,9 +178,14 @@ function deltaDecode(data: Uint8Array): Uint8Array {
   return result;
 }
 
-// RLE with chunking
-async function runLengthEncodeChunked(data: Uint8Array, chunkSize: number): Promise<Uint8Array> {
-  const result: number[] = [];
+/**
+ * Run-length encoding with chunking for non-blocking execution
+ * @param {Uint8Array} data - The data to encode
+ * @param {number} chunkSize - Size of chunks to process before yielding
+ * @returns {Promise<Uint8Array>} The RLE encoded data
+ */
+async function runLengthEncodeChunked(data, chunkSize) {
+  const result = [];
   let i = 0;
   let processedBytes = 0;
   
@@ -181,8 +218,13 @@ async function runLengthEncodeChunked(data: Uint8Array, chunkSize: number): Prom
   return new Uint8Array(result);
 }
 
-function runLengthDecode(data: Uint8Array): Uint8Array {
-  const result: number[] = [];
+/**
+ * Decodes run-length encoded data
+ * @param {Uint8Array} data - The RLE encoded data
+ * @returns {Uint8Array} The decoded data
+ */
+function runLengthDecode(data) {
+  const result = [];
   let i = 0;
   
   while (i < data.length) {
@@ -202,13 +244,17 @@ function runLengthDecode(data: Uint8Array): Uint8Array {
   return new Uint8Array(result);
 }
 
-// Optimized LZ77 with reduced complexity
-async function lz77CompressOptimized(data: Uint8Array): Promise<Uint8Array> {
+/**
+ * Optimized LZ77 compression with reduced complexity
+ * @param {Uint8Array} data - The data to compress
+ * @returns {Promise<Uint8Array>} The LZ77 compressed data
+ */
+async function lz77CompressOptimized(data) {
   if (data.length < 512) return data;
   
   const windowSize = 1024;
   const lookaheadSize = 8;
-  const result: number[] = [];
+  const result = [];
   let i = 0;
   
   while (i < data.length) {
@@ -252,8 +298,13 @@ async function lz77CompressOptimized(data: Uint8Array): Promise<Uint8Array> {
   return new Uint8Array(result);
 }
 
-function lz77Decompress(data: Uint8Array): Uint8Array {
-  const result: number[] = [];
+/**
+ * Decompresses LZ77 encoded data
+ * @param {Uint8Array} data - The LZ77 encoded data
+ * @returns {Uint8Array} The decompressed data
+ */
+function lz77Decompress(data) {
+  const result = [];
   let i = 0;
   
   while (i < data.length) {
@@ -275,9 +326,13 @@ function lz77Decompress(data: Uint8Array): Uint8Array {
   return new Uint8Array(result);
 }
 
-// Huffman encoding
-function huffmanCompress(data: Uint8Array): Uint8Array {
-  const frequencies = new Map<number, number>();
+/**
+ * Compresses data using Huffman encoding
+ * @param {Uint8Array} data - The data to compress
+ * @returns {Uint8Array} The Huffman encoded data
+ */
+function huffmanCompress(data) {
+  const frequencies = new Map();
   for (const byte of data) {
     frequencies.set(byte, (frequencies.get(byte) || 0) + 1);
   }
@@ -285,15 +340,15 @@ function huffmanCompress(data: Uint8Array): Uint8Array {
   if (frequencies.size === 0) return new Uint8Array(0);
   
   const huffmanTree = buildHuffmanTree(frequencies);
-  const codes = new Map<number, string>();
+  const codes = new Map();
   generateHuffmanCodes(huffmanTree, codes);
   
   let bitString = '';
   for (const byte of data) {
-    bitString += codes.get(byte)!;
+    bitString += codes.get(byte);
   }
   
-  const result: number[] = [];
+  const result = [];
   result.push(frequencies.size);
   
   frequencies.forEach((freq, char) => {
@@ -311,10 +366,15 @@ function huffmanCompress(data: Uint8Array): Uint8Array {
   return new Uint8Array(result);
 }
 
-function huffmanDecompress(data: Uint8Array): Uint8Array {
+/**
+ * Decompresses Huffman encoded data
+ * @param {Uint8Array} data - The Huffman encoded data
+ * @returns {Uint8Array} The decompressed data
+ */
+function huffmanDecompress(data) {
   let offset = 0;
   const tableSize = data[offset++];
-  const frequencies = new Map<number, number>();
+  const frequencies = new Map();
   
   for (let i = 0; i < tableSize; i++) {
     const char = data[offset++];
@@ -332,11 +392,11 @@ function huffmanDecompress(data: Uint8Array): Uint8Array {
   }
   bitString = bitString.substr(0, bitLength);
   
-  const result: number[] = [];
+  const result = [];
   let node = huffmanTree;
   
   for (const bit of bitString) {
-    node = bit === '0' ? node!.left! : node!.right!;
+    node = bit === '0' ? node.left : node.right;
     if (node.char !== null) {
       result.push(node.char);
       node = huffmanTree;
@@ -346,16 +406,21 @@ function huffmanDecompress(data: Uint8Array): Uint8Array {
   return new Uint8Array(result);
 }
 
-function buildHuffmanTree(frequencies: Map<number, number>): HuffmanNode {
-  const nodes: HuffmanNode[] = [];
+/**
+ * Builds a Huffman tree from character frequencies
+ * @param {Map<number, number>} frequencies - Map of character codes to frequencies
+ * @returns {HuffmanNode} The root of the Huffman tree
+ */
+function buildHuffmanTree(frequencies) {
+  const nodes = [];
   frequencies.forEach((freq, char) => {
     nodes.push(new HuffmanNode(char, freq));
   });
   
   while (nodes.length > 1) {
     nodes.sort((a, b) => a.freq - b.freq);
-    const left = nodes.shift()!;
-    const right = nodes.shift()!;
+    const left = nodes.shift();
+    const right = nodes.shift();
     const parent = new HuffmanNode(null, left.freq + right.freq);
     parent.left = left;
     parent.right = right;
@@ -365,7 +430,13 @@ function buildHuffmanTree(frequencies: Map<number, number>): HuffmanNode {
   return nodes[0];
 }
 
-function generateHuffmanCodes(node: HuffmanNode | null, codes: Map<number, string>, code: string = ''): void {
+/**
+ * Generates Huffman codes from a Huffman tree
+ * @param {HuffmanNode|null} node - Current node in the tree
+ * @param {Map<number, string>} codes - Map to store the generated codes
+ * @param {string} code - Current code being built
+ */
+function generateHuffmanCodes(node, codes, code = '') {
   if (!node) return;
   if (node.char !== null) {
     codes.set(node.char, code || '0');

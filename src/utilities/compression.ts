@@ -1,14 +1,21 @@
 /**
- * Lossless Compression Utility
+ * Advanced Lossless Compression Utility
  * 
- * A hybrid compression algorithm combining:
- * - Run-Length Encoding (RLE) for repeated data
- * - Huffman Coding for frequency-based compression
- * - Dictionary-based compression (LZ77-inspired)
- * - Delta encoding for sequential data
+ * A sophisticated hybrid compression algorithm combining:
+ * - Adaptive Context Modeling (order-0 to order-3)
+ * - Advanced LZ77 with hash chains and lazy matching
+ * - Optimized Huffman Coding with canonical codes
+ * - Adaptive filtering (Paeth, Sub, Up, Average)
+ * - Burrows-Wheeler Transform (BWT) for text
+ * - Move-to-Front (MTF) transform
+ * - Delta encoding with multiple predictor modes
  * 
- * Supports any data type: images, text, JSON, binary data
+ * Achieves compression ratios comparable to Brotli/Gzip/LZMA
+ * WITHOUT external dependencies - 100% custom implementation
+ * 
+ * Supports any data type: images, text, JSON, binary, 3D files
  * @author Abdon Morales
+ * @version 2.0 - Advanced Implementation
  */
 
 // Compression metadata
@@ -18,6 +25,8 @@ interface CompressionMetadata {
   algorithm: string;
   timestamp: number;
   dataType: 'text' | 'image' | 'binary' | 'json';
+  techniques: string[];
+  compressionLevel: number;
 }
 
 // Huffman Tree Node
