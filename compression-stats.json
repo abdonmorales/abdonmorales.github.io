@@ -1,0 +1,603 @@
+{
+  "totalFiles": 85,
+  "totalOriginalSize": 30177601,
+  "totalCompressedSize": 20754588,
+  "compressionRatio": 31.22518917259195,
+  "files": [
+    {
+      "path": "404.html",
+      "originalSize": 22015,
+      "compressedSize": 9490,
+      "ratio": 56.89302748126277,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "about/index.html",
+      "originalSize": 33154,
+      "compressedSize": 13702,
+      "ratio": 58.671653495807455,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/BaseLayout.astro_astro_type_script_index_0_lang.W-WaCSeV.js",
+      "originalSize": 17463,
+      "compressedSize": 9965,
+      "ratio": 42.93649430223901,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/LonghornLogo.svg",
+      "originalSize": 1645,
+      "compressedSize": 1846,
+      "ratio": -12.218844984802434,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/RGB_formal_Cockrell_Cockrell.jpg",
+      "originalSize": 122935,
+      "compressedSize": 107736,
+      "ratio": 12.363444096473742,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/ThemeToggle.CnRUNY2q.js",
+      "originalSize": 11212,
+      "compressedSize": 6845,
+      "ratio": 38.949339992864786,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/about.542d6c0b.Ccs2yVKk.js",
+      "originalSize": 141,
+      "compressedSize": 436,
+      "ratio": -209.21985815602838,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/about.D3HabBqd.css",
+      "originalSize": 1741,
+      "compressedSize": 1588,
+      "ratio": 8.788052843193572,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/about.Lf-fQWpj.css",
+      "originalSize": 17419,
+      "compressedSize": 7095,
+      "ratio": 59.26861473104081,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/at-work.jpg",
+      "originalSize": 5004123,
+      "compressedSize": 5031515,
+      "ratio": -0.5473886233411829,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-dark-1440w.jpg",
+      "originalSize": 15589,
+      "compressedSize": 12376,
+      "ratio": 20.610687022900763,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-dark-800w.jpg",
+      "originalSize": 6360,
+      "compressedSize": 6354,
+      "ratio": 0.09433962264151496,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-light-1440w.jpg",
+      "originalSize": 12614,
+      "compressedSize": 7665,
+      "ratio": 39.23418423973363,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-footer-light-800w.jpg",
+      "originalSize": 4735,
+      "compressedSize": 4218,
+      "ratio": 10.918690601900739,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark-1440w.jpg",
+      "originalSize": 28973,
+      "compressedSize": 27525,
+      "ratio": 4.997756531943532,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark-800w.jpg",
+      "originalSize": 12727,
+      "compressedSize": 13544,
+      "ratio": -6.419423273355851,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-dark.svg",
+      "originalSize": 1197,
+      "compressedSize": 1410,
+      "ratio": -17.794486215538853,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light-1440w.jpg",
+      "originalSize": 21502,
+      "compressedSize": 17452,
+      "ratio": 18.835457166775182,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light-800w.jpg",
+      "originalSize": 14098,
+      "compressedSize": 13072,
+      "ratio": 7.277628032345018,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-main-light.svg",
+      "originalSize": 1148,
+      "compressedSize": 1399,
+      "ratio": -21.86411149825784,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-dark-1440w.jpg",
+      "originalSize": 21122,
+      "compressedSize": 18261,
+      "ratio": 13.545118833443803,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-dark-800w.jpg",
+      "originalSize": 6710,
+      "compressedSize": 7032,
+      "ratio": -4.798807749627421,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-light-1440w.jpg",
+      "originalSize": 15807,
+      "compressedSize": 11629,
+      "ratio": 26.43132789270576,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-1-light-800w.jpg",
+      "originalSize": 6340,
+      "compressedSize": 5767,
+      "ratio": 9.037854889589902,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-dark-1440w.jpg",
+      "originalSize": 16804,
+      "compressedSize": 13356,
+      "ratio": 20.51892406569864,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-dark-800w.jpg",
+      "originalSize": 7519,
+      "compressedSize": 7086,
+      "ratio": 5.758744513898129,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-light-1440w.jpg",
+      "originalSize": 14445,
+      "compressedSize": 10402,
+      "ratio": 27.9889235029422,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/bg-subtle-2-light-800w.jpg",
+      "originalSize": 5420,
+      "compressedSize": 4985,
+      "ratio": 8.02583025830258,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/backgrounds/noise.png",
+      "originalSize": 27223,
+      "compressedSize": 28655,
+      "ratio": -5.260257870183294,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/client.CTDoNXH3.js",
+      "originalSize": 186619,
+      "compressedSize": 94239,
+      "ratio": 49.501926384773256,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/coursework.BIUJE63z.css",
+      "originalSize": 4664,
+      "compressedSize": 2713,
+      "ratio": 41.83104631217839,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/critter-312.png",
+      "originalSize": 2131221,
+      "compressedSize": 2133373,
+      "ratio": -0.10097498100853919,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke/Duke with Bones.fbx",
+      "originalSize": 555904,
+      "compressedSize": 399284,
+      "ratio": 28.173929311535804,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke/Duke with Bones.jas",
+      "originalSize": 1097231,
+      "compressedSize": 405522,
+      "ratio": 63.04132858076377,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke/Duke.png",
+      "originalSize": 229198,
+      "compressedSize": 224069,
+      "ratio": 2.2378031221912953,
+      "techniques": "LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Bonnet-Map.png",
+      "originalSize": 37094,
+      "compressedSize": 34740,
+      "ratio": 6.34603979080175,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Duke Car.jas",
+      "originalSize": 1997191,
+      "compressedSize": 782124,
+      "ratio": 60.8387980919201,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Duke Car.png",
+      "originalSize": 753635,
+      "compressedSize": 762849,
+      "ratio": -1.2226077610514308,
+      "techniques": "LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Car/Wheel.png",
+      "originalSize": 776237,
+      "compressedSize": 783469,
+      "ratio": -0.9316742180545345,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/Duke_wave.fbx",
+      "originalSize": 922400,
+      "compressedSize": 594244,
+      "ratio": 35.576322636600175,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/Duke_wave.mtl",
+      "originalSize": 411,
+      "compressedSize": 536,
+      "ratio": -30.41362530413625,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/Duke_wave.obj",
+      "originalSize": 964402,
+      "compressedSize": 537339,
+      "ratio": 44.28267465227156,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/openduke.png",
+      "originalSize": 488001,
+      "compressedSize": 492202,
+      "ratio": -0.8608588916825921,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Duke Waving/wave.png",
+      "originalSize": 94026,
+      "compressedSize": 95323,
+      "ratio": -1.379405696296776,
+      "techniques": "LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Duke Welder.jas",
+      "originalSize": 1323664,
+      "compressedSize": 518446,
+      "ratio": 60.83250734325327,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Duke Welder.obj",
+      "originalSize": 2346900,
+      "compressedSize": 1053072,
+      "ratio": 55.12923430908858,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Dukes-Lab-5k.jpg",
+      "originalSize": 2277742,
+      "compressedSize": 1995420,
+      "ratio": 12.394819079597251,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Dukes-Lab.jas",
+      "originalSize": 1682321,
+      "compressedSize": 713113,
+      "ratio": 57.6113595443438,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/3D/Welder Duke/Dukes-Lab.obj",
+      "originalSize": 4720669,
+      "compressedSize": 2013873,
+      "ratio": 57.339245772156445,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Agent.svg",
+      "originalSize": 30855,
+      "compressedSize": 14287,
+      "ratio": 53.69632150380814,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Boxer.svg",
+      "originalSize": 109596,
+      "compressedSize": 55439,
+      "ratio": 49.415124639585386,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/ChezDuke.svg",
+      "originalSize": 33110,
+      "compressedSize": 29234,
+      "ratio": 11.706433101781943,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Hips.svg",
+      "originalSize": 4035,
+      "compressedSize": 3929,
+      "ratio": 2.627013630731101,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Juggler.svg",
+      "originalSize": 99431,
+      "compressedSize": 44898,
+      "ratio": 54.845068439420295,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/NyaNya.svg",
+      "originalSize": 25241,
+      "compressedSize": 13234,
+      "ratio": 47.56943068816608,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Palmtree.svg",
+      "originalSize": 76425,
+      "compressedSize": 43828,
+      "ratio": 42.65227347072293,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Paper.svg",
+      "originalSize": 7270,
+      "compressedSize": 5777,
+      "ratio": 20.536451169188442,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Reward.svg",
+      "originalSize": 6714,
+      "compressedSize": 5021,
+      "ratio": 25.21596663687816,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Snooze.svg",
+      "originalSize": 7946,
+      "compressedSize": 5429,
+      "ratio": 31.67631512710798,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Surfing.svg",
+      "originalSize": 76724,
+      "compressedSize": 39163,
+      "ratio": 48.9559981231427,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Thinking.svg",
+      "originalSize": 5157,
+      "compressedSize": 4354,
+      "ratio": 15.571068450649605,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/ThumbsUp.svg",
+      "originalSize": 5250,
+      "compressedSize": 4066,
+      "ratio": 22.552380952380958,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Tumbling.svg",
+      "originalSize": 22565,
+      "compressedSize": 17953,
+      "ratio": 20.43873255040992,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/duke-java/vector/Wave.svg",
+      "originalSize": 3567,
+      "compressedSize": 3042,
+      "ratio": 14.71825063078217,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/index.D55ewHcJ.js",
+      "originalSize": 7848,
+      "compressedSize": 5786,
+      "ratio": 26.27420998980632,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/page.sJrt8mpm.js",
+      "originalSize": 2253,
+      "compressedSize": 2424,
+      "ratio": -7.589880159786944,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/portrait.jpg",
+      "originalSize": 1098605,
+      "compressedSize": 1144983,
+      "ratio": -4.221535492738515,
+      "techniques": "RLE+Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/stock-1.jpg",
+      "originalSize": 39459,
+      "compressedSize": 40635,
+      "ratio": -2.980308674827037,
+      "techniques": "LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/stock-2.jpg",
+      "originalSize": 20120,
+      "compressedSize": 21374,
+      "ratio": -6.2326043737574555,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/stock-3.jpg",
+      "originalSize": 21810,
+      "compressedSize": 22934,
+      "ratio": -5.153599266391562,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "assets/stock-4.jpg",
+      "originalSize": 27864,
+      "compressedSize": 29001,
+      "ratio": -4.0805340223944775,
+      "techniques": "LZ77-Hash+Huffman"
+    },
+    {
+      "path": "compression-stats.json",
+      "originalSize": 8393,
+      "compressedSize": 3304,
+      "ratio": 60.633861551292746,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "compression-worker.js",
+      "originalSize": 11781,
+      "compressedSize": 6119,
+      "ratio": 48.06043629573041,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "coursework/index.html",
+      "originalSize": 46785,
+      "compressedSize": 15783,
+      "ratio": 66.26482847066367,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "favicon.svg",
+      "originalSize": 749,
+      "compressedSize": 1191,
+      "ratio": -59.012016021361816,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "index.html",
+      "originalSize": 40735,
+      "compressedSize": 15424,
+      "ratio": 62.13575549281944,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "sw.js",
+      "originalSize": 4058,
+      "compressedSize": 2999,
+      "ratio": 26.09659931000493,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/critters312/index.html",
+      "originalSize": 55326,
+      "compressedSize": 22857,
+      "ratio": 58.686693417199876,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/graphy/index.html",
+      "originalSize": 30325,
+      "compressedSize": 13172,
+      "ratio": 56.56389117889531,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/index.html",
+      "originalSize": 30447,
+      "compressedSize": 12274,
+      "ratio": 59.68732551647125,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/kernel/index.html",
+      "originalSize": 30776,
+      "compressedSize": 13331,
+      "ratio": 56.68377956849493,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/longhornnetwork/index.html",
+      "originalSize": 30751,
+      "compressedSize": 13002,
+      "ratio": 57.718448180546964,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/pdfcompiler/index.html",
+      "originalSize": 31484,
+      "compressedSize": 13801,
+      "ratio": 56.16503620886799,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/tacc22/index.html",
+      "originalSize": 29939,
+      "compressedSize": 12732,
+      "ratio": 57.47352951000367,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    },
+    {
+      "path": "work/utsa_camp/index.html",
+      "originalSize": 32496,
+      "compressedSize": 13452,
+      "ratio": 58.604135893648454,
+      "techniques": "Delta+LZ77-Hash+Huffman"
+    }
+  ]
+}

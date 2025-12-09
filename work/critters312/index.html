@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="description" property="og:description" content><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.16.4"><meta name="author" content="Abdon Morales"><meta property="og:title" content="Critters for CS 312"><meta property="og:url" content="https://abdonmorales.github.io/work/critters312/"><meta property="og:type" content="website"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:title" content="Critters for CS 312"><meta property="twitter:description" content><link rel="canonical" href="https://abdonmorales.github.io/work/critters312/"><title>Critters for CS 312</title><!-- SEO y Open Graph --><link rel="canonical" href="https://abdonmorales.github.io/work/critters312/"><meta property="og:title" content="Critters for CS 312"><meta property="og:type" content="website"><meta property="og:url" content="https://abdonmorales.github.io/work/critters312/"><meta property="og:image" content="https://abdonmorales.github.io/assets/portrait.jpg"><meta property="og:site_name" content="Abdon Morales Portfolio"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@AbdonMorales7"><meta name="twitter:title" content="Critters for CS 312"><meta name="twitter:description" content><meta name="twitter:image" content="https://abdonmorales.github.io/assets/portrait.jpg"><!-- Favicon and Resource Preloading --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"><link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap" rel="stylesheet"></noscript><script>
+	// This code is inlined in the head to make dark mode instant & blocking.
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+
+	if (typeof localStorage !== 'undefined') {
+		// Watch the document element and persist user preference when it changes.
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('theme-dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script><meta name="theme-color" content="#bf5700"><meta name="color-scheme" content="light dark"><link rel="stylesheet" href="/assets/about.Lf-fQWpj.css">
+<style>a[data-astro-cid-balv45lp]{position:relative;display:flex;place-content:center;text-align:center;padding:.56em 2em;gap:.8em;color:var(--accent-text-over);text-decoration:none;line-height:1.1;border-radius:999rem;overflow:hidden;background:var(--gradient-accent-orange);box-shadow:var(--shadow-md);white-space:nowrap}@media(min-width:20em){a[data-astro-cid-balv45lp]{font-size:var(--text-lg)}}a[data-astro-cid-balv45lp]:after{content:"";position:absolute;inset:0;pointer-events:none;transition:background-color var(--theme-transition);mix-blend-mode:overlay}a[data-astro-cid-balv45lp]:focus:after,a[data-astro-cid-balv45lp]:hover:after{background-color:hsla(var(--gray-999-basis),.3)}@media(min-width:50em){a[data-astro-cid-balv45lp]{padding:1.125rem 2.5rem;font-size:var(--text-xl)}}aside[data-astro-cid-rcdzuq3a]{display:flex;flex-direction:column;align-items:center;gap:3rem;border-top:1px solid var(--gray-800);border-bottom:1px solid var(--gray-800);padding:5rem 1.5rem;background-color:var(--gray-999_40);box-shadow:var(--shadow-sm)}h2[data-astro-cid-rcdzuq3a]{font-size:var(--text-xl);text-align:center;max-width:15ch}@media(min-width:50em){aside[data-astro-cid-rcdzuq3a]{padding:7.5rem;flex-direction:row;flex-wrap:wrap;justify-content:space-between}h2[data-astro-cid-rcdzuq3a]{font-size:var(--text-3xl);text-align:left}}
+svg[data-astro-cid-patnjmll]{vertical-align:middle;width:var(--size, 1em);height:var(--size, 1em)}
+.pill[data-astro-cid-2qeywk4b]{display:flex;padding:.5rem 1rem;gap:.5rem;color:var(--accent-text-over);border:1px solid var(--accent-regular);background-color:var(--accent-regular);border-radius:999rem;font-size:var(--text-md);line-height:1.35;white-space:nowrap}
+header[data-astro-cid-qwekciqp]{padding-bottom:2.5rem;border-bottom:1px solid var(--gray-800)}.back-link[data-astro-cid-qwekciqp]{display:none}.details[data-astro-cid-qwekciqp]{display:flex;flex-direction:column;padding:.5rem;gap:1.5rem;justify-content:space-between;align-items:center}.tags[data-astro-cid-qwekciqp]{display:flex;gap:.5rem}.description[data-astro-cid-qwekciqp]{font-size:var(--text-lg);max-width:54ch}.content[data-astro-cid-qwekciqp]{max-width:65ch;margin-inline:auto}.content[data-astro-cid-qwekciqp]>*+*{margin-top:1rem}.content[data-astro-cid-qwekciqp] h1,.content[data-astro-cid-qwekciqp] h2,.content[data-astro-cid-qwekciqp] h3,.content[data-astro-cid-qwekciqp] h4,.content[data-astro-cid-qwekciqp] h5{margin:1.5rem 0}.content[data-astro-cid-qwekciqp] img{border-radius:1.5rem;box-shadow:var(--shadow-sm);background:var(--gradient-subtle);border:1px solid var(--gray-800)}.content[data-astro-cid-qwekciqp] blockquote{font-size:var(--text-lg);font-family:var(--font-brand);font-weight:600;line-height:1.1;padding-inline-start:1.5rem;border-inline-start:.25rem solid var(--accent-dark);color:var(--gray-0)}.back-link[data-astro-cid-qwekciqp],.content[data-astro-cid-qwekciqp] a{text-decoration:1px solid underline transparent;text-underline-offset:.25em;transition:text-decoration-color var(--theme-transition)}.back-link[data-astro-cid-qwekciqp]:hover,.back-link[data-astro-cid-qwekciqp]:focus,.content[data-astro-cid-qwekciqp] a:hover,.content[data-astro-cid-qwekciqp] a:focus{text-decoration-color:currentColor}@media(min-width:50em){.back-link[data-astro-cid-qwekciqp]{display:block;align-self:flex-start}.details[data-astro-cid-qwekciqp]{flex-direction:row;gap:2.5rem}.content[data-astro-cid-qwekciqp] blockquote{font-size:var(--text-2xl)}}
+</style><script type="module" src="/assets/page.sJrt8mpm.js"></script></head> <!-- @ts-ignore --> <body data-astro-cid-37fxchfa> <!-- @ts-ignore --> <div class="stack backgrounds liquid-glass" data-astro-cid-37fxchfa> <nav data-astro-cid-dmqpwcec> <div class="menu-header" data-astro-cid-dmqpwcec> <a href="/" class="site-title" data-astro-cid-dmqpwcec> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="url(#icon-gradient-1t8mz8len)" fill="url(#icon-gradient-1t8mz8len)" style="--size:1.6em" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="m80 96 40 32-40 32m56 0h40"/><rect width="192" height="160" x="32" y="48" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16.97" rx="8.5"/></g> <linearGradient id="icon-gradient-1t8mz8len" x1="23" x2="235" y1="43" y2="202" gradientUnits="userSpaceOnUse" data-astro-cid-patnjmll> <stop stop-color="var(--gradient-stop-1)" data-astro-cid-patnjmll></stop> <stop offset=".5" stop-color="var(--gradient-stop-2)" data-astro-cid-patnjmll></stop> <stop offset="1" stop-color="var(--gradient-stop-3)" data-astro-cid-patnjmll></stop> </linearGradient> </svg> 
+Abdon Morales
+</a> <menu-button data-astro-cid-dmqpwcec="true"> <template data-astro-cid-dmqpwcec> <button class="menu-button" aria-expanded="false" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M40 128h176M40 64h176M40 192h176"/></g>  </svg>  </button> </template> </menu-button> </div> <noscript> <ul class="nav-items" data-astro-cid-dmqpwcec> <li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/" data-astro-cid-dmqpwcec> Home </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link active" href="/work/" data-astro-cid-dmqpwcec> My Projects </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/coursework/" data-astro-cid-dmqpwcec> Coursework </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/about/" data-astro-cid-dmqpwcec> About </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="https://cs.utexas.edu/~abdonm" data-astro-cid-dmqpwcec> UTCS Webpage </a> </li> </ul> </noscript> <noscript> <div class="menu-footer" data-astro-cid-dmqpwcec> <div class="socials" data-astro-cid-dmqpwcec> <a href="https://github.com/abdonmorales" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>GitHub</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><g stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-width="14.7" d="M55.7 167.2c13.9 1 21.3 13.1 22.2 14.6 4.2 7.2 10.4 9.6 18.3 7.1l1.1-3.4a60.3 60.3 0 0 1-25.8-11.9c-12-10.1-18-25.6-18-46.3"/><path fill="none" stroke-width="16" d="M61.4 205.1a24.5 24.5 0 0 1-3-6.1c-3.2-7.9-7.1-10.6-7.8-11.1l-1-.6c-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.7 46.7 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4 0 42.6-25.8 54.7-43.6 58.7 1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3"/><path fill="none" stroke-width="16" d="M160.9 185.7c1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3A98.6 98.6 0 1 0 61.4 205c-1.4-2.1-11.3-17.5-11.8-17.8-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.4 46.4 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4.1 42.6-25.8 54.7-43.6 58.6z"/><path fill="none" stroke-width="18.7" d="m170.1 203.3 17.3-12 17.2-18.7 9.5-26.6v-27.9l-9.5-27.5" /><path fill="none" stroke-width="22.7" d="m92.1 57.3 23.3-4.6 18.7-1.4 29.3 5.4m-110 32.6-8 16-4 21.4.6 20.3 3.4 13" /><path fill="none" stroke-width="13.3" d="M28.8 133a100 100 0 0 0 66.9 94.4v-8.7c-22.4 1.8-33-11.5-35.6-19.8-3.4-8.6-7.8-11.4-8.5-11.8"/></g></g>  </svg>  </a><a href="https://gitlab.com/abdonmorales" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>GitLab</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path d="M230.15,117.1,210.25,41a11.94,11.94,0,0,0-22.79-1.11L169.78,88H86.22L68.54,39.87A11.94,11.94,0,0,0,45.75,41L25.85,117.1a57.19,57.19,0,0,0,22,61l73.27,51.76a11.91,11.91,0,0,0,13.74,0l73.27-51.76A57.19,57.19,0,0,0,230.15,117.1ZM58,57.5,73.13,98.76A8,8,0,0,0,80.64,104h94.72a8,8,0,0,0,7.51-5.24L198,57.5l13.07,50L128,166.21,44.9,107.5ZM40.68,124.11,114.13,176,93.41,190.65,57.09,165A41.06,41.06,0,0,1,40.68,124.11Zm87.32,91-20.73-14.65L128,185.8l20.73,14.64ZM198.91,165l-36.32,25.66L141.87,176l73.45-51.9A41.06,41.06,0,0,1,198.91,165Z"></path></g>  </svg>  </a><a href="https://www.linkedin.com/in/abdonmorales/" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>LinkedIn</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><rect width="184" height="184" x="36" y="36" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M120 112v64m-32-64v64m32-36a28 28 0 0 1 56 0v36"/><circle stroke="none" cx="88" cy="80" r="12"/></g>  </svg>  </a> </div> </div> </noscript> <div id="menu-content" hidden data-astro-cid-dmqpwcec> <ul class="nav-items" data-astro-cid-dmqpwcec> <li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/" data-astro-cid-dmqpwcec> Home </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link active" href="/work/" data-astro-cid-dmqpwcec> My Projects </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/coursework/" data-astro-cid-dmqpwcec> Coursework </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="/about/" data-astro-cid-dmqpwcec> About </a> </li><li data-astro-cid-dmqpwcec> <a aria-current="false" class="link" href="https://cs.utexas.edu/~abdonm" data-astro-cid-dmqpwcec> UTCS Webpage </a> </li> </ul> <div class="menu-footer" data-astro-cid-dmqpwcec> <div class="socials" data-astro-cid-dmqpwcec> <a href="https://github.com/abdonmorales" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>GitHub</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><g stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-width="14.7" d="M55.7 167.2c13.9 1 21.3 13.1 22.2 14.6 4.2 7.2 10.4 9.6 18.3 7.1l1.1-3.4a60.3 60.3 0 0 1-25.8-11.9c-12-10.1-18-25.6-18-46.3"/><path fill="none" stroke-width="16" d="M61.4 205.1a24.5 24.5 0 0 1-3-6.1c-3.2-7.9-7.1-10.6-7.8-11.1l-1-.6c-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.7 46.7 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4 0 42.6-25.8 54.7-43.6 58.7 1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3"/><path fill="none" stroke-width="16" d="M160.9 185.7c1.4 4.1 2.2 8.8 2.2 13.7l-.1 23.4v2.3A98.6 98.6 0 1 0 61.4 205c-1.4-2.1-11.3-17.5-11.8-17.8-2.4-1.6-9.5-6.5-7.2-13.9 1.4-4.5 6-7.2 12.3-7.2h.8c4 .3 7.6 1.5 10.7 3.2-9.1-10.1-13.6-24.3-13.6-42.3 0-11.3 3.5-21.7 10.1-30.4A46.4 46.4 0 0 1 65 67.3a8.3 8.3 0 0 1 5-4.7c2.8-.9 13.3-2.7 33.2 9.9a105 105 0 0 1 50.5 0c19.9-12.6 30.4-10.8 33.2-9.9 2.3.7 4.1 2.4 5 4.7 5 12.7 4 23.2 2.6 29.4 6.7 8.7 10 18.9 10 30.4.1 42.6-25.8 54.7-43.6 58.6z"/><path fill="none" stroke-width="18.7" d="m170.1 203.3 17.3-12 17.2-18.7 9.5-26.6v-27.9l-9.5-27.5" /><path fill="none" stroke-width="22.7" d="m92.1 57.3 23.3-4.6 18.7-1.4 29.3 5.4m-110 32.6-8 16-4 21.4.6 20.3 3.4 13" /><path fill="none" stroke-width="13.3" d="M28.8 133a100 100 0 0 0 66.9 94.4v-8.7c-22.4 1.8-33-11.5-35.6-19.8-3.4-8.6-7.8-11.4-8.5-11.8"/></g></g>  </svg>  </a><a href="https://gitlab.com/abdonmorales" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>GitLab</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path d="M230.15,117.1,210.25,41a11.94,11.94,0,0,0-22.79-1.11L169.78,88H86.22L68.54,39.87A11.94,11.94,0,0,0,45.75,41L25.85,117.1a57.19,57.19,0,0,0,22,61l73.27,51.76a11.91,11.91,0,0,0,13.74,0l73.27-51.76A57.19,57.19,0,0,0,230.15,117.1ZM58,57.5,73.13,98.76A8,8,0,0,0,80.64,104h94.72a8,8,0,0,0,7.51-5.24L198,57.5l13.07,50L128,166.21,44.9,107.5ZM40.68,124.11,114.13,176,93.41,190.65,57.09,165A41.06,41.06,0,0,1,40.68,124.11Zm87.32,91-20.73-14.65L128,185.8l20.73,14.64ZM198.91,165l-36.32,25.66L141.87,176l73.45-51.9A41.06,41.06,0,0,1,198.91,165Z"></path></g>  </svg>  </a><a href="https://www.linkedin.com/in/abdonmorales/" class="social" data-astro-cid-dmqpwcec> <span class="sr-only" data-astro-cid-dmqpwcec>LinkedIn</span> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><rect width="184" height="184" x="36" y="36" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="8"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M120 112v64m-32-64v64m32-36a28 28 0 0 1 56 0v36"/><circle stroke="none" cx="88" cy="80" r="12"/></g>  </svg>  </a> </div> <div class="theme-toggle" data-astro-cid-dmqpwcec> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="1Dhc08" prefix="r1" component-url="/assets/ThemeToggle.CnRUNY2q.js" component-export="default" renderer-url="/assets/client.CTDoNXH3.js" props="{&quot;data-astro-cid-dmqpwcec&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ThemeToggle&quot;,&quot;value&quot;:true}" await-children><button aria-pressed="false" aria-label="Switch to dark theme" class="_themeToggle_19h0h_1" data-theme="light"><span class="sr-only">Toggle theme</span><span class="_icon_19h0h_44 _sun_19h0h_56 undefined"><svg class="icon " viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><circle cx="128" cy="128" r="60" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M128 36V16M63 63 49 49m-13 79H16m47 65-14 14m79 13v20m65-47 14 14m13-79h20m-47-65 14-14"/></svg></span><span class="_icon_19h0h_44 _moon_19h0h_62 "><svg class="icon " viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M216 112V64m24 24h-48m-24-64v32m16-16h-32m65 113A92 92 0 0 1 103 39h0a92 92 0 1 0 114 114Z"/></svg></span></button><!--astro:end--></astro-island> </div> </div> </div> </nav> <script type="module">class c extends HTMLElement{constructor(){super(),this.appendChild(this.querySelector("template").content.cloneNode(!0));const t=this.querySelector("button"),n=document.getElementById("menu-content");n.hidden=!0,n.classList.add("menu-content");const d=e=>{t.setAttribute("aria-expanded",e?"true":"false"),n.hidden=!e},s=()=>d(n.hidden);t.addEventListener("click",s),t.addEventListener("keydown",e=>{(e.key==="Enter"||e.key===" ")&&(e.preventDefault(),s())}),window.addEventListener("keydown",e=>{e.key==="Escape"&&!n.hidden&&(d(!1),t.focus())});const i=e=>{d(e.matches),t.hidden=e.matches},o=window.matchMedia("(min-width: 50em)");i(o),o.addEventListener("change",i)}}customElements.define("menu-button",c);</script>  <!-- @ts-ignore --> <main class="liquid-glass-container" data-astro-cid-37fxchfa>  <div class="stack gap-20" data-astro-cid-qwekciqp> <div class="stack gap-15" data-astro-cid-qwekciqp> <header data-astro-cid-qwekciqp> <div class="wrapper stack gap-2" data-astro-cid-qwekciqp> <a class="back-link" href="/work/" data-astro-cid-qwekciqp><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M216 128H40m72-72-72 72 72 72"/></g>  </svg>  Work</a> <div class="hero stack gap-4 start" data-astro-cid-bbe6dxrz> <div class="stack gap-2" data-astro-cid-bbe6dxrz> <h1 class="title" data-astro-cid-bbe6dxrz>Critters for CS 312</h1>  </div>  <div class="details" data-astro-cid-qwekciqp> <div class="tags" data-astro-cid-qwekciqp> <div class="pill" data-astro-cid-2qeywk4b>Java</div> <div class="pill" data-astro-cid-2qeywk4b>Basic Data Structures</div> <div class="pill" data-astro-cid-2qeywk4b>Objected-Oriented Programming</div>  </div> <p class="description" data-astro-cid-qwekciqp></p> </div>  </div>  </div> </header> <main class="wrapper" data-astro-cid-qwekciqp> <div class="stack gap-10 content" data-astro-cid-qwekciqp> <img src="/assets/critter-312.png" alt="Critters for CS 312" data-astro-cid-qwekciqp> <div class="content" data-astro-cid-qwekciqp> <h1 id="critters-for-cs-312">Critters for CS 312</h1>
+<h2 id="description">Description</h2>
+<p>For Programming Assignment 10 in CS 312, we build a small ecosystem of “Critters” in Java. Each critter is just a Java class that extends a common <code>Critter</code> superclass, but together they form a full graphical simulation: they move around a 2D grid, fight, eat, sometimes mate, and try to out-survive each other in a toroidal (wrap-around) world.</p>
+<p>The twist: after implementing four specified species (<code>Ant</code>, <code>Bird</code>, <code>Hippo</code>, and <code>Vulture</code>), we design our own custom <code>Longhorn</code> critter that tries to dominate the simulation using strategy.</p>
+<p>In this post, I’ll walk through:</p>
+<ul>
+<li>How the simulator works at a high level</li>
+<li>The behavior of each critter I had to implement</li>
+<li>How I approached designing the Longhorn critter</li>
+<li>Testing strategies and what I learned from the assignment</li>
+</ul>
+<hr>
+<h2 id="the-world--core-mechanics">The World &#x26; Core Mechanics</h2>
+<p>The provided code gives us a 2D grid world and a GUI. We <strong>don’t</strong> manage the simulation loop ourselves—<code>CritterMain.java</code> does all of that. Our job is to override behavior hooks inside subclasses of <code>Critter</code>.</p>
+<p>Key ideas:</p>
+<ul>
+<li>The world is a <strong>torus</strong>
+<ul>
+<li>Walk off the right edge → you appear on the left</li>
+<li>Walk off the top → you reappear at the bottom</li>
+</ul>
+</li>
+<li>Coordinates:
+<ul>
+<li>Top-left is <code>(0, 0)</code></li>
+<li><code>x</code> increases to the right, <code>y</code> increases downward</li>
+</ul>
+</li>
+<li>Default size: <code>60 x 50</code>, though that can change via GUI options</li>
+</ul>
+<p>Each “round” of the simulation:</p>
+<ol>
+<li>Every critter chooses a move via <code>getMove()</code>.</li>
+<li>If two critters land on the same square, they <strong>fight</strong>.</li>
+<li>If a critter lands on food (<code>"."</code>), the simulator calls <code>eat()</code> to see if it wants to eat.</li>
+<li>The GUI redraws, calling <code>toString()</code> and <code>getColor()</code> on each critter to show them on screen.</li>
+</ol>
+<p>None of that logic lives in our classes; we just implement behavior through a fixed API.</p>
+<hr>
+<h2 id="the-critter-api">The Critter API</h2>
+<p>Every critter is a subclass of <code>Critter</code> that can override some or all of these methods:</p>
+<ul>
+<li>
+<p><code>public boolean eat()</code><br>
+Decide whether to eat food when on the same square.</p>
+</li>
+<li>
+<p><code>public Attack fight(String opponent)</code><br>
+Decide which attack to use when in combat with another critter. Valid attacks are:</p>
+<ul>
+<li><code>Attack.ROAR</code></li>
+<li><code>Attack.POUNCE</code></li>
+<li><code>Attack.SCRATCH</code></li>
+<li><code>Attack.FORFEIT</code> (basically “give up”)</li>
+</ul>
+</li>
+<li>
+<p><code>public Color getColor()</code><br>
+Decide the color used to draw this critter.</p>
+</li>
+<li>
+<p><code>public Direction getMove()</code><br>
+Decide whether to move <code>NORTH</code>, <code>SOUTH</code>, <code>EAST</code>, <code>WEST</code>, or stay <code>CENTER</code>.</p>
+</li>
+<li>
+<p><code>public String toString()</code><br>
+Decide what <strong>single-character</strong> string represents this critter on the board.</p>
+</li>
+</ul>
+<p>There are also useful helper methods we can call from inside our critters:</p>
+<ul>
+<li><code>getX()</code>, <code>getY()</code> – current position</li>
+<li><code>getWidth()</code>, <code>getHeight()</code> – dimensions of the world</li>
+<li><code>getNeighbor(Direction dir)</code> – what character is next to us in a given direction (space = empty)</li>
+</ul>
+<p>Plus event callbacks we <em>may</em> override (especially useful for <code>Longhorn</code>):</p>
+<ul>
+<li><code>win()</code>, <code>lose()</code> – after a fight</li>
+<li><code>sleep()</code>, <code>wakeup()</code> – when we get put to sleep from eating</li>
+<li><code>mate()</code>, <code>mateEnd()</code> – when mating begins/ends</li>
+<li><code>reset()</code> – when the world restarts</li>
+</ul>
+<hr>
+<h2 id="combat-system-in-a-nutshell">Combat System in a Nutshell</h2>
+<p>Fights are rock/paper/scissors-ish but with three attacks and <code>FORFEIT</code>. A very simplified view:</p>
+<ul>
+<li>Same attack vs same attack → random winner</li>
+<li>Each of <code>ROAR</code>, <code>POUNCE</code>, and <code>SCRATCH</code> “beats” one and “loses” to one</li>
+<li><code>FORFEIT</code> loses to anything that’s not also forfeiting</li>
+</ul>
+<p>This matters a lot when designing an intelligent critter like <code>Longhorn</code>: knowing what other species tend to use gives you a chance to counter them.</p>
+<hr>
+<h2 id="provided-files-vs-files-we-implement">Provided Files vs. Files We Implement</h2>
+<p>We are <strong>not</strong> supposed to modify:</p>
+<ul>
+<li><code>CritterMain.java</code> – GUI + simulation engine</li>
+<li><code>MiniMain.java</code> – small text-based tester</li>
+<li><code>Critter.java</code> – superclass for all critters</li>
+<li><code>Stone.java</code> – a simple built-in critter</li>
+</ul>
+<p>We <strong>do</strong> implement:</p>
+<ul>
+<li><code>Ant.java</code></li>
+<li><code>Bird.java</code></li>
+<li><code>Hippo.java</code></li>
+<li><code>Vulture.java</code></li>
+<li><code>Longhorn.java</code> (our custom species)</li>
+</ul>
+<p>Each file must have the standard CS 312 academic honesty header, and each class must have exactly one constructor with the specified parameters.</p>
+<hr>
+<h2 id="ant-zig-zag-workhorse">Ant: Zig-Zag Workhorse</h2>
+<p><strong>Constructor</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#B392F0"> Ant</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">boolean</span><span style="color:#E1E4E8"> walkSouth)</span></span></code></pre>
+<p><strong>Main behaviors</strong></p>
+<ul>
+<li>
+<p><strong>Movement</strong>:</p>
+<ul>
+<li>If <code>walkSouth == true</code>: moves in a repeated pattern <code>S, E, S, E, ...</code></li>
+<li>If <code>walkSouth == false</code>: moves <code>N, E, N, E, ...</code><br>
+This creates a zig-zag trail either trending south or north.</li>
+</ul>
+</li>
+<li>
+<p><strong>Eating</strong>:</p>
+<ul>
+<li>Always eats (<code>eat()</code> always returns <code>true</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Fighting</strong>:</p>
+<ul>
+<li>Always uses <code>Attack.SCRATCH</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Appearance</strong>:</p>
+<ul>
+<li><code>toString()</code> returns <code>"%"</code>.</li>
+<li><code>getColor()</code> returns red.</li>
+</ul>
+</li>
+</ul>
+<p>Ants are simple but predictable—good practice for basic state (alternating movement using a boolean or an index into a final array of directions).</p>
+<hr>
+<h2 id="bird-clockwise-square-with-directional-icons">Bird: Clockwise Square with Directional Icons</h2>
+<p><strong>Constructor</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#B392F0"> Bird</span><span style="color:#E1E4E8">()</span></span></code></pre>
+<p><strong>Movement</strong></p>
+<ul>
+<li>Moves in a <strong>clockwise square</strong>, three steps per side:
+<ul>
+<li><code>NORTH</code> 3 times</li>
+<li><code>EAST</code> 3 times</li>
+<li><code>SOUTH</code> 3 times</li>
+<li><code>WEST</code> 3 times</li>
+<li>Then repeats</li>
+</ul>
+</li>
+</ul>
+<p>This is a perfect use case for the “final arrays for states” requirement, like:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">private</span><span style="color:#F97583"> static</span><span style="color:#F97583"> final</span><span style="color:#F97583"> Direction</span><span style="color:#E1E4E8">[] BIRD_DIRECTIONS </span><span style="color:#F97583">=</span></span>
+<span class="line"><span style="color:#E1E4E8">    {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};</span></span></code></pre>
+<p>We track how many steps we’ve taken in the current direction and when it hits 3, we advance to the next direction.</p>
+<p><strong>Eating</strong></p>
+<ul>
+<li>Never eats (<code>eat()</code> always returns <code>false</code>).</li>
+</ul>
+<p><strong>Fighting</strong></p>
+<ul>
+<li>If the opponent <strong>looks like an Ant</strong> (<code>opponent.equals("%")</code>), the bird uses <code>Attack.ROAR</code>.</li>
+<li>Otherwise, it uses <code>Attack.POUNCE</code>.</li>
+</ul>
+<p><strong>Appearance</strong></p>
+<ul>
+<li>Depends on its last move:
+<ul>
+<li><code>"^"</code> if last move was <code>NORTH</code> or it hasn’t moved yet</li>
+<li><code>">"</code> if last move was <code>EAST</code></li>
+<li><code>"V"</code> if last move was <code>SOUTH</code></li>
+<li><code>"&#x3C;"</code> if last move was <code>WEST</code></li>
+</ul>
+</li>
+<li>Color: blue.</li>
+</ul>
+<p>This class is really about tying <strong>internal state</strong> (current direction, step count, last move) to both <code>getMove()</code> and <code>toString()</code>.</p>
+<hr>
+<h2 id="hippo-hunger-based-logic">Hippo: Hunger-Based Logic</h2>
+<p><strong>Constructor</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#B392F0"> Hippo</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">int</span><span style="color:#E1E4E8"> hunger)</span></span></code></pre>
+<p>Here, <code>hunger</code> means: “How many times in my life will I say yes to <code>eat()</code>?”</p>
+<p><strong>Hunger &#x26; Eating</strong></p>
+<ul>
+<li>Hippo keeps an internal counter of how many more times it will eat.</li>
+<li><code>eat()</code>:
+<ul>
+<li>Returns <code>true</code> while that counter is > 0</li>
+<li>Decrements the counter each time it returns <code>true</code></li>
+<li>Returns <code>false</code> once the counter hits 0</li>
+</ul>
+</li>
+</ul>
+<p><strong>Fighting</strong></p>
+<ul>
+<li>If the Hippo is still hungry (i.e., <code>eat()</code> <em>would</em> return <code>true</code>), it uses <code>Attack.SCRATCH</code>.</li>
+<li>If it’s no longer hungry, it uses <code>Attack.POUNCE</code>.</li>
+</ul>
+<p>So fighting style changes over the Hippo’s “lifetime.”</p>
+<p><strong>Movement</strong></p>
+<ul>
+<li>Moves in one direction for 5 steps (N, S, E, or W).</li>
+<li>After 5 steps, it chooses a <strong>new random direction</strong> that is <em>different</em> from the current one.</li>
+<li>Repeats that pattern: 5 steps, change direction, 5 steps, etc.</li>
+</ul>
+<p>Again, a good use of <code>final</code> arrays plus some randomness.</p>
+<p><strong>Appearance</strong></p>
+<ul>
+<li><code>toString()</code> returns the Hippo’s <strong>remaining hunger</strong> as a string:
+<ul>
+<li>Start: <code>"4"</code> if constructed as <code>Hippo(4)</code></li>
+<li>After one successful eat: <code>"3"</code>, and so on</li>
+<li>Once it’s full: <code>"0"</code></li>
+</ul>
+</li>
+<li><code>getColor()</code>:
+<ul>
+<li>Gray if hungry</li>
+<li>White if full</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="vulture-a-hungry-bird-variant">Vulture: A Hungry Bird Variant</h2>
+<p><code>Vulture</code> is like a modified <code>Bird</code> with hunger and different graphics.</p>
+<p><strong>Constructor</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#B392F0"> Vulture</span><span style="color:#E1E4E8">()</span></span></code></pre>
+<p><strong>Movement</strong></p>
+<ul>
+<li><strong>Identical</strong> movement pattern to <code>Bird</code>:
+<ul>
+<li>North 3, East 3, South 3, West 3, repeat.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Eating</strong></p>
+<ul>
+<li>Vulture has a <strong>binary hunger state</strong>:
+<ul>
+<li>Initially hungry → <code>eat()</code> returns <code>true</code> the next time it sees food, then it becomes full.</li>
+<li>While full → <code>eat()</code> returns <code>false</code>.</li>
+</ul>
+</li>
+<li>Any time the vulture gets into <strong>one or more fights</strong> (i.e., <code>fight()</code> is called), it becomes hungry again.</li>
+<li>So the cycle is:
+<ul>
+<li>Hungry → eats once → full</li>
+<li>Fights (one or many) → hungry again → eats once → full → …</li>
+</ul>
+</li>
+</ul>
+<p><strong>Fighting</strong></p>
+<ul>
+<li>Same pattern as <code>Bird</code>:
+<ul>
+<li>If the opponent looks like an Ant (<code>"%"</code>), <code>Attack.ROAR</code>.</li>
+<li>Otherwise, <code>Attack.POUNCE</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Appearance</strong></p>
+<ul>
+<li>Same directional characters as <code>Bird</code>:
+<ul>
+<li><code>"^"</code>, <code>">"</code>, <code>"V"</code>, <code>"&#x3C;"</code> based on last move.</li>
+</ul>
+</li>
+<li>Color: black.</li>
+</ul>
+<p>This class demonstrates inheritance nicely: you can reuse most of the Bird logic and just add hunger and override the relevant methods.</p>
+<hr>
+<h2 id="longhorn-bit-rand-chaos-critter">Longhorn: BIT-RAND Chaos Critter</h2>
+<p>My custom species is implemented as the class <code>Longhorn_Abdon_Morales</code> and I think of it as a <strong>BIT-RAND</strong> critter: it’s noisy, unpredictable, and constantly flickering both in color and in its on‑screen symbol.</p>
+<h3 id="fields-and-constructor">Fields and Constructor</h3>
+<p>The class keeps a handful of constants and state:</p>
+<ul>
+<li><code>Random rand</code> – shared PRNG for all of Longhorn’s decisions</li>
+<li><code>DATABIT_FLOW = 32</code> – starting index for the ASCII range I care about</li>
+<li><code>RAND_CHAR_SIZE = 127</code> – size of the character table</li>
+<li><code>char[] RAND_CHAR</code> – an ASCII-style lookup table</li>
+<li><code>Direction[] ALL_DIRS = { SOUTH, EAST, NORTH, WEST }</code> – the only directions Longhorn will ever move</li>
+<li><code>Color[] RGB_LIGHTS = { RED, GREEN, BLUE }</code> – the cycling colors</li>
+<li><code>int currentDirection</code> – index into <code>ALL_DIRS</code> used to avoid repeating the previous move</li>
+<li><code>int currentColor</code> – index into <code>RGB_LIGHTS</code> for the color cycle</li>
+</ul>
+<p>In the constructor, I fill the <code>RAND_CHAR</code> array from character code 32 up to 126:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#B392F0"> Longhorn_Abdon_Morales</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">int</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> DATABIT_FLOW; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> RAND_CHAR_SIZE; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">        RAND_CHAR</span><span style="color:#E1E4E8">[i] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">char</span><span style="color:#E1E4E8">) i;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>That effectively creates an ASCII-ish table of printable characters that I later sample from in <code>toString()</code>. The lower entries (below 32) remain the default <code>\u0000</code> character, which sometimes show up visually as blanks and add even more visual noise.</p>
+<h3 id="color-cycling-rgb-leds">Color: Cycling RGB “LEDs”</h3>
+<p><code>getColor()</code> uses <code>currentColor</code> to walk through <code>RGB_LIGHTS</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#E1E4E8"> Color </span><span style="color:#B392F0">getColor</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (currentColor </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> RGB_LIGHTS.length </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        currentColor</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#F97583"> RGB_LIGHTS</span><span style="color:#E1E4E8">[currentColor];</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    currentColor </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> RGB_LIGHTS</span><span style="color:#E1E4E8">[currentColor];</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>In practice this makes Longhorn <strong>cycle through GREEN → BLUE → RED → GREEN → …</strong> every time the GUI asks for its color, giving it a subtle RGB‑strobe effect as the simulation runs.</p>
+<h3 id="fighting-targeted-counters-for-known-species">Fighting: Targeted Counters for Known Species</h3>
+<p>The <code>fight(String opponent)</code> method is simple but tuned to the known critters in the assignment:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#E1E4E8"> Attack </span><span style="color:#B392F0">fight</span><span style="color:#E1E4E8">(String opponent) {</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (opponent.</span><span style="color:#B392F0">equals</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"%"</span><span style="color:#E1E4E8">)) {</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> Attack.ROAR;        </span><span style="color:#6A737D">// counter Ant</span></span>
+<span class="line"><span style="color:#E1E4E8">    } </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (opponent.</span><span style="color:#B392F0">equals</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"S"</span><span style="color:#E1E4E8">)) {</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> Attack.POUNCE;      </span><span style="color:#6A737D">// counter Stone</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> Attack.SCRATCH;         </span><span style="color:#6A737D">// default vs everything else</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li>Against <strong>Ants</strong> (<code>"%"</code>), Longhorn always uses <code>ROAR</code>.</li>
+<li>Against <strong>Stones</strong> (<code>"S"</code>), it uses <code>POUNCE</code>, taking advantage of Stone’s predictable <code>ROAR</code> behavior.</li>
+<li>Against everything else (Birds, Hippos, Vultures, and any unknown species), it falls back on <code>SCRATCH</code>.</li>
+</ul>
+<p>This gives Longhorn a small strategic edge against the most predictable species while keeping its interactions with others relatively straightforward.</p>
+<h3 id="eating-always-take-the-free-energy">Eating: Always Take the Free Energy</h3>
+<p>The eating strategy is intentionally aggressive:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> boolean</span><span style="color:#B392F0"> eat</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Longhorn <strong>never turns down food</strong>. This boosts its chances of staying alive in the long run, even if it means occasionally being put to sleep by the simulator’s rules.</p>
+<h3 id="movement-non-repeating-random-walk">Movement: Non-Repeating Random Walk</h3>
+<p>Movement is where the “chaos” really comes in. I wanted Longhorn to wander in a way that:</p>
+<ul>
+<li>Is truly random between the four cardinal directions, and</li>
+<li>Never repeats the same direction twice in a row.</li>
+</ul>
+<p>That logic lives in <code>getMove()</code>:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#E1E4E8"> Direction </span><span style="color:#B392F0">getMove</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    int</span><span style="color:#E1E4E8"> temp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> rand.</span><span style="color:#B392F0">nextInt</span><span style="color:#E1E4E8">(ALL_DIRS.length);</span></span>
+<span class="line"><span style="color:#F97583">    while</span><span style="color:#E1E4E8"> (currentDirection </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> temp) {</span></span>
+<span class="line"><span style="color:#E1E4E8">        temp </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> rand.</span><span style="color:#B392F0">nextInt</span><span style="color:#E1E4E8">(ALL_DIRS.length);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">    currentDirection </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> temp;</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#F97583"> ALL_DIRS</span><span style="color:#E1E4E8">[currentDirection];</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>On each move:</p>
+<ol>
+<li>Pick a random index into <code>ALL_DIRS</code>.</li>
+<li>If it matches <code>currentDirection</code>, keep re‑rolling.</li>
+<li>Once a new direction is chosen, store it and return that direction.</li>
+</ol>
+<p>The result is an erratic, jittery <strong>non‑repeating random walk</strong> across the toroidal grid. Longhorn doesn’t deliberately chase food or enemies; instead, it sweeps the map in a noisy way that, over time, still covers a lot of ground.</p>
+<h3 id="string-representation-random-ascii-flicker">String Representation: Random ASCII Flicker</h3>
+<p>Finally, <code>toString()</code> decides what symbol to show for Longhorn on the board:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#E1E4E8"> String </span><span style="color:#B392F0">toString</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#9ECBFF"> ""</span><span style="color:#F97583"> +</span><span style="color:#F97583"> RAND_CHAR</span><span style="color:#E1E4E8">[rand.</span><span style="color:#B392F0">nextInt</span><span style="color:#E1E4E8">(RAND_CHAR_SIZE)];</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>Every time the GUI asks for Longhorn’s string, it picks a <strong>random entry</strong> from the <code>RAND_CHAR</code> table. Because that table holds most of the printable ASCII range (and some blanks), Longhorn appears as a constantly changing mix of punctuation, letters, digits, and occasional “invisible” spots.</p>
+<p>Visually, this makes each Longhorn look like a noisy RGB LED that’s constantly glitching its glyph. Combined with the color cycle and random walk, BIT‑RAND Longhorns are easy to spot and fun to watch—even if they’re a little chaotic to predict.</p>
+<hr>
+<h2 id="testing--debugging">Testing &#x26; Debugging</h2>
+<p>There’s no fixed output file to diff against, so testing is more manual and interactive:</p>
+<ol>
+<li>
+<p><strong>MiniMain.java</strong></p>
+<ul>
+<li>Run this small tester to verify:
+<ul>
+<li>Movement patterns (e.g., Bird’s square, Ant’s zig-zag, Hippo’s 5-step moves)</li>
+<li>Eating logic (especially hunger-limited behavior)</li>
+<li><code>toString()</code> and color logic</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>GUI Simulation</strong></p>
+<ul>
+<li>Start with a <strong>small world</strong> and <strong>few critters</strong> to make it easier to track behavior.</li>
+<li>Enable the <strong>Debug output</strong> checkbox to see logs about fights, eating, and movement.</li>
+<li>Try different mixes of critters:
+<ul>
+<li>Only Ants and Birds</li>
+<li>Add Hippos</li>
+<li>Add Vultures</li>
+<li>Finally introduce the Longhorn and watch if it tends to dominate long-term.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Edge Cases</strong></p>
+<ul>
+<li>Make sure:
+<ul>
+<li>Hippo hunger never goes negative.</li>
+<li>Vulture hunger toggles correctly after fights.</li>
+<li>Longhorn doesn’t crash when fighting unknown critter types.</li>
+<li>No critter ever returns a string longer than length 1 from <code>toString()</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="takeaways">Takeaways</h2>
+<p>This assignment is a great sandbox for practicing:</p>
+<ul>
+<li>
+<p><strong>Object-Oriented Programming</strong></p>
+<ul>
+<li>Inheritance (<code>extends Critter</code>, Vulture extending Bird)</li>
+<li>Overriding methods</li>
+<li>Using final arrays to represent state machines</li>
+</ul>
+</li>
+<li>
+<p><strong>Stateful Behavior</strong></p>
+<ul>
+<li>Tracking hunger, movement phases, fight outcomes</li>
+<li>Using instance fields to carry state across simulation rounds</li>
+</ul>
+</li>
+<li>
+<p><strong>Designing “AI-lite” Behaviors</strong></p>
+<ul>
+<li>Even with simple enums and strings, you can get surprisingly complex interactions.</li>
+<li>The Longhorn class especially feels like building a tiny agent for a game.</li>
+</ul>
+</li>
+</ul>
+<p>It’s also just fun to run the simulation for a few thousand steps, sit back, and see if your Longhorn army actually takes over the world—or gets wiped out by a horde of surprisingly effective Hippos.</p>
+<p>If you’re working through this assignment yourself, I’d recommend:</p>
+<ul>
+<li>Implement each critter one by one and test with <code>MiniMain</code> as you go.</li>
+<li>Keep your Longhorn strategy simple at first, then iterate.</li>
+<li>Use comments generously to explain how your critter thinks—future you (and your TA) will thank you.</li>
+</ul> </div> </div> </main> </div> <aside data-astro-cid-rcdzuq3a> <h2 data-astro-cid-rcdzuq3a>Interested in working together?</h2> <a href="mailto:abdonmorales@utexas.edu" data-astro-cid-balv45lp>
+Send Me a Message
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" style="--size:1.2em" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M210.3 35.9 23.9 88.4a8 8 0 0 0-1.2 15l85.6 40.5a7.8 7.8 0 0 1 3.8 3.8l40.5 85.6a8 8 0 0 0 15-1.2l52.5-186.4a7.9 7.9 0 0 0-9.8-9.8Zm-99.4 109.2 45.2-45.2"/></g>  </svg>  </a>  </aside>  </div>  </main> <footer data-astro-cid-sz7xmlte> <div class="group" data-astro-cid-sz7xmlte> <p data-astro-cid-sz7xmlte>
+Designed & Developed in Austin, Texas with <a href="https://astro.build/" data-astro-cid-sz7xmlte>Astro 5.14.1</a> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 256 256" aria-hidden="true" stroke="currentcolor" fill="currentcolor" style="--size:1.2em" class="astro-patnjmll" data-astro-cid-patnjmll> <g data-astro-cid-patnjmll><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M94.1 184.6c-11.4 33.9-56.6 33.9-56.6 33.9s0-45.2 33.9-56.6m124.5-56.5L128 173.3 82.7 128l67.9-67.9C176.3 34.4 202 34.7 213 36.3a7.8 7.8 0 0 1 6.7 6.7c1.6 11 1.9 36.7-23.8 62.4Z"/><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M184.6 116.7v64.6a8 8 0 0 1-2.4 5.6l-32.3 32.4a8 8 0 0 1-13.5-4.1l-8.4-41.9m11.3-101.9H74.7a8 8 0 0 0-5.6 2.4l-32.4 32.3a8 8 0 0 0 4.1 13.5l41.9 8.4"/></g>  </svg>  </p> <p data-astro-cid-sz7xmlte>&copy; 2025 - 2027 Abdon Morales.</p> </div> <p class="socials" data-astro-cid-sz7xmlte> <!--<a href="https://x.com/AbdonMorales7"> Twitter</a>--> <a href="https://github.com/abdonmorales" data-astro-cid-sz7xmlte> GitHub</a> <a href="https://gitlab.com/abdonmorales" data-astro-cid-sz7xmlte> GitLab</a> </p> </footer>  </div> <script type="module" src="/assets/BaseLayout.astro_astro_type_script_index_0_lang.W-WaCSeV.js"></script>  </body> </html> 
