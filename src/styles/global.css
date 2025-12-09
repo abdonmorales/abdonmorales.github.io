@@ -280,6 +280,7 @@ h5 {
 
 .liquid-glass {
 	background: var(--glass-surface);
+	-webkit-backdrop-filter: blur(18px);
 	backdrop-filter: blur(18px);
 	border: var(--glass-border);
 	border-radius: var(--glass-border-radius);

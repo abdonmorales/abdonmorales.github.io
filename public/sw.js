@@ -25,18 +25,18 @@ const PRECACHE_ASSETS = [
 ];
 
 // Install event - cache critical assets
-self.addEventListener('install', (event: ExtendableEvent) => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE).then((cache) => {
       return cache.addAll(PRECACHE_ASSETS);
     })
   );
   // Force activation
-  (self as any).skipWaiting();
+  self.skipWaiting();
 });
 
 // Activate event - clean up old caches
-self.addEventListener('activate', (event: ExtendableEvent) => {
+self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
@@ -47,11 +47,11 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
     })
   );
   // Take control immediately
-  (self as any).clients.claim();
+  self.clients.claim();
 });
 
 // Fetch event - serve from cache with compression
-self.addEventListener('fetch', (event: FetchEvent) => {
+self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
@@ -74,7 +74,7 @@ self.addEventListener('fetch', (event: FetchEvent) => {
 /**
  * Handle image requests with compression
  */
-async function handleImageRequest(request: Request): Promise<Response> {
+async function handleImageRequest(request) {
   const cachedResponse = await caches.match(request);
   
   if (cachedResponse) {
@@ -101,7 +101,7 @@ async function handleImageRequest(request: Request): Promise<Response> {
 /**
  * Handle general requests
  */
-async function handleRequest(request: Request): Promise<Response> {
+async function handleRequest(request) {
   // Try cache first
   const cachedResponse = await caches.match(request);
   
@@ -129,7 +129,7 @@ async function handleRequest(request: Request): Promise<Response> {
 /**
  * Fetch and update cache in background
  */
-async function fetchAndUpdate(request: Request): Promise<void> {
+async function fetchAndUpdate(request) {
   try {
     const response = await fetch(request);
     
@@ -145,7 +145,7 @@ async function fetchAndUpdate(request: Request): Promise<void> {
 /**
  * Message handler for cache management
  */
-self.addEventListener('message', (event: ExtendableMessageEvent) => {
+self.addEventListener('message', (event) => {
   if (event.data.type === 'CLEAR_CACHE') {
     event.waitUntil(
       caches.keys().then((cacheNames) => {
