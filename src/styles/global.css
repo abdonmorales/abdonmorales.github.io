@@ -1,5 +1,12 @@
 /* Global variables */
 :root {
+	/* Glass + backgrounds tokens */
+	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
+	--glass-border-radius: 1.5rem;
+	--glass-surface: rgba(255, 255, 255, 0.03);
+	--glass-surface-strong: rgba(255, 255, 255, 0.08);
+	--glass-border: 1px solid rgba(255, 255, 255, 0.08);
+	--page-max-width: 83rem;
 	/* Colors */
 	--gray-0: #090b11;
 	--gray-50: #141925;
@@ -24,6 +31,41 @@
 	--accent-text-over: var(--gray-999);
 
 	--link-color: var(--accent-regular);
+
+	/* Liquid Glass Materials */
+	--glass-ultra-thin: rgba(255, 255, 255, 0.03);
+	--glass-thin: rgba(255, 255, 255, 0.05);
+	--glass-regular: rgba(255, 255, 255, 0.08);
+	--glass-thick: rgba(255, 255, 255, 0.12);
+	--glass-ultra-thick: rgba(255, 255, 255, 0.18);
+	
+	/* Glass blur effects */
+	--glass-blur-light: blur(20px);
+	--glass-blur-medium: blur(40px);
+	--glass-blur-heavy: blur(60px);
+	
+	/* Glass borders */
+	--glass-border-thin: 1px solid rgba(255, 255, 255, 0.1);
+	--glass-border-thick: 1px solid rgba(255, 255, 255, 0.15);
+	
+	/* Glass shadows for depth */
+	--glass-shadow-light: 
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24),
+		inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	--glass-shadow-medium: 
+		0 4px 6px rgba(0, 0, 0, 0.07),
+		0 3px 6px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	--glass-shadow-heavy: 
+		0 10px 25px rgba(0, 0, 0, 0.15),
+		0 6px 10px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.2);
+		
+	/* Vibrancy colors for glass */
+	--glass-text-primary: rgba(255, 255, 255, 0.9);
+	--glass-text-secondary: rgba(255, 255, 255, 0.7);
+	--glass-text-tertiary: rgba(255, 255, 255, 0.5);
 
 	/* Gradients */
 	--gradient-stop-1: var(--accent-light);
@@ -97,6 +139,36 @@
 	--accent-text-over: var(--gray-0);
 
 	--link-color: var(--accent-dark);
+
+	/* Liquid Glass Materials for dark mode */
+	--glass-ultra-thin: rgba(0, 0, 0, 0.03);
+	--glass-thin: rgba(0, 0, 0, 0.05);
+	--glass-regular: rgba(0, 0, 0, 0.08);
+	--glass-thick: rgba(0, 0, 0, 0.12);
+	--glass-ultra-thick: rgba(0, 0, 0, 0.18);
+	
+	/* Glass borders for dark mode */
+	--glass-border-thin: 1px solid rgba(0, 0, 0, 0.1);
+	--glass-border-thick: 1px solid rgba(0, 0, 0, 0.15);
+	
+	/* Glass shadows for dark mode depth */
+	--glass-shadow-light: 
+		0 1px 3px rgba(255, 255, 255, 0.12),
+		0 1px 2px rgba(255, 255, 255, 0.24),
+		inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	--glass-shadow-medium: 
+		0 4px 6px rgba(255, 255, 255, 0.07),
+		0 3px 6px rgba(255, 255, 255, 0.1),
+		inset 0 1px 0 rgba(0, 0, 0, 0.15);
+	--glass-shadow-heavy: 
+		0 10px 25px rgba(255, 255, 255, 0.15),
+		0 6px 10px rgba(255, 255, 255, 0.1),
+		inset 0 1px 0 rgba(0, 0, 0, 0.2);
+		
+	/* Vibrancy colors for dark mode glass */
+	--glass-text-primary: rgba(0, 0, 0, 0.9);
+	--glass-text-secondary: rgba(0, 0, 0, 0.7);
+	--glass-text-tertiary: rgba(0, 0, 0, 0.5);
 
 	--gradient-stop-1: #4c11c6;
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
@@ -201,9 +273,29 @@ h5 {
 
 .wrapper {
 	width: 100%;
-	max-width: 83rem;
+	max-width: var(--page-max-width);
 	margin-inline: auto;
 	padding-inline: 1.5rem;
+}
+
+.liquid-glass {
+	background: var(--glass-surface);
+	-webkit-backdrop-filter: blur(18px);
+	backdrop-filter: blur(18px);
+	border: var(--glass-border);
+	border-radius: var(--glass-border-radius);
+	box-shadow: var(--shadow-sm);
+}
+
+.liquid-glass-container {
+	padding: 1.5rem clamp(0.5rem, 2vw, 2rem);
+	border-radius: var(--glass-border-radius);
+	background: linear-gradient(180deg, var(--glass-surface), transparent 55%);
+}
+
+:global(.theme-dark) .liquid-glass {
+	background: var(--glass-surface-strong);
+	border-color: rgba(0, 0, 0, 0.25);
 }
 
 .stack {

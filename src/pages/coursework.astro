@@ -253,7 +253,17 @@ const fall2025 = [
 	{
 		id: 1,
 		title: "ECO 441K: Introduction to Econometrics",
-		description: "Parameter estimation and inference in regression models.",
+		description:
+			"This course provides an introduction to the main econometric models and estimation methods that are utilized in economics and business." +
+			" The goal is to provide students with the knowledge needed to conduct their own quantitative empirical research, evaluate economic and business policies," +
+			" perform basic forecasting, and conduct a critical reading of research and policy analysis. In addition to" +
+			" practicing how to conduct regression analysis and other related analysis (estimation and interpretation of" +
+			" the results), this course will emphasize the underlying statistical theory, which is needed to understand" +
+			" when particular methods are or are not likely to be valid." +
+			" In the lab part of this course, you will come up with your own research question, identify relevant data," +
+			" and use the methods of this course to investigate answers to your question. In the process, you will write a" +
+			" research paper, which will include a discussion of relevant literature, as well as the statistical" +
+			" methodology you have chosen, and your empirical results.",
 	},
 	{
 		id: 2,
@@ -268,15 +278,32 @@ const fall2025 = [
 		id: 3,
 		title: "PHY 303L: Engineering Physics II",
 		description:
-			"A general survey of physics; primarily electricity, magnetism, and optics." +
-			" Three lecture hours and one discussion hour a week for one semester.",
+			"This is a calculus-based introductory course on electricity and magnetism for engineering students. " +
+			"We will cover electric and magnetic forces, the idea of fields, how electric and magnetic fields " +
+			"are sourced by charges and currents, circuits, and electromagnetic waves and optics. " +
+			"Along the way we will discuss problem solving strategies, and get a glimpse of vector calculus.",
 	},
 	{
 		id: 4,
 		title: "PHY 105N: Lab for Engineering Physics II",
 		description:
-			"Participate in an introductory electricity and magnetism laboratory." +
-			" Three laboratory hours a week for one semester.",
+			"This course will focus on connecting topics from General Physics II with actual physical systems, " +
+			"including the experimental concepts and methods, the statistical tools, and the kinds of collaboration needed to approach this in ways reflective of how actual empirical scientists do.",
+	},
+];
+
+const spring2026 = [
+	{
+		id: 1,
+		title: "ECE 302: Introduction to Electrical Engineering",
+		description: "",
+	},
+	{ id: 2, title: "ECE 306: Introduction to Computing", description: "" },
+	{ id: 3, title: "ECO 420K: Microeconomic Theory", description: "" },
+	{
+		id: 4,
+		title: "ECE 351K: Probability and Random Processes",
+		description: "",
 	},
 ];
 ---
@@ -311,6 +338,11 @@ const fall2025 = [
 				<div class="semester-section">
 					<h2 class="semester-title">Fall 2025</h2>
 					<DropdownList dropdownItems={fall2025} />
+				</div>
+
+				<div class="semester-section">
+					<h2 class="semester-title">Spring 2026</h2>
+					<DropdownList dropdownItems={spring2026} />
 				</div>
 			</section>
 

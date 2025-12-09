@@ -12,18 +12,28 @@
     "lint": "npm run lint:ts",
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm run optimize && astro build && npm run compress:custom",
+    "build:no-compress": "astro build",
+    "optimize": "tsx scripts/optimize-images.mjs",
+    "compress:custom": "tsx scripts/compress-custom.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.3"
+    "@astrojs/react": "^4.4.2",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "astro": "^5.16.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.0.1",
     "@typescript-eslint/parser": "^8.0.1",
     "eslint": "^9.9.0",
     "stylelint": "^16.8.1",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-standard": "^36.0.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6"
   }
 }

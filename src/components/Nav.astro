@@ -1,6 +1,6 @@
 ---
 import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle.astro';
+import ThemeToggle from './ThemeToggle';
 import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
@@ -110,7 +110,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			</div>
 
 			<div class="theme-toggle">
-				<ThemeToggle />
+				<ThemeToggle client:load />
 			</div>
 		</div>
 	</div>
@@ -137,8 +137,24 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				menu.hidden = !expand;
 			};
 
-			// Toggle menu visibility when the menu button is clicked.
-			btn.addEventListener('click', () => setExpanded(menu.hidden));
+			const toggle = () => setExpanded(menu.hidden);
+
+			// Toggle menu visibility when the menu button is clicked or activated via keyboard.
+			btn.addEventListener('click', toggle);
+			btn.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					toggle();
+				}
+			});
+
+			// Close with Escape.
+			window.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape' && !menu.hidden) {
+					setExpanded(false);
+					btn.focus();
+				}
+			});
 
 			// Hide menu button for large screens.
 			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
@@ -158,8 +174,12 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		z-index: 9999;
 		position: relative;
 		font-family: var(--font-brand);
-		font-weight: 500;
-		margin-bottom: 3.5rem;
+	}
+
+	.nav-controls {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.menu-header {

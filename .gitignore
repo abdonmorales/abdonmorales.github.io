@@ -3,4 +3,5 @@ node_modules/
 .idea
 package-lock.json
 dist
+.astro/
 *:Zone.Identifier

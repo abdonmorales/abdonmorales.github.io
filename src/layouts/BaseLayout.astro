@@ -8,46 +8,101 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
-title?: string | undefined;
-description?: string | undefined;
+  title?: string | undefined;
+  description?: string | undefined;
 }
 
 const { title, description } = Astro.props;
+
+// Initialize theme class - will be set by client-side JavaScript
+const themeClass = '';
 ---
 
 <html lang="en">
-<head>
-<MainHead title={title} description={description} />
-<meta name="theme-color" content="#bf5700" />
-</head>
-<body>
-<div class="stack backgrounds">
-<Nav />
-<slot />
-<Footer />
-</div>
+  <head>
+    <MainHead title={title} description={description} />
+    <meta name="theme-color" content="#bf5700" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <!-- @ts-ignore -->
+  <body>
+    <!-- @ts-ignore -->
+    <div class="stack backgrounds liquid-glass">
+      <Nav />
+      <!-- @ts-ignore -->
+      <main class="liquid-glass-container">
+        <slot />
+      </main>
+      <Footer />
+    </div>
 
 <script>
 // Add "loaded" class once the document has completely loaded.
 import { setupTouchDetection } from '../utilities/touchDetection';
-addEventListener('load', () => document.documentElement.classList.add('loaded'));
-setupTouchDetection();
+import { 
+  initAssetOptimization,
+  setupLazyLoadingWithCompression,
+  setupLinkPrefetching,
+  setupNetworkQualityMonitoring
+} from '../utilities/assetOptimization';
+import { createCompressionMonitor } from '../utilities/compressionMonitor';
 
-// Mejorar la carga de imágenes de fondo
-document.addEventListener('DOMContentLoaded', () => {
-const bgImages = document.querySelectorAll('img[loading="lazy"]');
-if ('IntersectionObserver' in window) {
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-const img = entry.target;
-img.setAttribute('fetchpriority', 'high');
-observer.unobserve(img);
+// Set up theme
+const savedTheme = localStorage.getItem('theme');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+if (theme === 'dark') {
+  document.documentElement.classList.add('theme-dark');
+} else {
+  document.documentElement.classList.remove('theme-dark');
 }
-});
-});
-bgImages.forEach(img => observer.observe(img));
+
+// Set up theme change listener
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const handleChange = (e: MediaQueryListEvent) => {
+  if (!localStorage.getItem('theme')) {
+    if (e.matches) {
+      document.documentElement.classList.add('theme-dark');
+    } else {
+      document.documentElement.classList.remove('theme-dark');
+    }
+  }
+};
+mediaQuery.addEventListener('change', handleChange);
+
+// Clean up and optimize loading
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add('loaded');
+    
+    // Initialize asset optimization with Web Workers (non-blocking!)
+    initAssetOptimization().catch(console.error);
+    
+    // Setup lazy loading (now using workers)
+    setupLazyLoadingWithCompression();
+    
+    // Setup link prefetching (now using workers)
+    setupLinkPrefetching();
+    
+    // Monitor network quality
+    setupNetworkQualityMonitoring();
+  });
+} else {
+  document.documentElement.classList.add('loaded');
+  
+  initAssetOptimization().catch(console.error);
+  setupLazyLoadingWithCompression();
+  setupLinkPrefetching();
+  setupNetworkQualityMonitoring();
 }
+
+window.addEventListener('load', () => {
+  setupTouchDetection();
+  
+  // Enable compression monitor in development
+  if (import.meta.env.DEV) {
+    createCompressionMonitor();
+  }
 });
 </script>
 
