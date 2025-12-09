@@ -1,7 +1,7 @@
 ---
 title: Critters for CS 312
 publishDate: 2025-09-25 13:01:00
-img: /assets/critters.png
+img: /assets/critter-312.png
 img_alt: Critters for CS 312
 description: |-
   
