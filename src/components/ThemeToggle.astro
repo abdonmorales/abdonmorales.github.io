@@ -3,69 +3,128 @@ import Icon from './Icon.astro';
 ---
 
 <theme-toggle>
-	<button>
+	<button type="button" aria-pressed="false">
 		<span class="sr-only">Toggle color theme</span>
-		<span class="icon light"><Icon icon="sun" /></span>
-		<span class="icon dark"><Icon icon="moon-stars" /></span>
+		<span class="halo" aria-hidden="true"></span>
+		<span class="glyph sun" aria-hidden="true"><Icon icon="sun" /></span>
+		<span class="glyph moon" aria-hidden="true"><Icon icon="moon-stars" /></span>
 	</button>
 </theme-toggle>
 
 <style>
 	button {
-		display: flex;
-		border: 0;
+		--size: 2.4rem;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--size);
+		height: var(--size);
+		border: 1px solid color-mix(in srgb, var(--gray-800) 45%, transparent);
 		border-radius: 999rem;
 		padding: 0;
-		background-color: var(--gray-999);
-		box-shadow: inset 0 0 0 1px var(--accent-overlay);
+		background:
+			linear-gradient(145deg, color-mix(in srgb, #fff 10%, transparent), transparent 55%),
+			linear-gradient(165deg, color-mix(in srgb, var(--glass-regular) 60%, transparent), color-mix(in srgb, var(--glass-thin) 40%, transparent));
+		box-shadow:
+			inset 0 1px 0 color-mix(in srgb, #fff 12%, transparent),
+			var(--glass-shadow-light);
+		backdrop-filter: blur(18px) saturate(1.2);
+		-webkit-backdrop-filter: blur(18px) saturate(1.2);
 		cursor: pointer;
 		overflow: hidden;
-		transition: box-shadow var(--theme-transition), transform var(--theme-transition);
+		transition:
+			box-shadow var(--theme-transition),
+			transform var(--theme-transition),
+			border-color var(--theme-transition),
+			background-color var(--theme-transition);
+		will-change: transform, box-shadow;
 	}
 
-	.icon {
+	.halo {
+		position: absolute;
+		inset: -6%;
+		border-radius: inherit;
+		background: radial-gradient(circle at 35% 35%, color-mix(in srgb, #fff 14%, transparent), transparent 60%);
+		mix-blend-mode: soft-light;
+		opacity: 0.55;
+		pointer-events: none;
+	}
+
+	.glyph {
 		z-index: 1;
-		position: relative;
 		display: flex;
-		padding: 0.5rem;
-		width: 2rem;
-		height: 2rem;
-		font-size: 1rem;
-		color: var(--accent-overlay);
-	}
-
-	.icon.light::before {
-		content: '';
-		z-index: -1;
+		align-items: center;
+		justify-content: center;
+		width: 1.25rem;
+		height: 1.25rem;
+		font-size: 1.05rem;
+		color: var(--gray-300);
+		pointer-events: none;
 		position: absolute;
 		inset: 0;
-		background-color: var(--accent-regular);
-		border-radius: 999rem;
+		margin: auto;
+		transition: opacity var(--theme-transition), transform var(--theme-transition);
 	}
 
-	:global(.theme-dark) .icon.light::before {
-		transform: translateX(100%);
+	.sun {
+		opacity: 1;
+		transform: translateY(0);
+		color: color-mix(in srgb, #f6d27a 80%, var(--gray-200));
 	}
 
-	:global(.theme-dark) .icon.dark,
-	:global(html:not(.theme-dark)) .icon.light,
-	button[aria-pressed='false'] .icon.light {
-		color: var(--accent-text-over);
+	.moon {
+		opacity: 0;
+		transform: translateY(6%);
+		color: color-mix(in srgb, #c6ddff 78%, var(--gray-300));
+	}
+
+	:global(.theme-dark) button {
+		border-color: color-mix(in srgb, var(--glass-stroke) 80%, transparent);
+		background: linear-gradient(150deg, color-mix(in srgb, var(--glass-regular) 46%, transparent), color-mix(in srgb, var(--glass-thin) 34%, transparent));
+	}
+
+	:global(.theme-dark) .sun {
+		opacity: 0;
+		transform: translateY(-6%);
+		color: color-mix(in srgb, var(--gray-400) 88%, var(--accent-regular));
+	}
+
+	:global(.theme-dark) .moon {
+		opacity: 1;
+		transform: translateY(0);
+		color: color-mix(in srgb, #e6f1ff 90%, var(--gray-100));
+	}
+
+	button:focus-visible {
+		outline: 2px solid var(--accent-regular);
+		outline-offset: 3px;
+	}
+
+	button:hover {
+		box-shadow: var(--glass-shadow-medium);
+		transform: translateY(-1px);
 	}
 
 	@media (prefers-reduced-motion: no-preference) {
-		.icon,
-		.icon.light::before {
-		transition:
-			transform var(--theme-transition),
-			color var(--theme-transition),
-			box-shadow var(--theme-transition);
-	}
+		button,
+		.glyph {
+			transition:
+				transform var(--theme-transition),
+				color var(--theme-transition),
+				box-shadow var(--theme-transition),
+				border-color var(--theme-transition),
+				opacity var(--theme-transition);
+		}
 	}
 
 	@media (forced-colors: active) {
-		.icon.light::before {
-			background-color: SelectedItem;
+		button {
+			border: 1px solid ButtonText;
+			background: ButtonFace;
+		}
+		.glyph {
+			color: ButtonText;
 		}
 	}
 </style>
@@ -79,7 +138,6 @@ import Icon from './Icon.astro';
 			if (this.button) return;
 			this.button = this.querySelector('button')!;
 
-			// Sync button state with current theme.
 			const sync = () => {
 				const isDark = document.documentElement.classList.contains('theme-dark');
 				this.button?.setAttribute('aria-pressed', String(isDark));
@@ -88,7 +146,6 @@ import Icon from './Icon.astro';
 
 			const setTheme = (dark: boolean) => {
 				document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
-				// Persist immediately for next visit.
 				try {
 					localStorage.setItem('theme', dark ? 'dark' : 'light');
 				} catch (_) {}
