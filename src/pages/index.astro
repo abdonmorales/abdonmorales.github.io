@@ -28,7 +28,7 @@ const projects = (await getCollection('work'))
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
-			<header class="hero">
+			<header class="hero glass-panel flush glass-soft">
 				<Hero
 					title="Hello, my name is Abdon Morales"
 					tagline="I am a B.S Economics student currently studying at the University of Texas at Austin."
@@ -54,11 +54,11 @@ const projects = (await getCollection('work'))
 				/>
 			</header>
 
-			<Skills />
+			<Skills class="glass-soft" />
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="section with-background with-cta">
+			<section class="section with-background with-cta glass-panel flush">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>My Projects</h3>
 					<p>Take a look below at some of my featured projects from the past few years.</p>
@@ -92,13 +92,15 @@ const projects = (await getCollection('work'))
 
 <style>
 	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 2rem;
-		padding: 2rem 1.25rem;
-		border-radius: var(--glass-border-radius);
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		gap: 1.75rem;
+		padding: clamp(1.75rem, 3vw, 2.75rem);
+		border-radius: 1.75rem;
 		margin: 1rem 0;
+		backdrop-filter: var(--glass-blur-light);
+		-webkit-backdrop-filter: var(--glass-blur-light);
 	}
 
 	.roles {
@@ -115,17 +117,15 @@ const projects = (await getCollection('work'))
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
 		object-position: top;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
+		border-radius: 1.25rem;
+		box-shadow: var(--glass-shadow-medium);
 	}
 
 	@media (min-width: 50em) {
 		.hero {
-			display: grid;
 			grid-template-columns: 6fr 4fr;
-			padding: 3rem 2.25rem;
-			gap: 3.75rem;
-			align-items: center;
+			padding: 3rem clamp(2rem, 5vw, 3.25rem);
+			gap: 3.25rem;
 		}
 
 		.roles {
@@ -146,8 +146,17 @@ const projects = (await getCollection('work'))
 
 	.section {
 		display: grid;
-		gap: 2.5rem;
+		gap: 2.25rem;
 		position: relative;
+		padding: clamp(1.75rem, 3vw, 2.75rem);
+		border-radius: 1.5rem;
+	}
+
+	@supports (content-visibility: auto) {
+		.section {
+			content-visibility: auto;
+			contain-intrinsic-size: 1px 540px;
+		}
 	}
 
 	.with-background {
@@ -155,8 +164,8 @@ const projects = (await getCollection('work'))
 	}
 
 	.with-background {
-		padding-top: 3rem;
-		margin-top: 3rem;
+		padding-top: clamp(2.25rem, 4vw, 3rem);
+		margin-top: 1.5rem;
 	}
 
 	.with-background::before {
@@ -172,9 +181,8 @@ const projects = (await getCollection('work'))
 		transform: translateY(-75%) translateX(-50%);
 		background:
 			url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat,
-			var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
+			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat;
+		background-blend-mode: overlay, normal;
 		mix-blend-mode: var(--bg-blend-mode);
 		z-index: -1;
 	}
@@ -208,7 +216,7 @@ const projects = (await getCollection('work'))
 		.section {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 3.5rem;
+			gap: 3rem;
 		}
 
 		.section.with-cta {

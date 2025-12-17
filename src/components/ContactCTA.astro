@@ -3,7 +3,7 @@ import CallToAction from './CallToAction.astro';
 import Icon from './Icon.astro';
 ---
 
-<aside>
+<aside class="contact-cta glass-panel flush">
 	<h2>Interested in working together?</h2>
 	<CallToAction href="mailto:abdonmorales@utexas.edu">
 		Send Me a Message
@@ -12,16 +12,16 @@ import Icon from './Icon.astro';
 </aside>
 
 <style>
-	aside {
+	.contact-cta {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 3rem;
-		border-top: 1px solid var(--gray-800);
-		border-bottom: 1px solid var(--gray-800);
-		padding: 5rem 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+		gap: 2.5rem;
+		padding: clamp(3rem, 5vw, 4.25rem) clamp(1.5rem, 3vw, 2.75rem);
+		border-radius: 1.75rem;
+		box-shadow: var(--glass-shadow-medium);
+		backdrop-filter: var(--glass-blur-medium);
+		-webkit-backdrop-filter: var(--glass-blur-medium);
 	}
 
 	h2 {
@@ -31,8 +31,8 @@ import Icon from './Icon.astro';
 	}
 
 	@media (min-width: 50em) {
-		aside {
-			padding: 7.5rem;
+		.contact-cta {
+			padding: clamp(3.5rem, 5vw, 5.5rem);
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;

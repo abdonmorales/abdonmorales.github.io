@@ -3,14 +3,20 @@
 <style>
 	.pill {
 		display: flex;
-		padding: 0.5rem 1rem;
+		align-items: center;
+		padding: 0.45rem 1rem;
 		gap: 0.5rem;
 		color: var(--accent-text-over);
-		border: 1px solid var(--accent-regular);
-		background-color: var(--accent-regular);
+		border: 1px solid color-mix(in srgb, var(--accent-regular) 60%, transparent);
+		background:
+			linear-gradient(140deg, color-mix(in srgb, var(--accent-dark) 35%, transparent), transparent 55%),
+			color-mix(in srgb, var(--accent-regular) 78%, var(--glass-ultra-thick) 22%);
 		border-radius: 999rem;
 		font-size: var(--text-md);
 		line-height: 1.35;
 		white-space: nowrap;
+		box-shadow: 0 8px 20px color-mix(in srgb, var(--accent-regular) 28%, transparent);
+		-webkit-backdrop-filter: var(--glass-blur-light);
+		backdrop-filter: var(--glass-blur-light);
 	}
 </style>

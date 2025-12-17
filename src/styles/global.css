@@ -3,9 +3,15 @@
 	/* Glass + backgrounds tokens */
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--glass-border-radius: 1.5rem;
-	--glass-surface: rgba(255, 255, 255, 0.03);
-	--glass-surface-strong: rgba(255, 255, 255, 0.08);
-	--glass-border: 1px solid rgba(255, 255, 255, 0.08);
+	--glass-backdrop: blur(24px) saturate(1.35);
+	--glass-surface: color-mix(in srgb, var(--gray-999) 18%, transparent);
+	--glass-surface-strong: color-mix(in srgb, var(--gray-999) 30%, transparent);
+	--glass-stroke: color-mix(in srgb, var(--gray-0) 18%, transparent);
+	--glass-stroke-soft: color-mix(in srgb, var(--gray-0) 12%, transparent);
+	--glass-highlight: linear-gradient(145deg, color-mix(in srgb, var(--gray-999) 26%, transparent), transparent 52%);
+	--glass-reflection: radial-gradient(circle at 18% 18%, color-mix(in srgb, #fff 12%, transparent), transparent 34%);
+	--glass-noise: url('/assets/backgrounds/noise.png');
+	--glass-shadow-layer: 0 22px 60px color-mix(in srgb, var(--gray-0) 13%, transparent);
 	--page-max-width: 83rem;
 	/* Colors */
 	--gray-0: #090b11;
@@ -33,35 +39,31 @@
 	--link-color: var(--accent-regular);
 
 	/* Liquid Glass Materials */
-	--glass-ultra-thin: rgba(255, 255, 255, 0.03);
-	--glass-thin: rgba(255, 255, 255, 0.05);
-	--glass-regular: rgba(255, 255, 255, 0.08);
-	--glass-thick: rgba(255, 255, 255, 0.12);
-	--glass-ultra-thick: rgba(255, 255, 255, 0.18);
-	
+	--glass-ultra-thin: color-mix(in srgb, var(--gray-999) 10%, transparent);
+	--glass-thin: color-mix(in srgb, var(--gray-999) 16%, transparent);
+	--glass-regular: color-mix(in srgb, var(--gray-999) 22%, transparent);
+	--glass-thick: color-mix(in srgb, var(--gray-999) 28%, transparent);
+	--glass-ultra-thick: color-mix(in srgb, var(--gray-999) 38%, transparent);
+
 	/* Glass blur effects */
-	--glass-blur-light: blur(20px);
-	--glass-blur-medium: blur(40px);
-	--glass-blur-heavy: blur(60px);
-	
+	--glass-blur-light: blur(18px);
+	--glass-blur-medium: blur(30px);
+	--glass-blur-heavy: blur(48px);
+
 	/* Glass borders */
-	--glass-border-thin: 1px solid rgba(255, 255, 255, 0.1);
-	--glass-border-thick: 1px solid rgba(255, 255, 255, 0.15);
-	
+	--glass-border-thin: 1px solid color-mix(in srgb, var(--gray-0) 12%, transparent);
+	--glass-border-thick: 1px solid color-mix(in srgb, var(--gray-0) 18%, transparent);
+
 	/* Glass shadows for depth */
-	--glass-shadow-light: 
-		0 1px 3px rgba(0, 0, 0, 0.12),
-		0 1px 2px rgba(0, 0, 0, 0.24),
-		inset 0 1px 0 rgba(255, 255, 255, 0.1);
-	--glass-shadow-medium: 
-		0 4px 6px rgba(0, 0, 0, 0.07),
-		0 3px 6px rgba(0, 0, 0, 0.1),
-		inset 0 1px 0 rgba(255, 255, 255, 0.15);
-	--glass-shadow-heavy: 
-		0 10px 25px rgba(0, 0, 0, 0.15),
-		0 6px 10px rgba(0, 0, 0, 0.1),
-		inset 0 1px 0 rgba(255, 255, 255, 0.2);
-		
+	--glass-shadow-light: 0 6px 16px color-mix(in srgb, var(--gray-0) 8%, transparent),
+		inset 0 1px 0 color-mix(in srgb, var(--gray-0) 12%, transparent);
+	--glass-shadow-medium: 0 12px 28px color-mix(in srgb, var(--gray-0) 10%, transparent),
+		0 4px 14px color-mix(in srgb, var(--gray-0) 12%, transparent),
+		inset 0 1px 0 color-mix(in srgb, var(--gray-0) 16%, transparent);
+	--glass-shadow-heavy: 0 24px 52px color-mix(in srgb, var(--gray-0) 14%, transparent),
+		0 14px 36px color-mix(in srgb, var(--gray-0) 12%, transparent),
+		inset 0 1px 0 color-mix(in srgb, var(--gray-0) 18%, transparent);
+
 	/* Vibrancy colors for glass */
 	--glass-text-primary: rgba(255, 255, 255, 0.9);
 	--glass-text-secondary: rgba(255, 255, 255, 0.7);
@@ -141,30 +143,34 @@
 	--link-color: var(--accent-dark);
 
 	/* Liquid Glass Materials for dark mode */
-	--glass-ultra-thin: rgba(0, 0, 0, 0.03);
-	--glass-thin: rgba(0, 0, 0, 0.05);
-	--glass-regular: rgba(0, 0, 0, 0.08);
-	--glass-thick: rgba(0, 0, 0, 0.12);
-	--glass-ultra-thick: rgba(0, 0, 0, 0.18);
-	
-	/* Glass borders for dark mode */
-	--glass-border-thin: 1px solid rgba(0, 0, 0, 0.1);
-	--glass-border-thick: 1px solid rgba(0, 0, 0, 0.15);
-	
+	--glass-surface: color-mix(in srgb, #0a0f18 68%, transparent);
+	--glass-surface-strong: color-mix(in srgb, #0a0f18 84%, transparent);
+	--glass-stroke: color-mix(in srgb, #e7eaf3 12%, transparent);
+	--glass-stroke-soft: color-mix(in srgb, #e7eaf3 8%, transparent);
+	--glass-highlight: linear-gradient(150deg, color-mix(in srgb, #fff 10%, transparent), transparent 55%);
+	--glass-reflection: radial-gradient(circle at 18% 18%, color-mix(in srgb, #fff 9%, transparent), transparent 32%);
+	--glass-shadow-layer: 0 20px 50px color-mix(in srgb, #000 35%, transparent);
+
+	/* Glass blur/borders for dark mode */
+	--glass-ultra-thin: color-mix(in srgb, #0b0f18 16%, transparent);
+	--glass-thin: color-mix(in srgb, #0b0f18 22%, transparent);
+	--glass-regular: color-mix(in srgb, #0b0f18 30%, transparent);
+	--glass-thick: color-mix(in srgb, #0b0f18 38%, transparent);
+	--glass-ultra-thick: color-mix(in srgb, #0b0f18 48%, transparent);
+
+	--glass-border-thin: 1px solid color-mix(in srgb, #e7eaf3 9%, transparent);
+	--glass-border-thick: 1px solid color-mix(in srgb, #e7eaf3 14%, transparent);
+
 	/* Glass shadows for dark mode depth */
-	--glass-shadow-light: 
-		0 1px 3px rgba(255, 255, 255, 0.12),
-		0 1px 2px rgba(255, 255, 255, 0.24),
-		inset 0 1px 0 rgba(0, 0, 0, 0.1);
-	--glass-shadow-medium: 
-		0 4px 6px rgba(255, 255, 255, 0.07),
-		0 3px 6px rgba(255, 255, 255, 0.1),
-		inset 0 1px 0 rgba(0, 0, 0, 0.15);
-	--glass-shadow-heavy: 
-		0 10px 25px rgba(255, 255, 255, 0.15),
-		0 6px 10px rgba(255, 255, 255, 0.1),
-		inset 0 1px 0 rgba(0, 0, 0, 0.2);
-		
+	--glass-shadow-light: 0 6px 16px color-mix(in srgb, #000 32%, transparent),
+		inset 0 1px 0 color-mix(in srgb, #fff 8%, transparent);
+	--glass-shadow-medium: 0 12px 28px color-mix(in srgb, #000 36%, transparent),
+		0 4px 14px color-mix(in srgb, #000 32%, transparent),
+		inset 0 1px 0 color-mix(in srgb, #fff 10%, transparent);
+	--glass-shadow-heavy: 0 24px 52px color-mix(in srgb, #000 42%, transparent),
+		0 14px 36px color-mix(in srgb, #000 36%, transparent),
+		inset 0 1px 0 color-mix(in srgb, #fff 12%, transparent);
+
 	/* Vibrancy colors for dark mode glass */
 	--glass-text-primary: rgba(0, 0, 0, 0.9);
 	--glass-text-secondary: rgba(0, 0, 0, 0.7);
@@ -203,6 +209,21 @@ body {
 	transition: background-color var(--theme-transition-body),
 				color var(--theme-transition-body);
 	font-display: swap; /* Estrategia óptima para texto visible */
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }
 
 *,
@@ -279,23 +300,130 @@ h5 {
 }
 
 .liquid-glass {
-	background: var(--glass-surface);
-	-webkit-backdrop-filter: blur(18px);
-	backdrop-filter: blur(18px);
-	border: var(--glass-border);
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
 	border-radius: var(--glass-border-radius);
-	box-shadow: var(--shadow-sm);
+	background-color: color-mix(in srgb, var(--glass-surface-strong) 86%, transparent);
+	border: 1px solid var(--glass-stroke);
+	box-shadow: var(--glass-shadow-medium), var(--glass-shadow-layer);
+	-webkit-backdrop-filter: var(--glass-backdrop);
+	backdrop-filter: var(--glass-backdrop);
+}
+
+.liquid-glass::before,
+.liquid-glass::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+}
+
+.liquid-glass::before {
+	background:
+		var(--glass-highlight),
+		var(--glass-reflection),
+		linear-gradient(180deg, color-mix(in srgb, #fff 8%, transparent), transparent 36%),
+		var(--glass-noise);
+	mix-blend-mode: soft-light;
+	opacity: 0.7;
+}
+
+.liquid-glass::after {
+	border: 1px solid var(--glass-stroke-soft);
+	mix-blend-mode: screen;
 }
 
 .liquid-glass-container {
 	padding: 1.5rem clamp(0.5rem, 2vw, 2rem);
 	border-radius: var(--glass-border-radius);
-	background: linear-gradient(180deg, var(--glass-surface), transparent 55%);
+	background:
+		linear-gradient(180deg, color-mix(in srgb, var(--glass-surface-strong) 80%, transparent) 0%, transparent 70%),
+		linear-gradient(90deg, color-mix(in srgb, var(--glass-surface) 40%, transparent), transparent);
+	box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 12%, transparent);
 }
 
-:global(.theme-dark) .liquid-glass {
-	background: var(--glass-surface-strong);
-	border-color: rgba(0, 0, 0, 0.25);
+.glass-panel {
+	--glass-overlay-opacity: 0.55;
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	border-radius: 1.25rem;
+	background: linear-gradient(
+			160deg,
+			color-mix(in srgb, var(--glass-regular) 72%, transparent) 0%,
+			color-mix(in srgb, var(--glass-thick) 90%, transparent) 48%,
+			color-mix(in srgb, var(--glass-thin) 70%, transparent) 100%
+		),
+		linear-gradient(150deg, color-mix(in srgb, #fff 10%, transparent), transparent 55%);
+	border: var(--glass-border-thin);
+	box-shadow: var(--glass-shadow-light);
+	-webkit-backdrop-filter: var(--glass-blur-medium);
+	backdrop-filter: var(--glass-blur-medium);
+}
+
+.glass-panel::before,
+.glass-panel::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+}
+
+.glass-panel::before {
+	background:
+		radial-gradient(circle at 20% 18%, color-mix(in srgb, #fff 12%, transparent), transparent 36%),
+		linear-gradient(180deg, color-mix(in srgb, #fff 7%, transparent), transparent 52%);
+	mix-blend-mode: soft-light;
+	opacity: var(--glass-overlay-opacity);
+}
+
+.glass-panel::after {
+	border: 1px solid var(--glass-stroke-soft);
+	box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 9%, transparent);
+	mix-blend-mode: screen;
+}
+
+.glass-panel.flush {
+	overflow: visible;
+}
+
+.glass-soft {
+	--glass-overlay-opacity: 0.35;
+	background: linear-gradient(
+			165deg,
+			color-mix(in srgb, var(--glass-regular) 62%, transparent) 0%,
+			color-mix(in srgb, var(--glass-thin) 55%, transparent) 100%
+		),
+		linear-gradient(150deg, color-mix(in srgb, #fff 6%, transparent), transparent 55%);
+	box-shadow: var(--glass-shadow-light);
+}
+
+:global(.theme-dark) .liquid-glass::before {
+	opacity: 0.35;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+	.liquid-glass {
+		background: color-mix(in srgb, var(--glass-surface) 70%, transparent);
+		box-shadow: var(--shadow-sm);
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
+	}
+	.liquid-glass::before {
+		display: none;
+	}
+	.glass-panel {
+		background: color-mix(in srgb, var(--glass-regular) 55%, transparent);
+		box-shadow: var(--shadow-sm);
+		-webkit-backdrop-filter: none;
+		backdrop-filter: none;
+	}
+	.glass-panel::before {
+		display: none;
+	}
 }
 
 .stack {

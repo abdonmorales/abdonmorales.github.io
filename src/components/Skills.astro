@@ -1,8 +1,13 @@
 ---
 import Icon from './Icon.astro';
+interface Props {
+	class?: string | string[] | Record<string, boolean>;
+}
+
+const { class: className } = Astro.props;
 ---
 
-<section class="box skills">
+<section class:list={['box skills glass-panel flush', className]}>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="linux" color="var(--accent-regular)" size="2.5rem" gradient />
 		<h2>OS Architect</h2>
@@ -22,17 +27,21 @@ import Icon from './Icon.astro';
 
 <style>
 	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
+		padding: clamp(1.5rem, 3vw, 2.25rem);
+		border-radius: 1.5rem;
 	}
 
 	.skills {
 		display: flex;
 		flex-direction: column;
 		gap: 3rem;
+	}
+
+	@supports (content-visibility: auto) {
+		.skills {
+			content-visibility: auto;
+			contain-intrinsic-size: 1px 420px;
+		}
 	}
 
 	.skills h2 {
@@ -45,8 +54,8 @@ import Icon from './Icon.astro';
 
 	@media (min-width: 50em) {
 		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
+			border-radius: 1.75rem;
+			padding: clamp(2rem, 3vw, 2.75rem);
 		}
 
 		.skills {
