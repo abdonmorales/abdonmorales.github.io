@@ -1,28 +1,28 @@
 {
-  "totalFiles": 85,
-  "totalOriginalSize": 30177601,
-  "totalCompressedSize": 20754588,
-  "compressionRatio": 31.22518917259195,
+  "totalFiles": 82,
+  "totalOriginalSize": 30113048,
+  "totalCompressedSize": 20713623,
+  "compressionRatio": 31.213794764316116,
   "files": [
     {
       "path": "404.html",
-      "originalSize": 22015,
-      "compressedSize": 9490,
-      "ratio": 56.89302748126277,
+      "originalSize": 16326,
+      "compressedSize": 6322,
+      "ratio": 61.276491485973295,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "about/index.html",
-      "originalSize": 33154,
-      "compressedSize": 13702,
-      "ratio": 58.671653495807455,
+      "originalSize": 28332,
+      "compressedSize": 10952,
+      "ratio": 61.3440632500353,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
-      "path": "assets/BaseLayout.astro_astro_type_script_index_0_lang.W-WaCSeV.js",
-      "originalSize": 17463,
-      "compressedSize": 9965,
-      "ratio": 42.93649430223901,
+      "path": "assets/BaseLayout.astro_astro_type_script_index_0_lang.2Q9ifvx5.js",
+      "originalSize": 17074,
+      "compressedSize": 9838,
+      "ratio": 42.380227246105186,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -40,31 +40,10 @@
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
-      "path": "assets/ThemeToggle.CnRUNY2q.js",
-      "originalSize": 11212,
-      "compressedSize": 6845,
-      "ratio": 38.949339992864786,
-      "techniques": "Delta+LZ77-Hash+Huffman"
-    },
-    {
-      "path": "assets/about.542d6c0b.Ccs2yVKk.js",
-      "originalSize": 141,
-      "compressedSize": 436,
-      "ratio": -209.21985815602838,
-      "techniques": "Delta+LZ77-Hash+Huffman"
-    },
-    {
-      "path": "assets/about.D3HabBqd.css",
-      "originalSize": 1741,
-      "compressedSize": 1588,
-      "ratio": 8.788052843193572,
-      "techniques": "Delta+LZ77-Hash+Huffman"
-    },
-    {
-      "path": "assets/about.Lf-fQWpj.css",
-      "originalSize": 17419,
-      "compressedSize": 7095,
-      "ratio": 59.26861473104081,
+      "path": "assets/about.CoDwdrNf.css",
+      "originalSize": 22127,
+      "compressedSize": 8047,
+      "ratio": 63.6326659736973,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -208,10 +187,10 @@
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
-      "path": "assets/client.CTDoNXH3.js",
-      "originalSize": 186619,
-      "compressedSize": 94239,
-      "ratio": 49.501926384773256,
+      "path": "assets/client.EAUERNtn.js",
+      "originalSize": 194632,
+      "compressedSize": 98209,
+      "ratio": 49.54118541658104,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -453,10 +432,10 @@
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
-      "path": "assets/index.D55ewHcJ.js",
-      "originalSize": 7848,
-      "compressedSize": 5786,
-      "ratio": 26.27420998980632,
+      "path": "assets/index.D4_5ySxm.css",
+      "originalSize": 4209,
+      "compressedSize": 2778,
+      "ratio": 33.998574483250174,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -517,9 +496,9 @@
     },
     {
       "path": "coursework/index.html",
-      "originalSize": 46785,
-      "compressedSize": 15783,
-      "ratio": 66.26482847066367,
+      "originalSize": 41769,
+      "compressedSize": 13039,
+      "ratio": 68.78306878306879,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -531,9 +510,9 @@
     },
     {
       "path": "index.html",
-      "originalSize": 40735,
-      "compressedSize": 15424,
-      "ratio": 62.13575549281944,
+      "originalSize": 33007,
+      "compressedSize": 11753,
+      "ratio": 64.39240161177932,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
@@ -545,58 +524,58 @@
     },
     {
       "path": "work/critters312/index.html",
-      "originalSize": 55326,
-      "compressedSize": 22857,
-      "ratio": 58.686693417199876,
+      "originalSize": 50672,
+      "compressedSize": 20178,
+      "ratio": 60.17919166403536,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/graphy/index.html",
-      "originalSize": 30325,
-      "compressedSize": 13172,
-      "ratio": 56.56389117889531,
+      "originalSize": 25671,
+      "compressedSize": 10467,
+      "ratio": 59.22636438003973,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/index.html",
-      "originalSize": 30447,
-      "compressedSize": 12274,
-      "ratio": 59.68732551647125,
+      "originalSize": 26131,
+      "compressedSize": 9632,
+      "ratio": 63.13956603268149,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/kernel/index.html",
-      "originalSize": 30776,
-      "compressedSize": 13331,
-      "ratio": 56.68377956849493,
+      "originalSize": 26122,
+      "compressedSize": 10617,
+      "ratio": 59.35609830793966,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/longhornnetwork/index.html",
-      "originalSize": 30751,
-      "compressedSize": 13002,
-      "ratio": 57.718448180546964,
+      "originalSize": 26097,
+      "compressedSize": 10315,
+      "ratio": 60.47438402881558,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/pdfcompiler/index.html",
-      "originalSize": 31484,
-      "compressedSize": 13801,
-      "ratio": 56.16503620886799,
+      "originalSize": 26827,
+      "compressedSize": 11091,
+      "ratio": 58.65732284638611,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/tacc22/index.html",
-      "originalSize": 29939,
-      "compressedSize": 12732,
-      "ratio": 57.47352951000367,
+      "originalSize": 25288,
+      "compressedSize": 10023,
+      "ratio": 60.36459981018665,
       "techniques": "Delta+LZ77-Hash+Huffman"
     },
     {
       "path": "work/utsa_camp/index.html",
-      "originalSize": 32496,
-      "compressedSize": 13452,
-      "ratio": 58.604135893648454,
+      "originalSize": 27839,
+      "compressedSize": 10748,
+      "ratio": 61.39229138977693,
       "techniques": "Delta+LZ77-Hash+Huffman"
     }
   ]
