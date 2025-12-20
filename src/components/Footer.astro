@@ -3,7 +3,7 @@ import Icon from './Icon.astro';
 import packageJson from '../../package.json';
 const currentYear = new Date().getFullYear();
 const endCopyYear = new Date().getFullYear() + 2;
-const astroVersion = packageJson.dependencies.astro.replace('^', '');
+const astroVersion = packageJson.dependencies.astro.replace(/^[\^~>=<]+/, '');
 ---
 
 <footer class="footer-shell glass-panel flush">
