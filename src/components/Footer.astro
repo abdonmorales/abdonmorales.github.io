@@ -1,5 +1,7 @@
 ---
 import Icon from './Icon.astro';
+import { version as astroVersion } from 'astro/package.json';
+
 const currentYear = new Date().getFullYear();
 const endCopyYear = new Date().getFullYear() + 2;
 ---
@@ -7,7 +9,7 @@ const endCopyYear = new Date().getFullYear() + 2;
 <footer class="footer-shell glass-panel flush">
 	<div class="group">
 		<p>
-			Designed & Developed in Austin, Texas with <a href="https://astro.build/">Astro 5.14.1</a>
+			Designed & Developed in Austin, Texas with <a href="https://astro.build/">Astro v{astroVersion}</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
 		<p>&copy; {currentYear} - {endCopyYear} Abdon Morales.</p>

@@ -49,28 +49,11 @@ import {
 } from '../utilities/assetOptimization';
 import { createCompressionMonitor } from '../utilities/compressionMonitor';
 
-// Set up theme
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-if (theme === 'dark') {
-  document.documentElement.classList.add('theme-dark');
-} else {
-  document.documentElement.classList.remove('theme-dark');
-}
-
-// Set up theme change listener
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-const handleChange = (e: MediaQueryListEvent) => {
-  if (!localStorage.getItem('theme')) {
-    if (e.matches) {
-      document.documentElement.classList.add('theme-dark');
-    } else {
-      document.documentElement.classList.remove('theme-dark');
-    }
-  }
-};
-mediaQuery.addEventListener('change', handleChange);
+// Force dark mode for now; re-enable dynamic toggle later.
+document.documentElement.classList.add('theme-dark');
+try {
+  localStorage.setItem('theme', 'dark');
+} catch (_) {}
 
 // Clean up and optimize loading
 if (document.readyState === 'loading') {

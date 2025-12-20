@@ -1,6 +1,5 @@
 ---
 import Icon from './Icon.astro';
-import ThemeToggle from './ThemeToggle';
 import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
@@ -108,9 +107,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 					))
 				}
 			</div>
-			<div class="theme-toggle">
-				<ThemeToggle client:load />
-			</div>
+			{/*
+				TODO: Re-enable ThemeToggle after redesign; currently removed per request.
+			*/}
 		</div>
 	</div>
 </nav>
