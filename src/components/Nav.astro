@@ -172,9 +172,9 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		z-index: 9999;
 		position: relative;
 		font-family: var(--font-brand);
-		width: min(100%, calc(var(--page-max-width) + 3rem));
+		width: min(calc(100% - 1rem), var(--page-max-width));
 		margin-inline: auto;
-		padding: clamp(0.75rem, 2vw, 1.25rem);
+		padding: clamp(0.5rem, 2vw, 1.25rem);
 		display: flex;
 		flex-direction: column;
 		gap: 0.75rem;
@@ -342,6 +342,36 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		align-items: center;
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
 		margin-left: auto;
+	}
+
+	@media (max-width: 40em) {
+		nav {
+			border-radius: 1rem;
+			gap: 0.5rem;
+		}
+
+		.menu-header {
+			padding: 0.25rem 0.35rem 0.25rem 0.5rem;
+		}
+
+		.menu-button {
+			font-size: 1.15rem;
+			padding: 0.45rem;
+		}
+
+		.nav-items {
+			padding: 1rem 1.25rem;
+		}
+
+		.menu-footer {
+			padding: 0.75rem 1rem 1rem;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.theme-toggle {
+			margin-left: 0;
+		}
 	}
 
 	@media (min-width: 50em) {

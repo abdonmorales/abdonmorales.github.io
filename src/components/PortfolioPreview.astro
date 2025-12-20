@@ -49,6 +49,21 @@ const { data, slug } = Astro.props.project;
 		will-change: transform, box-shadow;
 	}
 
+	@media (max-width: 40em) {
+		.card {
+			height: 10rem;
+			padding: 0.6rem;
+		}
+
+		.title {
+			font-size: var(--text-md);
+		}
+
+		img {
+			border-radius: 0.8rem;
+		}
+	}
+
 	.card:hover {
 		box-shadow: var(--glass-shadow-medium);
 		transform: translateY(-2px);
