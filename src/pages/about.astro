@@ -40,7 +40,7 @@ import Hero from "../components/Hero.astro";
 				</div>
 				<section>
 					<h2 class="section-title">Education</h2>
-					<div class="content education-card">
+					<div class="content education-card glass-panel flush">
 						<div class="education-header">
 							<p class="university">University of Texas at Austin</p>
 							<p class="degree">Economics, Bachelor of Science</p>
@@ -162,21 +162,18 @@ import Hero from "../components/Hero.astro";
 	
 	/* Estilos para la sección Education */
 	.education-card {
-		background-color: var(--gray-999);
-		border-radius: 1rem;
-		padding: 1.5rem;
-		box-shadow: var(--shadow-sm);
-		transition: box-shadow 0.25s ease;
-		border: 1px solid var(--gray-800);
-	}
-	
-	:global(.theme-dark) .education-card {
-		background-color: var(--gray-800);
-		border-color: var(--gray-700);
+		border-radius: 1.25rem;
+		padding: clamp(1.75rem, 3vw, 2.5rem);
+		border: 1px solid var(--glass-stroke-soft);
+		box-shadow: var(--glass-shadow-light);
+		transition: box-shadow 0.25s ease, transform 0.25s ease;
+		backdrop-filter: var(--glass-blur-light);
+		-webkit-backdrop-filter: var(--glass-blur-light);
 	}
 	
 	.education-card:hover {
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--glass-shadow-medium);
+		transform: translateY(-2px);
 	}
 	
 	.university {
@@ -252,19 +249,25 @@ import Hero from "../components/Hero.astro";
 	/* Estilos para Community Involvement */
 	.involvement-item {
 		margin-bottom: 2rem;
-		padding: 1rem;
+		padding: 1.1rem 1.1rem 1.1rem 1.25rem;
 		border-left: 3px solid var(--accent-regular);
-		background-color: var(--gray-900);
-		border-radius: 0 0.5rem 0.5rem 0;
+		background: linear-gradient(
+			160deg,
+			color-mix(in srgb, var(--glass-regular) 70%, transparent),
+			color-mix(in srgb, var(--glass-thin) 55%, transparent)
+		);
+		border-radius: 0.65rem;
 		transition: transform 0.2s ease, box-shadow 0.2s ease;
-		box-shadow: var(--shadow-sm);
-		border: 1px solid var(--gray-800);
+		box-shadow: var(--glass-shadow-light);
+		border: 1px solid var(--glass-stroke-soft);
 		border-left-width: 3px;
+		backdrop-filter: var(--glass-blur-light);
+		-webkit-backdrop-filter: var(--glass-blur-light);
 	}
 	
 	.involvement-item:hover {
 		transform: translateX(5px);
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--glass-shadow-medium);
 		border-left-color: var(--accent-dark);
 	}
 	
@@ -295,11 +298,6 @@ import Hero from "../components/Hero.astro";
 	}
 	
 	:global(.theme-dark) .involvement-item {
-		background-color: var(--gray-800);
-		border-left-color: var(--accent-light);
-	}
-	
-	:global(.theme-dark) .involvement-item h3 {
-		color: var(--gray-200);
+		border-left-color: color-mix(in srgb, var(--accent-light) 85%, transparent);
 	}
 </style>

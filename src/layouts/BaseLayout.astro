@@ -27,13 +27,15 @@ const themeClass = '';
   <!-- @ts-ignore -->
   <body>
     <!-- @ts-ignore -->
-    <div class="stack backgrounds liquid-glass">
-      <Nav />
-      <!-- @ts-ignore -->
-      <main class="liquid-glass-container">
-        <slot />
-      </main>
-      <Footer />
+    <div class="stack backgrounds">
+      <div class="stack page-shell liquid-glass">
+        <Nav />
+        <!-- @ts-ignore -->
+        <main class="liquid-glass-container">
+          <slot />
+        </main>
+        <Footer />
+      </div>
     </div>
 
 <script>
@@ -47,28 +49,11 @@ import {
 } from '../utilities/assetOptimization';
 import { createCompressionMonitor } from '../utilities/compressionMonitor';
 
-// Set up theme
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-if (theme === 'dark') {
-  document.documentElement.classList.add('theme-dark');
-} else {
-  document.documentElement.classList.remove('theme-dark');
-}
-
-// Set up theme change listener
-const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-const handleChange = (e: MediaQueryListEvent) => {
-  if (!localStorage.getItem('theme')) {
-    if (e.matches) {
-      document.documentElement.classList.add('theme-dark');
-    } else {
-      document.documentElement.classList.remove('theme-dark');
-    }
-  }
-};
-mediaQuery.addEventListener('change', handleChange);
+// Force dark mode for now; re-enable dynamic toggle later.
+document.documentElement.classList.add('theme-dark');
+try {
+  localStorage.setItem('theme', 'dark');
+} catch (_) {}
 
 // Clean up and optimize loading
 if (document.readyState === 'loading') {
@@ -140,6 +125,19 @@ window.addEventListener('load', () => {
 --bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
 --bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
 --bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
+}
+
+.page-shell {
+	min-height: 100vh;
+	gap: 1.25rem;
+	padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+@media (min-width: 60em) {
+	.page-shell {
+		padding: 1.75rem clamp(1.25rem, 3vw, 2.5rem);
+		gap: 1.75rem;
+	}
 }
 
 @media (min-width: 50em) {

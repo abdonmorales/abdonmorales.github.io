@@ -21,9 +21,16 @@ const { href } = Astro.props;
 		line-height: 1.1;
 		border-radius: 999rem;
 		overflow: hidden;
-		background: var(--gradient-accent-orange);
-		box-shadow: var(--shadow-md);
+		background:
+			linear-gradient(145deg, color-mix(in srgb, #fff 12%, transparent), transparent 50%),
+			var(--gradient-accent-orange);
+		border: 1px solid color-mix(in srgb, var(--accent-regular) 55%, transparent);
+		box-shadow: 0 16px 36px color-mix(in srgb, var(--accent-regular) 28%, transparent);
+		-webkit-backdrop-filter: blur(12px) saturate(1.25);
+		backdrop-filter: blur(12px) saturate(1.25);
+		transition: transform var(--theme-transition), box-shadow var(--theme-transition);
 		white-space: nowrap;
+		will-change: transform, box-shadow;
 	}
 
 	@media (min-width: 20em) {
@@ -45,6 +52,11 @@ const { href } = Astro.props;
 	a:focus::after,
 	a:hover::after {
 		background-color: hsla(var(--gray-999-basis), 0.3);
+	}
+
+	a:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 20px 42px color-mix(in srgb, var(--accent-regular) 32%, transparent);
 	}
 
 	@media (min-width: 50em) {
